@@ -1,0 +1,124 @@
+.btn {
+  background-color: #1976D2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  height: 36px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button--size-s {
+  font-size: 14px;
+  height: 32px;
+  padding: 8px 16px;
+}
+
+.button--size-m {
+  font-size: 16px;
+  height: 36px;
+  padding: 12px 24px;
+}
+
+.button--size-l {
+  font-size: 18px;
+  height: 40px;
+  padding: 16px 32px;
+}
+
+.button--type-default {
+  background-color: #1976D2;
+}
+
+.button--type-outline {
+  background-color: transparent;
+  border: 1px solid #1976D2;
+  color: #1976D2;
+}
+
+.button--type-secondary {
+  background-color: #F50057;
+}
+
+.button--type-tentery {
+  background-color: #4CAF50;
+}
+
+.button--align-left {
+  text-align: left;
+}
+
+.button--align-center {
+  text-align: center;
+}
+
+.button--align-right {
+  text-align: right;
+}
+
+.button--rounded-small {
+  border-radius: 4px;
+}
+
+.button--rounded-medium {
+  border-radius: 16px;
+}
+
+.button--rounded-large {
+  border-radius: 32px;
+}
+
+.btn.disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.btn-loading {}
+
+.btn:hover {
+  background-color: #1565c0;
+}
+
+.btn:hover.button--type-outline {
+  background-color: #1976D2;
+  color: #fff;
+}
+
+.btn:hover.button--type-secondary {
+  background-color: #c70039;
+}
+
+.btn:hover.button--type-tentery {
+  background-color: #45a049;
+}
+
+.btn:hover.button--type-outline.button--type-secondary,
+.btn:hover.button--type-outline.button--type-tentery,
+.btn:hover.button--type-secondary.button--type-tentery {
+  background-color: #1565c0;
+  color: #fff;
+}
+
+.btn:hover.button--rounded-small {
+  border-radius: 4px;
+}
+
+.btn:hover.button--rounded-medium {
+  border-radius: 16px;
+}
+
+.btn:hover.button--rounded-large {
+  border-radius: 32px;
+}
+
+.btn:hover.disabled {
+  background-color: #ccc;
+  color: #666;
+}

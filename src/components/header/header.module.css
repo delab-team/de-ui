@@ -1,0 +1,56 @@
+.header {
+  height: 90px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  z-index: 10;
+}
+
+.header-in {
+  height: 100%;
+  display: flex;
+  width: 100%; 
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 0 16px 0 16px;
+  box-sizing: border-box;
+  z-index: 11;
+}
+
+.header-in > * {
+  z-index: 12;
+}
+
+.header-children {
+  height: 90px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 11;
+}
+
+.header.fixed {
+  position: fixed;
+  width: 100%;
+}
+
+.header.absolute {
+  position: absolute;
+}
+
+.header.relative {
+  position: relative;
+}
+
+.header.static {
+  position: static;
+}

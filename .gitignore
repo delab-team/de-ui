@@ -1,0 +1,11 @@
+dist
+node_modules
+.DS_Store
+build
+*.log
+
+src/example/node_modules
+src/example/build
+src/example/.DS_Store
+src/example/dist
+src/example/*.log

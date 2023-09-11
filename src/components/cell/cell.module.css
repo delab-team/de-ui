@@ -1,0 +1,108 @@
+.Cell {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 16px;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #fff;
+}
+
+.Cell--disabled {
+  opacity: 0.6;
+}
+
+.Cell__before {
+  margin-right: 16px;
+}
+
+.Cell__main {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.Cell__subhead {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 4px;
+}
+
+.Cell__content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+.Cell__badge {
+  margin-right: 8px;
+  width: max-content;
+  font-size: 12px;
+  background-color: #f5f5f5;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.Cell__children {
+  flex: 1;
+  font-weight: bold;
+}
+
+.Cell__subtitle {
+  font-size: 14px;
+  color: #333;
+  margin-top: 4px;
+}
+
+.Cell__extraSubtitle {
+  font-size: 12px;
+  color: #888;
+  margin-top: 4px;
+}
+
+.Cell__indicator {
+  margin-left: 16px;
+  color: #888;
+}
+
+.Cell__after {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: auto;
+}
+
+.Cell__chevronIcon {
+  width: 24px;
+  height: 24px;
+  fill: #888;
+}
+
+@media (max-width: 768px) {
+  .Cell {
+    flex-direction: column;
+    padding: 8px;
+  }
+
+  .Cell__before {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+  .Cell__after {
+    margin: 0;
+  }
+  .Cell__main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Cell__badge {
+    margin-right: 4px;
+  }
+}
