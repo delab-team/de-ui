@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="">
+  <a href="https://github.com/delab-team">
       <img src="https://avatars.githubusercontent.com/u/116884789?s=200&v=4" width="150" alt="DE-UI logo" />
   </a>
 </h1>

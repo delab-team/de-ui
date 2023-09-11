@@ -81,3 +81,9 @@ export type { SpinnerProps } from './components/spinner/spinner'
 
 export { IconSelector } from './components/icon-selector/icon-selector'
 export type { IconSelectorProps } from './components/icon-selector/icon-selector'
+
+/**
+ * Textarea
+*/
+export { TextArea } from './components/textarea/textarea'
+export type { TextAreaProps } from './components/textarea/textarea'
