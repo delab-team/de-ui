@@ -27,6 +27,35 @@
 yarn add
 ```
 
+## Components
+Here's a list of components included in our library:
+
+Button: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/button/Readme.md)
+
+Avatar: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/avatar/Readme.md)
+
+Cell: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/cell/Readme.md)
+
+Font: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/font/Readme.md)
+
+Footer: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/footer/Readme.md)
+
+IconImg: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/icon-img/Readme.md)
+
+Header: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/header/Readme.md)
+
+Input: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/input/Readme.md)
+
+IconSelector: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/icon-selector/Readme.md)
+
+PageWrapper: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/page-wrapper/Readme.md)
+
+PageWrapperSidebar: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/page-wrapper-sidebar/Readme.md)
+
+TextArea: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/textarea/Readme.md)
+
+Spinner: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/spinner/Readme.md)
+
 # License
 
 [MIT License Copyright (c) 2023 DeLab Team](LICENSE)
