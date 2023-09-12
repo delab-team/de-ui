@@ -1,6 +1,6 @@
 import { useState, FC } from 'react';
 
-import { Button, TextArea } from '../../../src/'
+import { Avatar, Button, TextArea } from '../../../src/'
 
 interface HomeProps {}
 

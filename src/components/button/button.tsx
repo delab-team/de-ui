@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes } from 'react'
+import { ButtonHTMLAttributes, ReactNode } from 'react'
 
 import s from './button.module.css'
 
@@ -62,7 +62,7 @@ export interface ButtonProps
     /**
      * children
      */
-    children?: React.ReactNode
+    children?: ReactNode
 }
 
 export const Button = ({

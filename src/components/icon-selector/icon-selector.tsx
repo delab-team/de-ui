@@ -1,11 +1,5 @@
 import React, { FC } from 'react'
 
-type IconProps = {
-    height: number;
-    width: number;
-    fill: string;
-}
-
 export interface IconSelectorProps {
     id:
     | 'settings'
