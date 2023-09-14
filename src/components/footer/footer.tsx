@@ -1,5 +1,4 @@
 import { FC } from 'react'
-import { Link } from 'react-router-dom'
 
 import styles from './footer.module.css'
 
@@ -45,7 +44,7 @@ export const Footer: FC<FooterProps> = ({
                 <ul>
                     {menuItems.map(menuItem => (
                         <li key={menuItem.id}>
-                            <Link to={menuItem.url}>{menuItem.label}</Link>
+                            <a href={menuItem.url}>{menuItem.label}</a>
                         </li>
                     ))}
                 </ul>
@@ -55,7 +54,7 @@ export const Footer: FC<FooterProps> = ({
                     <ul>
                         {menuItems2.map(menuItem => (
                             <li key={menuItem.id}>
-                                <Link to={menuItem.url}>{menuItem.label}</Link>
+                                <a href={menuItem.url}>{menuItem.label}</a>
                             </li>
                         ))}
                     </ul>
@@ -66,7 +65,7 @@ export const Footer: FC<FooterProps> = ({
                     <ul>
                         {menuItems3.map(menuItem => (
                             <li key={menuItem.id}>
-                                <Link to={menuItem.url}>{menuItem.label}</Link>
+                                <a href={menuItem.url}>{menuItem.label}</a>
                             </li>
                         ))}
                     </ul>

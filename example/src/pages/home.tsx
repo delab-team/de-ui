@@ -1,6 +1,6 @@
 import { useState, FC } from 'react';
 
-import { Avatar, Button, TextArea } from '../../../src/'
+import { Avatar, Button, IconSelector, TextArea } from '../../../src/'
 
 interface HomeProps {}
 
@@ -32,6 +32,8 @@ export const Home: FC<HomeProps> = () => {
         />
         {error && <p>Текст слишком короткий.</p>}
         <Button onClick={handleSubmit}>Отправить</Button>
+
+        <IconSelector id="favorite" size="24px" />
       </div>
   
     )

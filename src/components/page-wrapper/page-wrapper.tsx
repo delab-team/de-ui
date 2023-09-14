@@ -1,5 +1,7 @@
 import { FC } from 'react'
 
+import s from './page-wrapper.module.css'
+
 export interface PageWrapperProps {
     content: React.ReactNode;
     pageTitle: string;
@@ -11,7 +13,7 @@ export const PageWrapper: FC<PageWrapperProps> = ({ content, header, footer, pag
     document.title = pageTitle
 
     return (
-        <div className="page-wrapper">
+        <div className={s.pageWrapper}>
             <header>
                 {header}
             </header>
