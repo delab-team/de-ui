@@ -5,7 +5,8 @@ import { PageWrapper, PageWrapperProps } from './page-wrapper'
 
 const story: Meta<PageWrapperProps> = {
     title: 'wrappers/Page-Wrappers',
-    component: PageWrapper
+    component: PageWrapper,
+    tags: [ 'autodocs' ]
 }
 
 export default story

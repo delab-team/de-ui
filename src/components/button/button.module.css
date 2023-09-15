@@ -75,8 +75,14 @@
   border-radius: 32px;
 }
 
-.btn.disabled {
+.btn-disabled {
   background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.btn-disabled:hover {
+  background-color: #8b8787 !important;
   color: #666;
   cursor: not-allowed;
 }

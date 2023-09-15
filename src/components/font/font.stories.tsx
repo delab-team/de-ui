@@ -5,7 +5,8 @@ import { Font, FontProps } from './font'
 
 const story: Meta<FontProps> = {
     title: 'Common/Font',
-    component: Font
+    component: Font,
+    tags: [ 'autodocs' ]
 }
 
 export default story

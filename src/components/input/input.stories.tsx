@@ -5,7 +5,8 @@ import { Input, InputProps } from './input'
 
 const story: Meta<InputProps> = {
     title: 'Common/Input',
-    component: Input
+    component: Input,
+    tags: [ 'autodocs' ]
 }
 
 export default story

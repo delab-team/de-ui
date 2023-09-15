@@ -6,6 +6,9 @@ The Input component is a reusable React component designed to create input field
 
 - `label` (string, optional): Specifies the label text for the input field.
 - `error` (string, optional): Displays an error message below the input field if provided.
+- `value` (string, required): The current value of the text area.
+- `onChange` ((newValue: string) => void, required): A callback function to handle changes to the text area's value.
+- `placeholder` (string, optional): The placeholder text displayed in the text area when it's empty.
 - `rest` (React.InputHTMLAttributes<HTMLInputElement>, optional): Any additional input attributes you want to pass.
 
 ## Example 

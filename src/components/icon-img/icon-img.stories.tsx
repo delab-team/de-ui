@@ -5,7 +5,8 @@ import { IconImg, IconImgProps } from './icon-img'
 
 const story: Meta<IconImgProps> = {
     title: 'Icons/IconsImg',
-    component: IconImg
+    component: IconImg,
+    tags: [ 'autodocs' ]
 }
 
 export default story

@@ -5,7 +5,8 @@ import { IconSelector, IconSelectorProps } from './icon-selector'
 
 const story: Meta<IconSelectorProps> = {
     title: 'Icons/IconSelector',
-    component: IconSelector
+    component: IconSelector,
+    tags: [ 'autodocs' ]
 }
 
 export default story

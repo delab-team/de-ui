@@ -5,7 +5,8 @@ import { Footer, FooterProps } from './footer'
 
 const story: Meta<FooterProps> = {
     title: 'Common/Footer',
-    component: Footer
+    component: Footer,
+    tags: [ 'autodocs' ]
 }
 
 export default story
@@ -16,6 +17,8 @@ export const Playground: Story = {
     render: () => (
         <Footer
             logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flat_tick_icon.svg/2048px-Flat_tick_icon.svg.png"
+            logoSize={80}
+            logoWidth={80}
             menuItems={[
                 { id: '1', url: '/home', label: 'Home' },
                 { id: '2', url: '/about', label: 'About' },

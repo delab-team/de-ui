@@ -5,7 +5,8 @@ import { Header, HeaderProps } from './header'
 
 const story: Meta<HeaderProps> = {
     title: 'Common/Header',
-    component: Header
+    component: Header,
+    tags: [ 'autodocs' ]
 }
 
 export default story

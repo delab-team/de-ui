@@ -23,6 +23,8 @@ export interface FooterProps {
     footerClass?: string;
     menuItems2?: MenuItem[];
     menuItems3?: MenuItem[];
+    logoSize?: number;
+    logoWidth?: number;
 }
 
 export const Footer: FC<FooterProps> = ({
@@ -33,12 +35,14 @@ export const Footer: FC<FooterProps> = ({
     children,
     footerClass,
     menuItems2,
-    menuItems3
+    menuItems3,
+    logoSize,
+    logoWidth
 }) => (
     <footer className={`${styles.footer} ${footerClass}`} style={{ backgroundColor }}>
         <div className={styles['footer-content']}>
             <div className={styles['footer-logo']}>
-                <img src={logo} alt="Logo" />
+                <img src={logo} alt="Logo" height={logoSize} width={logoWidth} />
             </div>
             <div className={styles['footer-menu']}>
                 <ul>

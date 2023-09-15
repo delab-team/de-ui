@@ -5,7 +5,8 @@ import { Spinner, SpinnerProps } from './spinner'
 
 const story: Meta<SpinnerProps> = {
     title: 'Common/Spinner',
-    component: Spinner
+    component: Spinner,
+    tags: [ 'autodocs' ]
 }
 
 export default story

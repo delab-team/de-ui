@@ -5,7 +5,8 @@ import { Button, ButtonProps } from './button'
 
 const story: Meta<ButtonProps> = {
     title: 'Common/Button',
-    component: Button
+    component: Button,
+    tags: [ 'autodocs' ]
 }
 
 export default story

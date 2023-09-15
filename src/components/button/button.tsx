@@ -84,7 +84,7 @@ export const Button = ({
           ${buttonType[variant]}
           ${buttonAlign[textAlign]}
           ${buttonRounded[rounded]}
-          ${disabled ? 'btn-disabled' : ''}
+          ${disabled && s['btn-disabled']}
           ${loading && s['btn-loading']}
         `}
         disabled={disabled}

@@ -5,7 +5,8 @@ import { PageWrapperSidebar, PageWrapperSidebarProps } from './page-wrapper-side
 
 const story: Meta<PageWrapperSidebarProps> = {
     title: 'wrappers/page-wrapper-sidebar',
-    component: PageWrapperSidebar
+    component: PageWrapperSidebar,
+    tags: [ 'autodocs' ]
 }
 
 export default story

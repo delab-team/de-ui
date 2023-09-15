@@ -4,7 +4,8 @@ import { Avatar, AvatarProps } from './avatar'
 
 const meta: Meta<AvatarProps> = {
     title: 'Common/Avatar',
-    component: Avatar
+    component: Avatar,
+    tags: [ 'autodocs' ]
 }
 
 export default meta

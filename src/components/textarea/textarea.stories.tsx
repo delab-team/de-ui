@@ -5,7 +5,8 @@ import { TextArea, TextAreaProps } from './textarea'
 
 const story: Meta<TextAreaProps> = {
     title: 'Common/Textarea',
-    component: TextArea
+    component: TextArea,
+    tags: [ 'autodocs' ]
 }
 
 export default story
