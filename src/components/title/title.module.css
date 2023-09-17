@@ -1,0 +1,45 @@
+.Typography {
+  font-size: 1rem;
+  font-weight: normal;
+  color: black;
+}
+
+.Typography-h1 {
+  font-size: 2.5rem;
+}
+
+.Typography-h2 {
+  font-size: 2rem;
+}
+
+.Typography-h3 {
+  font-size: 1.75rem;
+}
+
+.Typography-h4 {
+  font-size: 1.5rem;
+}
+
+.Typography-h5 {
+  font-size: 1.25rem;
+}
+
+.Typography-h6 {
+  font-size: 1rem;
+}
+
+.Typography-bold {
+  font-weight: bold;
+}
+
+.Typography-semibold {
+  font-weight: 600;
+}
+
+.Typography-medium {
+  font-weight: 500;
+}
+
+.Typography-light {
+  font-weight: 300;
+}

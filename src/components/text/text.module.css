@@ -1,0 +1,54 @@
+.Text {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+.Text-normal {
+  font-weight: normal;
+}
+
+.Text-bold {
+  font-weight: bold;
+}
+
+.Text-light {
+  font-weight: lighter;
+}
+
+.Text-medium {
+  font-weight: medium;
+}
+
+.Text-semibold {
+  font-weight: 500;
+}
+
+.Text-small {
+  font-size: 14px;
+}
+
+.Text-medium {
+  font-size: 16px;
+}
+
+.Text-large {
+  font-size: 20px;
+}
+
+.Text-serif {
+  font-family: 'serif', serif;
+}
+
+.Text-sans-serif {
+  font-family: 'sans-serif', sans-serif;
+}
+
+.Text-red {
+  color: red;
+}
+
+.Text-blue {
+  color: blue;
+}
+
