@@ -19,11 +19,11 @@ export const Header: FC<HeaderProps> = ({
     className,
     position = 'static'
 }) => (
-    <div className={`${s.header} ${s[position]} ${className}`}>
+    <header className={`${s.header} ${s[position]} ${className}`}>
         <div className={s['header-in']} style={{ width }}>
             <div className={s['header-before']}>{before}</div>
             <div className={s['header-children']}>{children}</div>
             <div className={s['header-after']}>{after}</div>
         </div>
-    </div>
+    </header>
 )

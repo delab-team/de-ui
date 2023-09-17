@@ -16,11 +16,6 @@ The Footer component is a reusable React component designed to create footer sec
 
 ```
     const logoUrl = 'your-logo.png';
-    const menuItems = [
-        { id: '1', url: '/home', label: 'Home' },
-        { id: '2', url: '/about', label: 'About' },
-        { id: '3', url: '/contact', label: 'Contact' },
-    ];
 
     const contactInfo = {
         phoneNumber: '+1 (123) 456-7890',
@@ -33,8 +28,18 @@ The Footer component is a reusable React component designed to create footer sec
             {/* Other content of your web application */}
             <Footer
                 logo={logoUrl}
-                menuItems={menuItems}
-                contactInfo={contactInfo}
+                logoSize={80}
+                logoWidth={80}
+                menuItems={[
+                    { id: '1', link: <Link to="example">Example</Link> },
+                    { id: '2', link: <Link to="about">About us</Link> },
+                    { id: '3', link: <Link to="news">News</Link> }
+                ]}
+                contactInfo={{
+                    phoneNumber: '+1 (123) 456-7890',
+                    email: 'info@example.com',
+                    address: '123 Main Street, City, Country'
+                }}
                 backgroundColor="#333"
             >
                 {/* Additional custom content goes here */}

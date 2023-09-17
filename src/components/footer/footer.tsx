@@ -4,8 +4,7 @@ import styles from './footer.module.css'
 
 interface MenuItem {
     id: string;
-    url: string;
-    label: string;
+    link: React.ReactNode;
 }
 
 interface ContactInfo {
@@ -48,7 +47,7 @@ export const Footer: FC<FooterProps> = ({
                 <ul>
                     {menuItems.map(menuItem => (
                         <li key={menuItem.id}>
-                            <a href={menuItem.url}>{menuItem.label}</a>
+                            {menuItem.link}
                         </li>
                     ))}
                 </ul>
@@ -58,7 +57,7 @@ export const Footer: FC<FooterProps> = ({
                     <ul>
                         {menuItems2.map(menuItem => (
                             <li key={menuItem.id}>
-                                <a href={menuItem.url}>{menuItem.label}</a>
+                                {menuItem.link}
                             </li>
                         ))}
                     </ul>
@@ -69,7 +68,7 @@ export const Footer: FC<FooterProps> = ({
                     <ul>
                         {menuItems3.map(menuItem => (
                             <li key={menuItem.id}>
-                                <a href={menuItem.url}>{menuItem.label}</a>
+                                {menuItem.link}
                             </li>
                         ))}
                     </ul>

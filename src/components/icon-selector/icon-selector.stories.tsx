@@ -18,7 +18,7 @@ export const Playground: Story = {
         <IconSelector {...args} />
     ),
     args: {
-        id: 'settings',
+        id: 'search',
         size: '32px',
         color: '#000000'
     }

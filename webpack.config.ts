@@ -9,7 +9,6 @@ const config: Configuration = {
     target: 'web',
     devtool: 'inline-source-map',
     devServer: {
-        static: { directory: path.join(__dirname, 'example/public') },
         compress: true,
         https: false,
         port: 8080,
@@ -52,7 +51,6 @@ const config: Configuration = {
         path: path.resolve(__dirname, 'build')
     },
     plugins: [
-        new HtmlWebpackPlugin({ template: path.join(__dirname, 'example/public', 'index.html') }),
         new SourceMapDevToolPlugin({ filename: '[file].map' }),
         new ProvidePlugin({ process: 'process/browser.js' })
     ],
