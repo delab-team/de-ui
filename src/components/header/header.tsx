@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { CSSProperties, FC } from 'react'
 
 import s from './header.module.css'
 
@@ -9,6 +9,7 @@ export interface HeaderProps {
     width: string;
     className?: string;
     position?: 'fixed' | 'absolute' | 'relative' | 'static';
+    style?: CSSProperties;
 }
 
 export const Header: FC<HeaderProps> = ({
@@ -17,9 +18,10 @@ export const Header: FC<HeaderProps> = ({
     children,
     after,
     className,
-    position = 'static'
+    position = 'static',
+    style
 }) => (
-    <header className={`${s.header} ${s[position]} ${className}`}>
+    <header className={`${s.header} ${s[position]} ${className}`} style={style}>
         <div className={s['header-in']} style={{ width }}>
             <div className={s['header-before']}>{before}</div>
             <div className={s['header-children']}>{children}</div>

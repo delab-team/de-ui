@@ -9,6 +9,7 @@ import { Button } from '../button/button'
 import { Header } from '../header/header'
 
 import '../header/example.style.css'
+import './example.style.css'
 
 const story: Meta<PageWrapperSidebarProps> = {
     title: 'wrappers/page-wrapper-sidebar',
@@ -35,16 +36,16 @@ export const Playground: Story = {
                             <nav className="nav">
                                 <ul>
                                     <li>
-                                        <Link to="/">Главная</Link>
+                                        <Link to="/">Home</Link>
                                     </li>
                                     <li>
-                                        <Link to="/about">О нас</Link>
+                                        <Link to="/about">About us</Link>
                                     </li>
                                     <li>
-                                        <Link to="/services">Услуги</Link>
+                                        <Link to="/services">Services</Link>
                                     </li>
                                     <li>
-                                        <Link to="/contact">Контакты</Link>
+                                        <Link to="/contact">Contacts</Link>
                                     </li>
                                 </ul>
                             </nav>
@@ -83,10 +84,28 @@ export const Playground: Story = {
                         backgroundColor="#333"
                     />
                 }
-                sidebar={<aside>Sidebar Content</aside>}
+                sidebar={
+                    <aside className="sidebar">
+                        <h2>Menu</h2>
+                        <ul>
+                            <li>
+                                <Link to="/">Main</Link>
+                            </li>
+                            <li>
+                                <Link to="/about">About us</Link>
+                            </li>
+                            <li>
+                                <Link to="/services">Services</Link>
+                            </li>
+                            <li>
+                                <Link to="/contact">Contacts</Link>
+                            </li>
+                        </ul>
+                    </aside>
+                }
             >
                 <main>
-                Your page's main content
+                    Your page's main content
                 </main>
             </PageWrapperSidebar>
         </Router>

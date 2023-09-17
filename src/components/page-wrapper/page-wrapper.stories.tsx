@@ -9,6 +9,7 @@ import { Button } from '../button/button'
 import { Header } from '../header/header'
 
 import '../header/example.style.css'
+import './example.style.css'
 
 const story: Meta<PageWrapperProps> = {
     title: 'wrappers/Page-Wrappers',
@@ -30,6 +31,7 @@ export const Playground: Story = {
                         width="100%"
                         position="static"
                         className="header"
+                        style={{ borderRadius: '0px' }}
                         before={<img src="https://avatars.githubusercontent.com/u/116884789?s=200&v=4" alt="Logo" className="logo" />}
                         children={
                             <nav className="nav">
