@@ -56,6 +56,10 @@ TextArea: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/
 
 Spinner: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/spinner/Readme.md)
 
+Title: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/title/Readme.md)
+
+Text: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/text/Readme.md)
+
 # License
 
 [MIT License Copyright (c) 2023 DeLab Team](LICENSE)
