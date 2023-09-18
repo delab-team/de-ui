@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import s from './spinner.module.css'
+import s from '../../styles/spinner.module.css'
 
 export interface SpinnerProps {
     size?: 'small' | 'medium' | 'large'

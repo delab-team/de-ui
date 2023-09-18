@@ -12,7 +12,7 @@ const config: Configuration = {
     devServer: {
         compress: true,
         https: false,
-        port: 8085,
+        port: 8089,
         headers: {
             'Access-Control-Allow-Origin': '*',
             'Access-Control-Allow-Methods': '*',

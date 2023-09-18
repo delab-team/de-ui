@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes, ReactNode } from 'react'
 
-import s from './button.module.css'
+import s from '../../styles/button.module.css'
 
 import { Spinner } from '../spinner/spinner'
 

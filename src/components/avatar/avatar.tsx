@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import s from './avatar.module.css'
+import s from '../../styles/avatar.module.css'
 
 type GradientColor = keyof typeof gradientStyles
 

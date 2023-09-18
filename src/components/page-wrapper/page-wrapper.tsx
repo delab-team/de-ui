@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import s from './page-wrapper.module.css'
+import s from '../../styles/page-wrapper.module.css'
 
 export interface PageWrapperProps {
     content: React.ReactNode;

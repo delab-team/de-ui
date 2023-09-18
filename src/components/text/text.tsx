@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import s from './text.module.css'
+import s from '../../styles/text.module.css'
 
 export interface TextProps {
     fontSize?: 'small' | 'medium' | 'large';

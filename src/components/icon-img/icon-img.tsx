@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import s from './icon-img.module.css'
+import s from '../../styles/icon-img.module.css'
 
 export interface IconImgProps {
     src: string;

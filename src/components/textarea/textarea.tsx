@@ -1,6 +1,6 @@
 import { ChangeEvent, FC } from 'react'
 
-import s from './textarea.module.css'
+import s from '../../styles/textarea.module.css'
 
 export interface TextAreaProps {
     value: string;

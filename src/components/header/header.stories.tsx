@@ -4,7 +4,7 @@ import { Meta, StoryObj } from '@storybook/react'
 import { BrowserRouter as Router, Link } from 'react-router-dom'
 import { Header, HeaderProps } from './header'
 
-import './example.style.css'
+import '../../styles/example.style.css'
 import { Button } from '../button/button'
 
 const story: Meta<HeaderProps> = {

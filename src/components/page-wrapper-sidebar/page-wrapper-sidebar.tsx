@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import s from './page-wrapper-sidebar.module.css'
+import s from '../../styles/page-wrapper-sidebar.module.css'
 
 export interface PageWrapperSidebarProps {
     children: React.ReactNode;

@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-import styles from './cell.module.css'
+import styles from '../../styles/cell.module.css'
 
 export interface CellProps {
     before?: React.ReactNode;

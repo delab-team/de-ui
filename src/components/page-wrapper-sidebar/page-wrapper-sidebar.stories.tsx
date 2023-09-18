@@ -8,8 +8,8 @@ import { Footer } from '../footer/footer'
 import { Button } from '../button/button'
 import { Header } from '../header/header'
 
-import '../header/example.style.css'
-import './example.style.css'
+import '../../styles/example.style.css'
+import '../../styles/example-wrapper-sidebar.style.css'
 
 const story: Meta<PageWrapperSidebarProps> = {
     title: 'wrappers/page-wrapper-sidebar',

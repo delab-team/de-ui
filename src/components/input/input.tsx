@@ -1,6 +1,6 @@
 import { ChangeEvent } from 'react'
 
-import s from './input.module.css'
+import s from '../../styles/input.module.css'
 
 export interface InputProps {
     label?: string;

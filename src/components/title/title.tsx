@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import s from './title.module.css'
+import s from '../../styles/title.module.css'
 
 export interface TitleProps {
     variant: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';

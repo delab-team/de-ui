@@ -1,6 +1,6 @@
 import { CSSProperties, FC } from 'react'
 
-import s from './header.module.css'
+import s from '../../styles/header.module.css'
 
 export interface HeaderProps {
     children?: React.ReactNode;
