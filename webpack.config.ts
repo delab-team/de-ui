@@ -27,18 +27,7 @@ const config: Configuration = {
             },
             {
                 test: /\.css$/,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            modules: {
-                                localIdentName: '[hash:base64:5]', 
-                            },
-                            importLoaders: 1,
-                        },
-                    },
-                ],
+                use: [ 'style-loader', 'css-loader' ]
             },
             {
                 test: /\.js$/,
@@ -61,13 +50,14 @@ const config: Configuration = {
     output: {
         filename: '[name].js',
         path: path.resolve(__dirname, 'build'),
+        publicPath: '../',
     },
     plugins: [
         new SourceMapDevToolPlugin({ filename: '[file].map' }),
         new ProvidePlugin({ process: 'process/browser.js' }),
-        new MiniCssExtractPlugin({
-            filename: '../../styles/[name].css',
-        }),
+        // new MiniCssExtractPlugin({
+        //     filename: '../../styles/[name].css',
+        // }),
         new CopyWebpackPlugin({
             patterns: [
                 { from: 'src/styles', to: '../dist/styles' },
