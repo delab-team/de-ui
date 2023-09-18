@@ -88,3 +88,15 @@ export type { IconSelectorProps } from './components/icon-selector/icon-selector
 */
 export { TextArea } from './components/textarea/textarea'
 export type { TextAreaProps } from './components/textarea/textarea'
+
+/**
+ * Title
+*/
+export { Title } from './components/title/title'
+export type { TitleProps } from './components/title/title'
+
+/**
+ * Text
+*/
+export { Text } from './components/text/text'
+export type { TextProps } from './components/text/text'
