@@ -1,15 +1,27 @@
 {
   "name": "@delab-team/de-ui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A versatile and customizable React UI library designed to streamline the development of beautiful and responsive user interfaces. Packed with a rich set of components and themes, it empowers developers to create stunning web applications with ease.",
   "repository": "https://github.com/delab-team/de-ui",
+  "homepage": "https://ui.delabteam.com",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "author": "DeLab Team",
   "license": "MIT",
+  "keywords": [
+    "package",
+    "blockchain",
+    "ton",
+    "ui",
+    "web3"
+],
   "scripts": {
     "start": "webpack-dev-server --mode development",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "build": "tsc -p tsconfig.build.json"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
