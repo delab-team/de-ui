@@ -1,7 +1,8 @@
-import { Configuration, SourceMapDevToolPlugin, ProvidePlugin } from 'webpack'
-import HtmlWebpackPlugin from 'html-webpack-plugin'
-import * as path from 'path'
-import 'webpack-dev-server'
+import { Configuration, SourceMapDevToolPlugin, ProvidePlugin } from 'webpack';
+import path from 'path';
+import 'webpack-dev-server';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 
 const config: Configuration = {
     mode: 'none',
@@ -11,51 +12,70 @@ const config: Configuration = {
     devServer: {
         compress: true,
         https: false,
-        port: 8080,
+        port: 8085,
         headers: {
             'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Methods': '*'
-        }
+            'Access-Control-Allow-Methods': '*',
+        },
     },
     module: {
         rules: [
             {
                 test: /\.tsx?$/,
                 use: 'ts-loader',
-                exclude: '/node_modules/'
+                exclude: /node_modules/,
             },
             {
-                test: /\.(css)$/,
-                use: [ 'style-loader', 'css-loader' ]
+                test: /\.css$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: {
+                                localIdentName: '[local]_[hash:base64:5]',
+                            },
+                            importLoaders: 1,
+                        },
+                    },
+                ],
             },
             {
                 test: /\.js$/,
                 enforce: 'pre',
-                use: [ 'source-map-loader' ]
+                use: ['source-map-loader'],
             },
             {
                 test: /\.(jpe?g|gif|png|svg)$/i,
                 use: [
-                {
-                  loader: 'file-loader',
-                  options: {
-                    limit: 10000
-                  }
-                }
-              ]
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            limit: 10000,
+                        },
+                    },
+                ],
             },
-        ]
+        ],
     },
     output: {
         filename: '[name].js',
-        path: path.resolve(__dirname, 'build')
+        path: path.resolve(__dirname, 'build'),
     },
     plugins: [
         new SourceMapDevToolPlugin({ filename: '[file].map' }),
-        new ProvidePlugin({ process: 'process/browser.js' })
+        new ProvidePlugin({ process: 'process/browser.js' }),
+        new MiniCssExtractPlugin({
+            filename: 'styles/[name].css',
+        }),
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: 'src/styles', to: '../dist/styles' },
+            ],
+        }),
     ],
     resolve: {
-        extensions: [ '.ts', '.tsx', '.js' ],
+        extensions: ['.ts', '.tsx', '.js'],
         alias: { process: 'process/browser.js' },
         fallback: {
             util: require.resolve('util/'),
@@ -64,10 +84,9 @@ const config: Configuration = {
             http: require.resolve('stream-http'),
             https: require.resolve('https-browserify'),
             os: require.resolve('os-browserify'),
-            url: require.resolve('url')
-        }
-    }
-}
+            url: require.resolve('url'),
+        },
+    },
+};
 
-// eslint-disable-next-line import/no-default-export
-export default config
+export default config;

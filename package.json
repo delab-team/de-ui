@@ -15,7 +15,7 @@
     "ton",
     "ui",
     "web3"
-],
+  ],
   "scripts": {
     "start": "webpack-dev-server --mode development",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -29,11 +29,14 @@
     "@types/classnames": "^2.3.1",
     "@types/react": "^18.2.21",
     "classnames": "^2.3.2",
+    "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.8.1",
+    "mini-css-extract-plugin": "^2.7.6",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.15.0",
     "react-scripts": "5.0.1",
-    "stream-browserify": "^3.0.0"
+    "stream-browserify": "^3.0.0",
+    "style-loader": "^3.3.3"
   },
   "private": false,
   "devDependencies": {
