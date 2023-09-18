@@ -76,7 +76,10 @@ const config: Configuration = {
     ],
     resolve: {
         extensions: ['.ts', '.tsx', '.js'],
-        alias: { process: 'process/browser.js' },
+        alias: {
+            process: 'process/browser.js',
+            styles: path.resolve(__dirname, 'src/styles')
+        },
         fallback: {
             util: require.resolve('util/'),
             stream: require.resolve('stream-browserify'),
