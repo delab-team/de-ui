@@ -66,7 +66,7 @@ const config: Configuration = {
         new SourceMapDevToolPlugin({ filename: '[file].map' }),
         new ProvidePlugin({ process: 'process/browser.js' }),
         new MiniCssExtractPlugin({
-            filename: 'styles/[name].css',
+            filename: '../../styles/[name].css',
         }),
         new CopyWebpackPlugin({
             patterns: [
