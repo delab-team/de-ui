@@ -27,7 +27,7 @@
 yarn add @delab-team/de-ui
 ```
 
-## [Documentation](ui.delabteam.com/)
+## [Documentation](https://ui.delabteam.com/)
 
 ## Components
 Here's a list of components included in our library:
