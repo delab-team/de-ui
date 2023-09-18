@@ -21,8 +21,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "build": "tsc -p tsconfig.build.json"
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
