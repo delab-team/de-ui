@@ -12,7 +12,7 @@
     <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="typescript" />
   </a>
   <a href="NPM">
-    <img src="https://img.shields.io/npm/v/111" height="28px" />
+    <img src="https://img.shields.io/npm/v/@delab-team/de-ui" height="28px" />
   </a>
 </p>
 
@@ -24,7 +24,7 @@
 
 - as local project package
 ```
-yarn add
+yarn add @delab-team/de-ui
 ```
 
 ## Components
