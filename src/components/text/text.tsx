@@ -1,5 +1,4 @@
 import { FC } from 'react'
-
 import s from '../../styles/text.module.css'
 
 export interface TextProps {
@@ -22,7 +21,7 @@ export const Text: FC<TextProps> = ({
     const classNames = [
         s.Text,
         fontSize && s[`Text-${fontSize}`],
-        fontWeight === 'bold' && s['Text-bold'],
+        fontWeight && s[`Text-${fontWeight}`],
         customClassName
     ]
         .filter(className => className)

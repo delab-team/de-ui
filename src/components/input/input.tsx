@@ -1,5 +1,4 @@
 import { ChangeEvent } from 'react'
-
 import s from '../../styles/input.module.css'
 
 export interface InputProps {
@@ -8,6 +7,7 @@ export interface InputProps {
     value: string;
     onChange: (newValue: string) => void;
     placeholder?: string;
+    size?: 'xsmall' | 'small' | 'medium' | 'large';
 }
 
 export const Input: React.FC<InputProps> = ({
@@ -16,6 +16,7 @@ export const Input: React.FC<InputProps> = ({
     value,
     onChange,
     placeholder,
+    size = 'medium',
     ...rest
 }) => {
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -23,14 +24,16 @@ export const Input: React.FC<InputProps> = ({
         onChange(newValue)
     }
 
+    const sizeClass = s[size]
+
     return (
-        <div className={s.inputWrapper}>
+        <div className={`${s.inputWrapper} ${sizeClass}`}>
             {label && <label className={s.label}>{label}</label>}
             <input
                 value={value}
                 onChange={handleChange}
                 placeholder={placeholder}
-                className={s.input}
+                className={`${s.input} ${sizeClass}`}
                 {...rest}
             />
             {error && <div className={s.error}>{error}</div>}

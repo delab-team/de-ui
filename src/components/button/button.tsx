@@ -19,7 +19,7 @@ const buttonAlign = {
     right: s['button--align-right']
 }
 
-const buttonRounded = { s: s['button--rounded-small'], m: [ 'button--rounded-medium' ], l: [ 'button--rounded-large' ] }
+const buttonRounded = { s: s['button--rounded-small'], m: s['button--rounded-medium'], l: s['button--rounded-large'] }
 
 export interface ButtonProps
     extends React.DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {

@@ -100,3 +100,15 @@ export type { TitleProps } from './components/title/title'
 */
 export { Text } from './components/text/text'
 export type { TextProps } from './components/text/text'
+
+/**
+ * Mobile Menu
+*/
+export { MobileMenu } from './components/mobile-menu/mobile-menu'
+export type { MobileMenuProps } from './components/mobile-menu/mobile-menu'
+
+/**
+ * Mobile Header
+*/
+export { MobileHeader } from './components/mobile-header/mobile-header'
+export type { MobileHeaderProps } from './components/mobile-header/mobile-header'

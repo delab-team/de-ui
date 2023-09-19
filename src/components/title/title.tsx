@@ -12,7 +12,7 @@ export interface TitleProps {
 }
 
 export const Title: FC<TitleProps> = ({
-    variant,
+    variant = 'h1',
     fontWeight,
     fontFamily,
     color,
@@ -22,7 +22,7 @@ export const Title: FC<TitleProps> = ({
     const classNames = [
         s.Typography,
         s[`Typography-${variant}`],
-        fontWeight === 'bold' && s['Typography-bold'],
+        fontWeight && s[`Typography-${fontWeight}`], // Добавьте класс в зависимости от значения fontWeight
         customClassName
     ]
         .filter(className => className)

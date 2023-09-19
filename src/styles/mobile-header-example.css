@@ -1,0 +1,36 @@
+.mobile-header-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.2s ease;
+}
+
+.mobile-header-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+.input:hover {
+  border-color: #666;
+}
+
+.input::placeholder {
+  color: #888;
+}
+
+.small {
+  height: 30px;
+  font-size: 12px;
+} 
+
+.medium {
+  height: 40px;
+  font-size: 16px;
+}
+
+.large {
+  height: 50px;
+  font-size: 20px;
+}

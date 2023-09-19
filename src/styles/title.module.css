@@ -28,18 +28,22 @@
   font-size: 1rem;
 }
 
+.Typography-normal {
+  font-weight: normal;
+}
+
 .Typography-bold {
   font-weight: bold;
 }
 
-.Typography-semibold {
-  font-weight: 600;
+.Typography-light {
+  font-weight: light;
 }
 
 .Typography-medium {
-  font-weight: 500;
+  font-weight: medium;
 }
 
-.Typography-light {
-  font-weight: 300;
+.Typography-semibold {
+  font-weight: 700;
 }

@@ -1,7 +1,6 @@
 .inputWrapper {
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
 }
 
 .label {
@@ -22,4 +21,37 @@
   color: #ff0000;
   font-size: 14px;
   margin-top: 5px;
+}
+
+.small {
+  .label {
+    font-size: 12px;
+  }
+
+  .input {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
+
+.large {
+  .label {
+    font-size: 18px;
+  }
+
+  .input {
+    padding: 12px;
+    font-size: 20px;
+  }
+}
+
+.xsmall {
+  .label {
+    font-size: 10px;
+  }
+
+  .input {
+    padding: 6px;
+    font-size: 12px;
+  }
 }
