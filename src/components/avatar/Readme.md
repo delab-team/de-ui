@@ -12,7 +12,7 @@ The Avatar component is a versatile React component designed to create user or p
 
 ## Example
 
-```
+```jsx
             <Avatar size={48} gradientColor="blue" initials="EX" />
             <Avatar size={64} gradientColor="green" fallbackIcon="user-icon.png" />
             <Avatar size={32} gradientColor="red">

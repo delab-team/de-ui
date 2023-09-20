@@ -1,0 +1,38 @@
+.tooltipContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltipTrigger {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.infoIcon {
+  width: 16px;
+  height: 16px;
+  margin-left: 4px;
+  fill: #007bff;
+}
+
+.tooltip {
+  position: absolute;
+  background-color: #007bff;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  white-space: nowrap;
+  opacity: 0.9;
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.tooltipText {
+  font-size: 14px;
+  line-height: 1.5;
+}

@@ -14,7 +14,7 @@ The Footer component is a reusable React component designed to create footer sec
 
 ## Example 
 
-```
+```jsx
     const logoUrl = 'your-logo.png';
 
     const contactInfo = {

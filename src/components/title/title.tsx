@@ -22,7 +22,7 @@ export const Title: FC<TitleProps> = ({
     const classNames = [
         s.Typography,
         s[`Typography-${variant}`],
-        fontWeight && s[`Typography-${fontWeight}`], // Добавьте класс в зависимости от значения fontWeight
+        fontWeight && s[`Typography-${fontWeight}`],
         customClassName
     ]
         .filter(className => className)

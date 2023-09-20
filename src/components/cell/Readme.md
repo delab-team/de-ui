@@ -22,7 +22,7 @@ The Cell component is a versatile React component designed to create structured 
 
 ## Example 
 
-```
+```jsx
             <Cell
                 before={<div>Before Content</div>}
                 badgeBeforeTitle={<span className="badge">Badge</span>}

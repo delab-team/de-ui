@@ -10,6 +10,6 @@ The IconSelector component is a reusable React component designed to display ico
 
 ## Example
 
-```
+```jsx
   <IconSelector id="settings" size="32px" color="#000000" />
 ```

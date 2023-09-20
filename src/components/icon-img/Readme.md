@@ -12,4 +12,6 @@ The IconImg component is a reusable React component designed to display images a
 
 ## Example
 
-```<IconImg src="icon.png" size={32} type="default" alt="Icon" />```
+```jsx 
+  <IconImg src="icon.png" size={32} type="default" alt="Icon" />
+```

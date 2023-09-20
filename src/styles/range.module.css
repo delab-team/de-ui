@@ -1,0 +1,21 @@
+.rangeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.label {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.input {
+  width: 100%;
+  height: 20px;
+}
+
+.output {
+  font-size: 14px;
+  margin-top: 5px;
+}

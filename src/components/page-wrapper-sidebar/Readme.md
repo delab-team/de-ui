@@ -17,7 +17,7 @@ Once you have the PageWrapperSidebar component set up, you can use it to structu
 
 ## Example
 
-```
+```jsx
     return (
         <PageWrapperSidebar
             pageTitle="My Page Title"

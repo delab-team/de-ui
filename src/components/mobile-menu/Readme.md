@@ -13,8 +13,7 @@
 
   - `borderRadius (string)``: A string representing the border radius for the menu.
 ## Example
-<pre>
-```
+```jsx
 return (
           <div style={{ maxWidth: '400px', margin: '0 auto' }}>
             <MobileMenu items={[
@@ -43,4 +42,3 @@ return (
         </div>
 )
 ```
-</pre>

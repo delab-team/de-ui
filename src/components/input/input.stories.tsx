@@ -4,7 +4,7 @@ import { Meta, StoryObj } from '@storybook/react'
 import { Input, InputProps } from './input'
 
 const story: Meta<InputProps> = {
-    title: 'Common/Input',
+    title: 'Forms/Input',
     component: Input,
     tags: [ 'autodocs' ]
 }

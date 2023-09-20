@@ -11,7 +11,7 @@ The PageWrapper component is a reusable React component designed to create a str
 
 ## Example
 
-```
+```jsx
     return (
         <PageWrapper
             pageTitle="My Page Title"

@@ -62,6 +62,16 @@ Title: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/tit
 
 Text: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/text/Readme.md)
 
+Tooltip: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/tooltip/Readme.md)
+
+FileUpload: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/file-upload/Readme.md)
+
+Select: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/Select/Readme.md)
+
+Toggle: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/Toggle/Readme.md)
+
+Table: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/Table/Readme.md)
+
 # License
 
 [MIT License Copyright (c) 2023 DeLab Team](LICENSE)

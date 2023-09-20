@@ -12,7 +12,7 @@ The Header component is a reusable React component designed to create customizab
 
 ## Example
 
-```
+```jsx
             <Header
                 width="100%"
                 position="fixed"

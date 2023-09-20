@@ -10,7 +10,7 @@ The Spinner component is a reusable React component designed to display loading 
 
 Here's an example of how to use it:
 
-```
+```jsx
         <div>
             <h1>Loading Example</h1>
             <Spinner size="medium" color="#000000" />

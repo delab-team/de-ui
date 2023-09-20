@@ -15,7 +15,7 @@ The MobileHeader component accepts the following props:
 - `backgroundHeader`: Background color or CSS properties for the header.
 - `borderRadiusHeader`: Border radius for the header.
 
-```
+```jsx
 
 type MobileItem = {
     icon?: React.ReactNode
@@ -42,7 +42,7 @@ export interface MobileHeaderProps {
 
 ### Example 
 
-```
+``` jsx
 const mobileTopItems = [
     { text: 'Edit', isActive: false },
     { icon: <IconSelector id="profile" color="#fff" size="25px" />, isActive: false },

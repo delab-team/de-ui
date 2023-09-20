@@ -1,0 +1,13 @@
+.tableContainer {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.tableContainer > table {
+  width: 100%;
+}
+
+.tdTable {
+  padding: 8px;
+  text-align: center;
+}

@@ -10,7 +10,7 @@ The TextArea component is a reusable React component designed for creating text 
 
 Once you have installed the TextArea component, you can start using it in your React components. Here's an example of how to use it:
 
-```
+```jsx
   const [text, setText] = useState('');
 
   const handleTextChange = (newValue) => {

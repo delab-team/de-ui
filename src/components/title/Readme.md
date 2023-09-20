@@ -18,7 +18,7 @@ The Title component can be used to create text elements with various styles. It 
 
 ## Usage 
 
-```
+```jsx
       <Title variant="h1" fontWeight="bold" color="blue">
         Heading 1
       </Title>

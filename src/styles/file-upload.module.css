@@ -1,0 +1,29 @@
+.fileUploadContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fileUpload {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.uploadIcon {
+  width: 48px;
+  height: 48px;
+  fill: #007bff;
+}
+
+.uploadText {
+  margin-top: 8px;
+  color: #333;
+}
+
+.fileInput {
+  display: none;
+}

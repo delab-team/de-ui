@@ -11,7 +11,7 @@ The Font component is a reusable React component designed to apply custom font s
 
 ## Example
 
-```
+```jsx
             <Font
                 fontFamily="Arial, sans-serif"
                 fontSize="24px"

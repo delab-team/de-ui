@@ -20,7 +20,7 @@ The Text component accepts the following props:
 
 ## Usage 
 
-```
+```jsx
      <Text fontSize="medium" fontWeight="bold" color="blue">
         This is a bold and blue text.
       </Text>

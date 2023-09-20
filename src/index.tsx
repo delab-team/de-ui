@@ -112,3 +112,33 @@ export type { MobileMenuProps } from './components/mobile-menu/mobile-menu'
 */
 export { MobileHeader } from './components/mobile-header/mobile-header'
 export type { MobileHeaderProps } from './components/mobile-header/mobile-header'
+
+/**
+ * Tooltip
+*/
+export { Tooltip } from './components/tooltip/tooltip'
+export type { TooltipProps } from './components/tooltip/tooltip'
+
+/**
+ *  File-Upload
+*/
+export { FileUpload } from './components/file-upload/file-upload'
+export type { FileUploadProps } from './components/file-upload/file-upload'
+
+/**
+ * Select
+ */
+export { Select } from './components/select/select'
+export type { SelectProps } from './components/select/select'
+
+/**
+ * Toggle
+*/
+export { Toggle } from './components/toggle/toggle'
+export type { ToggleProps } from './components/toggle/toggle'
+
+/**
+ * Table
+*/
+export { Table } from './components/table/table'
+export type { TableProps } from './components/table/table'

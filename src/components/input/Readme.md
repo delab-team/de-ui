@@ -18,7 +18,7 @@ The Input component is a reusable React component designed to create input field
     onChange={(newValue: string) => setValue(newValue)
 ```
 
-```
+```jsx
         <form>
             <Input
                 label="Username"

@@ -16,7 +16,7 @@ variant ('default' | 'outline' | 'secondary' | 'tentery', optional): Specifies t
 
 ## Example 
 
-```
+```jsx
             <Button size="s" variant="default" textAlign="center" rounded="s">
                 Default Button
             </Button>
