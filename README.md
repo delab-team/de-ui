@@ -66,11 +66,17 @@ Tooltip: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/t
 
 FileUpload: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/file-upload/Readme.md)
 
-Select: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/Select/Readme.md)
+Select: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/select/Readme.md)
 
-Toggle: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/Toggle/Readme.md)
+Toggle: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/toggle/Readme.md)
 
-Table: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/Table/Readme.md)
+Table: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/table/Readme.md)
+
+Alert: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/alert/Readme.md)
+
+Modal: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/modal/Readme.md)
+
+ModalConfirm: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/modal-confirm/Readme.md)
 
 # License
 

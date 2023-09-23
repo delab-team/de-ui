@@ -3,70 +3,60 @@ import './styles/common.css'
 /**
  * Buttons
 */
-
 export { Button } from './components/button/button'
 export type { ButtonProps } from './components/button/button'
 
 /**
  * Inputs
 */
-
 export { Input } from './components/input/input'
 export type { InputProps } from './components/input/input'
 
 /**
  * Cells
 */
-
 export { Cell } from './components/cell/cell'
 export type { CellProps } from './components/cell/cell'
 
 /**
  * Icons
 */
-
 export { IconImg } from './components/icon-img/icon-img'
 export type { IconImgProps } from './components/icon-img/icon-img'
 
 /**
  * Avatars
 */
-
 export { Avatar } from './components/avatar/avatar'
 export type { AvatarProps } from './components/avatar/avatar'
 
 /**
  * Headers
 */
-
 export { Header } from './components/header/header'
 export type { HeaderProps } from './components/header/header'
 
 /**
  * Footer
 */
-
 export { Footer } from './components/footer/footer'
 export type { FooterProps } from './components/footer/footer'
 
 /**
  * Font
 */
-
 export { Font } from './components/font/font'
 export type  { FontProps } from './components/font/font'
 
 /**
  * Page wrapper
 */
-
 export { PageWrapper } from './components/page-wrapper/page-wrapper'
 export type { PageWrapperProps } from './components/page-wrapper/page-wrapper'
 
 /**
  * Page wrapper with sidebar
  */
-
 export { PageWrapperSidebar } from './components/page-wrapper-sidebar/page-wrapper-sidebar'
 export type { PageWrapperSidebarProps } from './components/page-wrapper-sidebar/page-wrapper-sidebar'
 
@@ -79,7 +69,6 @@ export type { SpinnerProps } from './components/spinner/spinner'
 /**
  * Icon Selector
 */
-
 export { IconSelector } from './components/icon-selector/icon-selector'
 export type { IconSelectorProps } from './components/icon-selector/icon-selector'
 
@@ -142,3 +131,21 @@ export type { ToggleProps } from './components/toggle/toggle'
 */
 export { Table } from './components/table/table'
 export type { TableProps } from './components/table/table'
+
+/**
+ * Alert
+*/
+export { Alert } from './components/alert/alert'
+export type { AlertProps } from './components/alert/alert'
+
+/**
+ * Modal
+*/
+export { Modal } from './components/modal/modal'
+export type { ModalProps } from './components/modal/modal'
+
+/**
+ * ModalConfirm
+*/
+export { ModalConfirm } from './components/modal-confirm/modal-confirm'
+export type { ModalConfirmProps } from './components/modal-confirm/modal-confirm'
