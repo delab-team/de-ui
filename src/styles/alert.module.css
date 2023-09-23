@@ -32,7 +32,6 @@
 .alert {
   padding: 10px;
   border: 1px solid #ccc;
-  margin: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;

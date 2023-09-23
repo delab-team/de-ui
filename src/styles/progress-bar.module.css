@@ -1,0 +1,60 @@
+.progressBarContainer {
+    display: flex;
+    align-items: center;
+    background-color: #e5e7eb;
+    border-radius: 5px;
+}
+
+.progressBar {
+    height: 20px;
+    border-radius: 5px;
+    transition: width 0.3s ease-in-out;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.small {
+    height: 16px;
+    font-size: 14px;
+}
+
+.large {
+    height: 30px;
+}
+
+.dark {
+    background-color: #333;
+}
+
+.blue {
+    background-color: #007bff;
+}
+
+.green {
+    background-color: #28a745;
+}
+
+.red {
+    background-color: #dc3545;
+}
+
+.purple {
+    background-color: #6f42c1;
+}
+
+.default {
+    background-color: #17a2b8;
+}
+
+.label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}

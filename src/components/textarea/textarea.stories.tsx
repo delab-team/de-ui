@@ -4,7 +4,7 @@ import { Meta, StoryObj } from '@storybook/react'
 import { TextArea, TextAreaProps } from './textarea'
 
 const story: Meta<TextAreaProps> = {
-    title: 'Common/Textarea',
+    title: 'Forms/Textarea',
     component: TextArea,
     tags: [ 'autodocs' ]
 }

@@ -1,4 +1,4 @@
-# Range Component Documentation
+# Range Component
 
 The `Range` component is a customizable input range slider that can be used in React applications.
 

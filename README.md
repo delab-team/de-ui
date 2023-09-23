@@ -22,61 +22,86 @@
 
 ## Install
 
-- as local project package
-```
+- **as local project package** 
+```jsx
 yarn add @delab-team/de-ui
 ```
 
 ## [Documentation](https://ui.delabteam.com/)
 
-## Components
-Here's a list of components included in our library:
+### **Here's a list of components included in our library:**
 
-Button: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/button/Readme.md)
+## Modals:
 
-Avatar: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/avatar/Readme.md)
+- **Alert**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/alert/Readme.md)
 
-Cell: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/cell/Readme.md)
+- **ModalConfirm**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/modal-confirm/Readme.md)
 
-Font: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/font/Readme.md)
+- **Modal**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/modal/Readme.md)
 
-Footer: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/footer/Readme.md)
+- **Alert**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/alert/Readme.md)
 
-IconImg: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/icon-img/Readme.md)
+## Common:
 
-Header: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/header/Readme.md)
+- **Avatar**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/avatar/Readme.md)
 
-Input: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/input/Readme.md)
+- **Button**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/button/Readme.md)
 
-IconSelector: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/icon-selector/Readme.md)
+- **Font**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/font/Readme.md)
 
-PageWrapper: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/page-wrapper/Readme.md)
+- **Footer**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/footer/Readme.md)
 
-PageWrapperSidebar: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/page-wrapper-sidebar/Readme.md)
+- **Header**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/header/Readme.md)
 
-TextArea: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/textarea/Readme.md)
+- **Spinner**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/spinner/Readme.md)
 
-Spinner: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/spinner/Readme.md)
+- **Toggle**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/toggle/Readme.md)
 
-Title: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/title/Readme.md)
+- **Tooltip**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/tooltip/Readme.md)
 
-Text: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/text/Readme.md)
+- **ProgressBar**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/progress-bar/Readme.md)
 
-Tooltip: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/tooltip/Readme.md)
+- **Cell**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/cell/Readme.md)
 
-FileUpload: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/file-upload/Readme.md)
+## Forms:
 
-Select: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/select/Readme.md)
+- **FileUpload**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/file-upload/Readme.md)
 
-Toggle: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/toggle/Readme.md)
+- **Input**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/input/Readme.md)
 
-Table: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/table/Readme.md)
+- **Range**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/range/Readme.md)
 
-Alert: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/alert/Readme.md)
+- **Select**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/select/Readme.md)
 
-Modal: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/modal/Readme.md)
+- **TextArea**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/textarea/Readme.md)
 
-ModalConfirm: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/modal-confirm/Readme.md)
+## Icons:
+
+- **IconImg**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/icon-img/Readme.md)
+
+- **IconSelector**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/icon-selector/Readme.md)
+
+## Mobile:
+
+- **MobileHeader**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/mobile-header/Readme.md)
+
+- **MobileMenu**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/mobile-menu/Readme.md)
+
+## Wrappers:
+
+- **PageWrapper**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/page-wrapper/Readme.md)
+
+- **PageWrapperSidebar**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/page-wrapper-sidebar/Readme.md)
+
+## Tables:
+
+- **Table**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/table/Readme.md)
+
+## Typography:
+
+- **Title**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/title/Readme.md)
+
+- **Text**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/text/Readme.md)
 
 # License
 

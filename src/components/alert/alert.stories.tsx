@@ -6,7 +6,7 @@ import { Button } from '../button/button'
 import { Alert, AlertProps } from './alert'
 
 const meta: Meta<AlertProps> = {
-    title: 'Common/Alert',
+    title: 'Modals/Alert',
     component: Alert,
     tags: [ 'autodocs' ]
 }

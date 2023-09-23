@@ -149,3 +149,9 @@ export type { ModalProps } from './components/modal/modal'
 */
 export { ModalConfirm } from './components/modal-confirm/modal-confirm'
 export type { ModalConfirmProps } from './components/modal-confirm/modal-confirm'
+
+/**
+ * ProgressBar
+*/
+export { ProgressBar } from './components/progress-bar/progress-bar'
+export type { ProgressBarProps } from './components/progress-bar/progress-bar'

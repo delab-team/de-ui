@@ -1,4 +1,4 @@
-# Table Component Documentation
+# Table Component
 
 The `Table` component is a customizable table for displaying tabular data in React applications.
 

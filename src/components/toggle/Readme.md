@@ -1,4 +1,4 @@
-# Toggle Component Documentation
+# Toggle Component
 
 The `Toggle` component is a customizable toggle switch that can be used in React applications.
 

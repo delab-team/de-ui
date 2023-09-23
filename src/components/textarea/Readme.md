@@ -2,10 +2,6 @@
 
 The TextArea component is a reusable React component designed for creating text areas with additional features like error styling and size options. This readme provides instructions on how to use the component along with an example code snippet.
 
-## Installation
-
-The TextArea component is a reusable React component designed for creating text areas with additional features like error styling and size options. This readme provides instructions on how to use the component along with an example code snippet.
-
 ## Usage
 
 Once you have installed the TextArea component, you can start using it in your React components. Here's an example of how to use it:

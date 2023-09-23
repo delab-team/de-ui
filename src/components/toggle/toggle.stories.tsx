@@ -5,7 +5,7 @@ import { Meta, StoryObj } from '@storybook/react'
 import { Toggle, ToggleProps } from './toggle'
 
 const story: Meta<ToggleProps> = {
-    title: 'Forms/Toggle',
+    title: 'Common/Toggle',
     component: Toggle,
     tags: [ 'autodocs' ]
 }
