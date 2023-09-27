@@ -191,3 +191,21 @@ export type { RichCellItemProps } from './components/rich-cell/rich-cell-item'
 */
 export { RichCell } from './components/rich-cell/rich-cell'
 export type { RichCellProps } from './components/rich-cell/rich-cell'
+
+/**
+ * ActionCell
+*/
+export { ActionCell } from './components/action-cell/action-cell'
+export type { ActionCellProps } from './components/action-cell/action-cell'
+
+/**
+ * ButtonsCell
+*/
+export { ButtonsCell } from './components/buttons-cell/buttons-cell'
+export type { ButtonsCellProps } from './components/buttons-cell/buttons-cell'
+
+/**
+ * SettingsCell
+*/
+export { SettingsCell } from './components/settings-cell/settings-cell'
+export type { SettingsCellProps } from './components/settings-cell/settings-cell'

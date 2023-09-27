@@ -1,0 +1,31 @@
+.inner {
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.innerWhite {
+  background: #FFF;
+}
+
+.innerBlack {
+  background: #000;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.itemBlack > span {
+  color: #FFFFFF;
+}
+
+.itemWhite > span {
+  color: #000;
+}

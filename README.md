@@ -31,6 +31,12 @@ yarn add @delab-team/de-ui
 
 ### **Here's a list of components included in our library:**
 
+## Cells:
+
+- **ActionCell**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/action-cell/Readme.md)
+- **ButtonsCell**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/buttons-cell/Readme.md)
+- **Settings-Cell**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/settings-cell/Readme.md)
+
 ## Modals:
 
 - **Alert**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/alert/Readme.md)

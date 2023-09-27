@@ -8,6 +8,7 @@
 }
 
 .richCellWhite {
+  border: 1px solid #e2e2e2;
   background: #fff;
 }
 
@@ -32,6 +33,10 @@
   transition: all 0.3s ease 0s;
 }
 
+.richCellTopBlack > .richChevron > svg > path {
+  fill: #fff;
+}
+
 .richCellTopBlack > .richChevron > a {
   color: #fff;
 }
@@ -40,16 +45,16 @@
   color: #e0e0e0;
 }
 
+.richCellTopWhite > .richChevron > svg > path {
+  fill: #000;
+}
+
 .richCellTopWhite > .richChevron > a {
   color: #3b3b3b;
 }
 
 .richCellTopWhite > .richChevron > a:hover {
   color: #000;
-}
-
-.richCellTopBlack > .richChevron > a > svg {
-  fill: #fff;
 }
 
 .richCellTopWhite > .richChevron > a {
