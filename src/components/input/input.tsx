@@ -8,6 +8,7 @@ export interface InputProps {
     onChange: (newValue: string) => void;
     placeholder?: string;
     size?: 'xsmall' | 'small' | 'medium' | 'large';
+    className?: string;
 }
 
 export const Input: React.FC<InputProps> = ({
@@ -17,6 +18,7 @@ export const Input: React.FC<InputProps> = ({
     onChange,
     placeholder,
     size = 'medium',
+    className,
     ...rest
 }) => {
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -33,7 +35,7 @@ export const Input: React.FC<InputProps> = ({
                 value={value}
                 onChange={handleChange}
                 placeholder={placeholder}
-                className={`${s.input} ${sizeClass}`}
+                className={`${s.input} ${sizeClass} ${className || ''}`}
                 {...rest}
             />
             {error && <div className={s.error}>{error}</div>}

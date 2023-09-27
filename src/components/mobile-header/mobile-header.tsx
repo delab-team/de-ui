@@ -50,6 +50,7 @@ export const MobileHeader: FC<MobileHeaderProps> = ({
     if (borderRadiusHeader) {
         backgroundStyle.borderRadius = borderRadiusHeader
     }
+
     return (
         <div className={`${s.mobile} ${mobileClassName}`} style={backgroundStyle}>
             <div className={s.mobileTopContainer}>

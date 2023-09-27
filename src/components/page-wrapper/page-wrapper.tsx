@@ -9,6 +9,9 @@ export interface PageWrapperProps {
     footer: React.ReactNode;
     containerWidth?: string;
     className?: string;
+    headerClassName?: string;
+    mainClassName?: string;
+    footerClassName?: string;
 }
 
 export const PageWrapper: FC<PageWrapperProps> = ({
@@ -17,7 +20,10 @@ export const PageWrapper: FC<PageWrapperProps> = ({
     footer,
     pageTitle,
     containerWidth,
-    className
+    className,
+    headerClassName,
+    mainClassName,
+    footerClassName
 }) => {
     document.title = pageTitle
 
@@ -27,13 +33,13 @@ export const PageWrapper: FC<PageWrapperProps> = ({
 
     return (
         <div className={wrapperClassName} style={containerStyle}>
-            <div>
+            <div className={headerClassName}>
                 {header}
             </div>
-            <main className={s.main}>
+            <main className={`${s.main} ${mainClassName || ''}`}>
                 {content}
             </main>
-            <div className={s.footer}>
+            <div className={`${s.footer} ${footerClassName || ''}`}>
                 {footer}
             </div>
         </div>

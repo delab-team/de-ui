@@ -3,7 +3,7 @@ import { FC } from 'react'
 import s from '../../styles/mobile-menu.module.css'
 
 export interface MobileMenuItemProps {
-    icon: React.ReactNode;
+    icon?: React.ReactNode;
     text: string;
     backgroundColor?: string;
     textColor?: string;

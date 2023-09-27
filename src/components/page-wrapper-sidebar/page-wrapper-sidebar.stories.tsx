@@ -32,7 +32,13 @@ export const Playground: Story = {
                         position="static"
                         className="header"
                         style={{ borderRadius: '0px' }}
-                        before={<img src="https://avatars.githubusercontent.com/u/116884789?s=200&v=4" alt="Logo" className="logo" />}
+                        before={
+                            <img
+                                src="https://avatars.githubusercontent.com/u/116884789?s=200&v=4"
+                                alt="Logo"
+                                className="logo"
+                            />
+                        }
                         children={
                             <nav className="nav">
                                 <ul>
@@ -51,9 +57,7 @@ export const Playground: Story = {
                                 </ul>
                             </nav>
                         }
-                        after={
-                            <Button size="l">Войти</Button>
-                        }
+                        after={<Button size="l">Войти</Button>}
                     />
                 }
                 footer={
@@ -76,7 +80,6 @@ export const Playground: Story = {
                             { id: '8', link: <Link to="portfolio">Portfolio</Link> },
                             { id: '9', link: <Link to="events">Events</Link> }
                         ]}
-
                         contactInfo={{
                             phoneNumber: '+1 (123) 456-7890',
                             email: 'info@example.com',
@@ -105,9 +108,7 @@ export const Playground: Story = {
                     </aside>
                 }
             >
-                <main>
-                    Your page's main content
-                </main>
+                <main>Your page's main content</main>
             </PageWrapperSidebar>
         </Router>
     )

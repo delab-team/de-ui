@@ -9,6 +9,9 @@ The PageWrapper component is a reusable React component designed to create a str
 - `content` (React.ReactNode, required): The main content of the page that goes inside the <main> element.
 - `containerWidth` - container width
 - `className` - wrapper className
+- `headerClassName?`: string;
+- `mainClassName?`: string;
+- `footerClassName?`: string;
 
 ## Example
 
