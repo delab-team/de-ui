@@ -1,5 +1,7 @@
 import { FC, useRef } from 'react'
+
 import { IconSelector } from '../icon-selector/icon-selector'
+
 import styles from '../../styles/file-upload.module.css'
 
 export interface FileUploadProps {

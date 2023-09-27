@@ -18,8 +18,8 @@ export const Playground: Story = {
         <IconSelector {...args} />
     ),
     args: {
-        id: 'search',
+        id: 'bell',
         size: '32px',
-        color: '#000000'
+        color: 'transparent'
     }
 }

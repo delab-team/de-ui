@@ -31,7 +31,7 @@ export const Select: FC<SelectProps> = ({ options, selectedValue, onSelect }) =>
             <div className={`${s.selectHeader} ${isOpen ? s.open : ''}`} onClick={toggleSelect}>
                 <div className={s.selectedValue}>{selectedValue}</div>
                 <div className={s.arrowIcon}>
-                    {isOpen ? <IconSelector id="chevron-up" size="23px" color="#fff"/> : <IconSelector id="chevron-bottom" size="23px" color="#fff" />}
+                    {isOpen ? <IconSelector id="chevron-up" size="23px" color="#fff"/> : <IconSelector id="chevron-down" size="23px" color="#fff" />}
                 </div>
             </div>
             {isOpen && (

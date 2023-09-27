@@ -155,3 +155,15 @@ export type { ModalConfirmProps } from './components/modal-confirm/modal-confirm
  */
 export { ProgressBar } from './components/progress-bar/progress-bar'
 export type { ProgressBarProps } from './components/progress-bar/progress-bar'
+
+/**
+ * LogoSelector
+*/
+export { LogoSelector } from './components/logo-selector/logo-selector'
+export type { LogoSelectorProps } from './components/logo-selector/logo-selector'
+
+/**
+ * SocialIcons
+*/
+export { SocialIcons } from './components/social-icons/social-icons'
+export type { SocialIconsProps } from './components/social-icons/social-icons'

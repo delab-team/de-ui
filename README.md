@@ -79,6 +79,10 @@ yarn add @delab-team/de-ui
 
 - **IconSelector**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/icon-selector/Readme.md)
 
+- **SocialIcons** [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/social-icons/Readme.md)
+
+- **LogoSelector** [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/logo-selector/Readme.md)
+
 ## Mobile:
 
 - **MobileHeader**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/mobile-header/Readme.md)

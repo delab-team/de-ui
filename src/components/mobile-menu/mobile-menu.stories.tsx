@@ -28,15 +28,15 @@ export const Playground: Story = {
                     onClick: () => {}
                 },
                 {
-                    icon: <IconSelector id="profile" color="#fff" size="24px" />,
+                    icon: <IconSelector id="user" color="#fff" size="24px" />,
                     text: 'Профиль',
                     backgroundColor: 'transparent',
                     textColor: 'white',
                     onClick: () => {}
                 },
                 {
-                    icon: <IconSelector id="settings" color="#fff" size="24px" />,
-                    text: 'Профиль',
+                    icon: <IconSelector id="credit-card" color="#fff" size="24px" />,
+                    text: 'Пополнить',
                     backgroundColor: 'transparent',
                     textColor: 'white',
                     onClick: () => {}

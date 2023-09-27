@@ -27,7 +27,7 @@ export const Tooltip: FC<TooltipProps> = ({ text, children }) => {
                 onMouseLeave={hideTooltip}
             >
                 {children}
-                <IconSelector id="info" className={s.infoIcon} />
+                <IconSelector id="info-2" className={s.infoIcon} />
             </div>
             {isTooltipVisible && (
                 <div className={s.tooltip}>
