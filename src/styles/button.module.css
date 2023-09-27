@@ -1,131 +1,146 @@
 .btn {
-  background-color: #1976D2;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-  height: 36px;
-  text-align: center;
-  text-decoration: none;
-  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+    color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 16px;
+    gap: 10px;
 }
 
+/*--------------------Button Size--------------------*/
+
 .button--size-s {
-  font-size: 14px;
-  height: 32px;
-  padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    height: 26px;
+    padding: 5px 16px;
 }
 
 .button--size-m {
-  font-size: 16px;
-  height: 36px;
-  padding: 12px 24px;
+    font-size: 13px;
+    font-weight: 400;
+    height: 32px;
+    padding: 8px 16px;
 }
 
 .button--size-l {
-  font-size: 18px;
-  height: 40px;
-  padding: 16px 32px;
+    font-size: 13px;
+    height: 40px;
+    padding: 12px 23.5px;
 }
 
-.button--type-default {
-  background-color: #1976D2;
+.button--size-str {
+    height: 32px;
+    padding: 8px;
+    width: 100%;
 }
+  
+/*--------------------/Button Size--------------------*/
 
-.button--type-outline {
-  background-color: transparent;
-  border: 1px solid #1976D2;
-  color: #1976D2;
-}
-
-.button--type-secondary {
-  background-color: #F50057;
-}
-
-.button--type-tentery {
-  background-color: #4CAF50;
-}
+/*--------------------Text-Align--------------------*/
 
 .button--align-left {
-  text-align: left;
+    text-align: left;
 }
 
 .button--align-center {
-  text-align: center;
+    text-align: center;
 }
 
 .button--align-right {
-  text-align: right;
+    text-align: right;
 }
+  
+/*--------------------/Text-Align--------------------*/
+
+/*--------------------Border-Radius--------------------*/
 
 .button--rounded-small {
-  border-radius: 4px;
+    border-radius: 4px;
 }
 
 .button--rounded-medium {
-  border-radius: 16px;
+    border-radius: 16px;
 }
 
 .button--rounded-large {
-  border-radius: 32px;
+    border-radius: 32px;
 }
 
+/*--------------------/Border-Radius--------------------*/
+
+/*--------------------Disabled--------------------*/
+
 .btn-disabled {
-  background-color: #ccc;
-  color: #666;
-  cursor: not-allowed;
+    cursor: not-allowed;
+    opacity: 0.55;
+    color: #dcdcdc;
+    transition: all 0.3s ease 0s;
 }
 
 .btn-disabled:hover {
-  background-color: #8b8787 !important;
-  color: #666;
-  cursor: not-allowed;
+    opacity: 0.75;
+    cursor: not-allowed;
 }
 
-.btn-loading {}
+/*--------------------/Disabled--------------------*/
 
-.btn:hover {
-  background-color: #1565c0;
+/*--------------------Variants--------------------*/
+
+.button--type-primary {
+  background: #000;
 }
 
-.btn:hover.button--type-outline {
-  background-color: #1976D2;
-  color: #fff;
+.button--type-secondary {
+  background: #6C6C6C;
 }
 
-.btn:hover.button--type-secondary {
-  background-color: #c70039;
+.button--type-outline {
+  color: #000;
+  border: 1px solid #232323;
+  background: transparent;
 }
 
-.btn:hover.button--type-tentery {
-  background-color: #45a049;
+.button--type-tertiary {
+  color: #000;
+  background: transparent;
 }
 
-.btn:hover.button--type-outline.button--type-secondary,
-.btn:hover.button--type-outline.button--type-tentery,
-.btn:hover.button--type-secondary.button--type-tentery {
-  background-color: #1565c0;
-  color: #fff;
+.button--type-successfully {
+  background: #4BB34B;
 }
 
-.btn:hover.button--rounded-small {
-  border-radius: 4px;
+.button--type-danger {
+  background: #E64646;
 }
 
-.btn:hover.button--rounded-medium {
-  border-radius: 16px;
+.button--type-primary:hover {
+  background: #4f4848;
 }
 
-.btn:hover.button--rounded-large {
-  border-radius: 32px;
+.button--type-secondary:hover {
+  background: #636161;
+}
+  
+.button--type-outline:hover {
+  background: #f5f5f5;
 }
 
-.btn:hover.disabled {
-  background-color: #ccc;
-  color: #666;
+.button--type-tertiary:hover {
+  background: #f5f5f5;
 }
+
+.button--type-successfully:hover {
+  background: #47c547;
+}
+
+.button--type-danger:hover {
+  background: #ee3939;
+}
+/*--------------------/Variants--------------------*/

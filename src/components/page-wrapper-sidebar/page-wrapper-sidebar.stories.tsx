@@ -57,7 +57,7 @@ export const Playground: Story = {
                                 </ul>
                             </nav>
                         }
-                        after={<Button size="l">Войти</Button>}
+                        after={<Button size="large">Войти</Button>}
                     />
                 }
                 footer={

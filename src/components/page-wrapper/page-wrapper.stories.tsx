@@ -52,7 +52,7 @@ export const Playground: Story = {
                             </nav>
                         }
                         after={
-                            <Button size="l">Войти</Button>
+                            <Button size="large">Войти</Button>
                         }
                     />
                 }

@@ -19,6 +19,6 @@ export const Playground: Story = {
     ),
     args: {
         children: 'Button',
-        size: 's'
+        size: 'small'
     }
 }

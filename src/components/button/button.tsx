@@ -4,13 +4,15 @@ import s from '../../styles/button.module.css'
 
 import { Spinner } from '../spinner/spinner'
 
-const buttonSize = { s: s['button--size-s'], m: s['button--size-m'], l: s['button--size-l'] }
+const buttonSize = { small: s['button--size-s'], medium: s['button--size-m'], large: s['button--size-l'], stretched: s['button--size-str'] }
 
 const buttonType = {
-    default: s['button--type-default'],
-    outline: s['button--type-outline'],
+    primary: s['button--type-primary'],
     secondary: s['button--type-secondary'],
-    tentery: s['button--type-tentery']
+    outline: s['button--type-outline'],
+    tertiary: s['button--type-tertiary'],
+    successfully: s['button--type-successfully'],
+    danger: s['button--type-danger']
 }
 
 const buttonAlign = {
@@ -38,11 +40,11 @@ export interface ButtonProps
     /**
      * variant button
      */
-    variant?: 'default' | 'outline' | 'secondary' | 'tentery'
+    variant?: 'primary' | 'secondary' | 'outline' | 'successfully' | 'danger'
     /**
      * size button
      */
-    size?: 's' | 'm' | 'l'
+    size?: 'small' | 'medium' | 'large' | 'stretched'
     /**
      * loading
      */
@@ -67,8 +69,8 @@ export interface ButtonProps
 
 export const Button = ({
     children,
-    size = 's',
-    variant = 'default',
+    size = 'small',
+    variant = 'primary',
     textAlign = 'center',
     rounded = 's',
     startIcon,

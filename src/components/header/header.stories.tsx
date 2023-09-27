@@ -44,7 +44,7 @@ export const Playground: Story = {
                     </nav>
                 }
                 after={
-                    <Button size="l">Войти</Button>
+                    <Button size="large" variant='secondary'>Войти</Button>
                 }
             />
         </Router>
