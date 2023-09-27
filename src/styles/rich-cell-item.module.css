@@ -1,0 +1,56 @@
+.item {
+    padding: 6px 16px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+}
+
+.itemInfo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.itemInfo > img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.itemContentTitle {
+    font-size: 15px;
+    line-height: 133.33%;
+    margin-bottom: 1px;
+}
+
+.itemContentDate {
+    font-size: 13px;
+    color: #818c99;
+    line-height: 123%;
+}
+
+.darkItem {
+    background: #232323;
+}
+
+.whiteItem {
+    border: 1px solid #e2e2e2;
+    background: #fff;
+}
+
+.sum {
+  color: #4BB34B;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.darkItem .itemContentTitle {
+  color: #000;
+}
+
+.darkItem .itemContentTitle {
+  color: #fff;
+}

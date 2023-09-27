@@ -179,3 +179,15 @@ export type { RadioProps } from './components/radio/radio'
 */
 export { Checkbox } from './components/checkbox/checkbox'
 export type { CheckboxProps } from './components/checkbox/checkbox'
+
+/**
+ * RichCellItem
+*/
+export { RichCellItem } from './components/rich-cell/rich-cell-item'
+export type { RichCellItemProps } from './components/rich-cell/rich-cell-item'
+
+/**
+ * RichCell
+*/
+export { RichCell } from './components/rich-cell/rich-cell'
+export type { RichCellProps } from './components/rich-cell/rich-cell'

@@ -99,6 +99,12 @@ yarn add @delab-team/de-ui
 
 - **PageWrapperSidebar**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/page-wrapper-sidebar/Readme.md)
 
+## RichCells:
+
+- **RichCellItem**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/rich-cell/Readme.md)
+
+- **RichCell**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/rich-cell/Readme.md)
+
 ## Tables:
 
 - **Table**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/table/Readme.md)
