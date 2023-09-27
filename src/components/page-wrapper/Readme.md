@@ -6,8 +6,9 @@ The PageWrapper component is a reusable React component designed to create a str
 - `pageTitle` (string, required): Specifies the title of the page, which is set as the document title.
 - `header` (React.ReactNode, required): Content to be displayed in the header section of the page.
 - `footer` (React.ReactNode, required): Content to be displayed in the footer section of the page.
-- `content` (React.ReactNode, required): The main content of the page that goes inside the 
-- `<main>` element.
+- `content` (React.ReactNode, required): The main content of the page that goes inside the <main> element.
+- `containerWidth` - container width
+- `className` - wrapper className
 
 ## Example
 

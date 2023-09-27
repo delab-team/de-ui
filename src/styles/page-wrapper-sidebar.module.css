@@ -2,6 +2,8 @@
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
+  padding: 0 10px;
+  margin: 0 auto;
 }
 
 .header {

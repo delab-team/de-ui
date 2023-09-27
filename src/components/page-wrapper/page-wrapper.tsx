@@ -7,22 +7,35 @@ export interface PageWrapperProps {
     pageTitle: string;
     header: React.ReactNode;
     footer: React.ReactNode;
+    containerWidth?: string;
+    className?: string;
 }
 
-export const PageWrapper: FC<PageWrapperProps> = ({ content, header, footer, pageTitle }) => {
+export const PageWrapper: FC<PageWrapperProps> = ({
+    content,
+    header,
+    footer,
+    pageTitle,
+    containerWidth,
+    className
+}) => {
     document.title = pageTitle
 
+    const containerStyle = containerWidth ? { width: containerWidth } : undefined
+
+    const wrapperClassName = `${s.pageWrapper} ${className || ''}`
+
     return (
-        <div className={s.pageWrapper}>
-            <header>
+        <div className={wrapperClassName} style={containerStyle}>
+            <div>
                 {header}
-            </header>
-            <main>
+            </div>
+            <main className={s.main}>
                 {content}
             </main>
-            <footer>
+            <div className={s.footer}>
                 {footer}
-            </footer>
+            </div>
         </div>
     )
 }

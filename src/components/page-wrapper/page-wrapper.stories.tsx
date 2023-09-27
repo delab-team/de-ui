@@ -26,6 +26,7 @@ export const Playground: Story = {
         <Router>
             <PageWrapper
                 pageTitle="My Page Title"
+                containerWidth='900px'
                 header={
                     <Header
                         width="100%"

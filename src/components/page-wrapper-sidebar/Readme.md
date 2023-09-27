@@ -12,9 +12,9 @@ Once you have the PageWrapperSidebar component set up, you can use it to structu
 - `header` (React.ReactNode, required): Content to be displayed in the header section of the page.
 - `footer` (React.ReactNode, required): Content to be displayed in the footer section of the page.
 - `sidebar` (React.ReactNode, required): Content to be displayed in the sidebar section of the page.
-- `children` (React.ReactNode, required): The main content of the page that goes inside the
-- `<main>` element.
-
+- `children` (React.ReactNode, required): The main content of the page that goes inside the <main> element.
+- `containerWidth` - container width
+- `className` - wrapper className
 ## Example
 
 ```jsx

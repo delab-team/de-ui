@@ -8,6 +8,8 @@ export interface PageWrapperSidebarProps {
     header: React.ReactNode;
     footer: React.ReactNode;
     sidebar: React.ReactNode;
+    containerWidth?: string;
+    className?: string;
 }
 
 export const PageWrapperSidebar: FC<PageWrapperSidebarProps> = ({
@@ -15,15 +17,21 @@ export const PageWrapperSidebar: FC<PageWrapperSidebarProps> = ({
     footer,
     pageTitle,
     sidebar,
-    children
+    children,
+    containerWidth,
+    className
 }) => {
     document.title = pageTitle
 
+    const containerStyle = containerWidth ? { width: containerWidth } : undefined
+
+    const wrapperClassName = `${s.pageWrapper} ${className || ''}`
+
     return (
-        <div className={s.pageWrapper}>
-            <header className={s.header}>
+        <div className={wrapperClassName} style={containerStyle}>
+            <div className={s.header}>
                 {header}
-            </header>
+            </div>
             <div className={s.contentWrapper}>
                 <aside className={s.sidebar}>
                     {sidebar}
@@ -32,9 +40,9 @@ export const PageWrapperSidebar: FC<PageWrapperSidebarProps> = ({
                     {children}
                 </main>
             </div>
-            <footer className={s.footer}>
+            <div className={s.footer}>
                 {footer}
-            </footer>
+            </div>
         </div>
     )
 }
