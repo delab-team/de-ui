@@ -39,8 +39,6 @@ yarn add @delab-team/de-ui
 
 - **Modal**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/modal/Readme.md)
 
-- **Alert**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/alert/Readme.md)
-
 ## Common:
 
 - **Avatar**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/avatar/Readme.md)
