@@ -12,9 +12,20 @@ export interface SelectProps {
     options: Option[];
     selectedValue: string;
     onSelect: (value: string) => void;
+    variant: 'black' | 'white'
 }
 
-export const Select: FC<SelectProps> = ({ options, selectedValue, onSelect }) => {
+const selectVariantType = {
+    black: s['select--type-black'],
+    white: s['select--type-white']
+}
+
+const selectItemType = {
+    black: s['select-item--type-black'],
+    white: s['select-item--type-white']
+}
+
+export const Select: FC<SelectProps> = ({ options, selectedValue, onSelect, variant = 'black' }) => {
     const [ isOpen, setIsOpen ] = useState<boolean>(false)
 
     const toggleSelect = () => {
@@ -27,19 +38,19 @@ export const Select: FC<SelectProps> = ({ options, selectedValue, onSelect }) =>
     }
 
     return (
-        <div className={s.customSelect}>
+        <div className={`${s.customSelect} ${selectVariantType[variant]}`}>
             <div className={`${s.selectHeader} ${isOpen ? s.open : ''}`} onClick={toggleSelect}>
                 <div className={s.selectedValue}>{selectedValue}</div>
                 <div className={s.arrowIcon}>
-                    {isOpen ? <IconSelector id="chevron-up" size="23px" color="#fff"/> : <IconSelector id="chevron-down" size="23px" color="#fff" />}
+                    {isOpen ? <IconSelector id="chevron-top-2" color={variant === 'black' ? '#fff' : '#000'} size="23px" /> : <IconSelector id="chevron-bottom-2" color={variant === 'black' ? '#fff' : '#000'} size="23px" />}
                 </div>
             </div>
             {isOpen && (
-                <ul className={s.optionList}>
+                <ul className={`${s.optionList} ${selectItemType[variant]}`}>
                     {options.map(option => (
                         <li
                             key={option.value}
-                            className={s.optionItem}
+                            className={`${s.optionItem}`}
                             onClick={() => handleOptionClick(option.value)}
                         >
                             {option.label}

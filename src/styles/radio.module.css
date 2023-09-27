@@ -1,0 +1,38 @@
+.radio-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.radio {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #C0C0C0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  transition: border-color 0.2s ease-in-out;
+}
+.radio.checked {
+  border: 2px solid #000;
+}
+.radio.checked > svg  {
+  width: 8px;
+  height: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.disabled {
+  color: #C0C0C0;
+  cursor: not-allowed;
+  opacity: 0.9;
+}
+
+.radio-label {
+  font-size: 15px;
+}

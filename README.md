@@ -73,6 +73,10 @@ yarn add @delab-team/de-ui
 
 - **TextArea**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/textarea/Readme.md)
 
+- **Radio**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/radio/Readme.md)
+
+- **Checkbox**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/checkbox/Readme.md)
+
 ## Icons:
 
 - **IconImg**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/icon-img/Readme.md)

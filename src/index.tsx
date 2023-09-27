@@ -167,3 +167,15 @@ export type { LogoSelectorProps } from './components/logo-selector/logo-selector
 */
 export { SocialIcons } from './components/social-icons/social-icons'
 export type { SocialIconsProps } from './components/social-icons/social-icons'
+
+/**
+ * Radio
+*/
+export { Radio } from './components/radio/radio'
+export type { RadioProps } from './components/radio/radio'
+
+/**
+ * Checkbox
+*/
+export { Checkbox } from './components/checkbox/checkbox'
+export type { CheckboxProps } from './components/checkbox/checkbox'

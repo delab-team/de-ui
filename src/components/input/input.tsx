@@ -8,7 +8,13 @@ export interface InputProps {
     onChange: (newValue: string) => void;
     placeholder?: string;
     size?: 'xsmall' | 'small' | 'medium' | 'large';
+    variant: 'black' | 'white'
     className?: string;
+}
+
+const inputVariantType = {
+    black: s['input--type-black'],
+    white: s['input--type-white']
 }
 
 export const Input: React.FC<InputProps> = ({
@@ -18,6 +24,7 @@ export const Input: React.FC<InputProps> = ({
     onChange,
     placeholder,
     size = 'medium',
+    variant = 'black',
     className,
     ...rest
 }) => {
@@ -35,7 +42,7 @@ export const Input: React.FC<InputProps> = ({
                 value={value}
                 onChange={handleChange}
                 placeholder={placeholder}
-                className={`${s.input} ${sizeClass} ${className || ''}`}
+                className={`${s.input} ${sizeClass} ${inputVariantType[variant]} ${className || ''}`}
                 {...rest}
             />
             {error && <div className={s.error}>{error}</div>}

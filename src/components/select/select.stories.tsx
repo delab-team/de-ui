@@ -11,9 +11,9 @@ const story: Meta<SelectProps> = {
 }
 
 const example = [
-    { value: 'option1', label: 'Option 1' },
-    { value: 'option2', label: 'Option 2' },
-    { value: 'option3', label: 'Option 3' }
+    { value: 'Option 1', label: 'Option 1' },
+    { value: 'Option 2', label: 'Option 2' },
+    { value: 'Option 3', label: 'Option 3' }
 ]
 
 export default story
@@ -21,14 +21,14 @@ export default story
 type Story = StoryObj<SelectProps>
 
 const SelectExample = () => {
-    const [ selectedValue, setSelectedValue ] = useState<string>(example[0].value)
+    const [ selectedValue, setSelectedValue ] = useState<string>('Type the text')
 
     const handleSelect = (value: string) => {
         setSelectedValue(value)
     }
 
     return (
-        <Select options={example} selectedValue={selectedValue} onSelect={handleSelect} />
+        <Select variant="black" options={example} selectedValue={selectedValue} onSelect={handleSelect} />
     )
 }
 

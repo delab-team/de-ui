@@ -18,7 +18,7 @@ export default story
 
 const mobileTopItems = [
     { text: 'Edit', isActive: false },
-    { mobileComponent: <Input value="" onChange={() => {}}  size="xsmall" /> },
+    { mobileComponent: <Input variant="white" value="" onChange={() => {}}  size="xsmall" /> },
     { icon: <IconSelector id="user" color="#fff" size="25px" />, isActive: false }
 ]
 

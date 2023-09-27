@@ -1,0 +1,44 @@
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox-icon {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: white;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.checkbox {
+  border-radius: 3px;
+  border: 1.5px solid #000;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checked {
+  background: #000;
+}
+
+.disabled {
+  color: #C0C0C0;
+  cursor: not-allowed;
+  opacity: 0.9;
+}
+
+.checkbox.checked.disabled {
+  background: #C0C0C0;
+}
+
+.checkbox.disabled {
+  border: 1px solid #C0C0C0;
+}

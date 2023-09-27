@@ -18,7 +18,7 @@ export const Playground: Story = {
         <Input {...args} />
     ),
     args: {
-        label: 'Username',
+        variant: 'black',
         placeholder: 'Enter your username',
         error: 'Username is required'
     }

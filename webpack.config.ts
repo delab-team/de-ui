@@ -61,6 +61,7 @@ const config: Configuration = {
         new CopyWebpackPlugin({
             patterns: [
                 { from: 'src/styles', to: '../dist/styles' },
+                { from: 'src/assets', to: '../dist/assets' },
             ],
         }),
     ],
