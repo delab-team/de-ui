@@ -209,3 +209,15 @@ export type { ButtonsCellProps } from './components/buttons-cell/buttons-cell'
 */
 export { SettingsCell } from './components/settings-cell/settings-cell'
 export type { SettingsCellProps } from './components/settings-cell/settings-cell'
+
+/**
+ * InfoCell
+*/
+export { InfoCell } from './components/info-cell/info-cell'
+export type { InfoCellProps } from './components/info-cell/info-cell'
+
+/**
+ * PaymentCell
+*/
+export { PaymentCell } from './components/payment-cell/payment-cell'
+export type { PaymentCellProps } from './components/payment-cell/payment-cell'

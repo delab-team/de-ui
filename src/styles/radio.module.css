@@ -20,6 +20,7 @@
   border: 2px solid #000;
 }
 .radio.checked > svg  {
+  border-radius: 50%;
   width: 8px;
   height: 8px;
   display: flex;

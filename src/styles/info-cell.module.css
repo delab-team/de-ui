@@ -1,0 +1,56 @@
+.inner {
+  padding: 20px 16px;
+  border-radius: 8px;
+}
+
+.innerWhite {
+  background: #fff;
+}
+
+.innerBlack {
+  background: #232323;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.itemInfo {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.itemBlack > .itemInfo > .itemTitle {
+  color: #fff;
+}
+
+.itemBlack > .itemInfo > svg > path {
+  fill: #fff;
+}
+
+.itemWhite > .itemInfo > .itemTitle {
+  color: #000;
+}
+
+.itemWhite > .itemInfo > svg > path {
+  fill: #232323;
+}
+
+.itemTitle {
+  font-size: 15px;
+  line-height: 133.33%;
+  letter-spacing: -0.24px;
+}
+
+.itemData {
+  font-size: 15px;
+  line-height: 133.33%;
+  letter-spacing: -0.24px;
+  color: #818C99;
+}

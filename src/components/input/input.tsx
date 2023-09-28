@@ -1,11 +1,11 @@
-import { ChangeEvent } from 'react'
 import s from '../../styles/input.module.css'
 
 export interface InputProps {
     label?: string;
     error?: string;
     value: string;
-    onChange: (newValue: string) => void;
+    type?: string;
+    onChange: (...args: any[]) => void;
     placeholder?: string;
     size?: 'xsmall' | 'small' | 'medium' | 'large';
     variant: 'black' | 'white'
@@ -20,6 +20,7 @@ const inputVariantType = {
 export const Input: React.FC<InputProps> = ({
     label,
     error,
+    type = 'string',
     value,
     onChange,
     placeholder,
@@ -28,19 +29,15 @@ export const Input: React.FC<InputProps> = ({
     className,
     ...rest
 }) => {
-    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-        const newValue = e.target.value
-        onChange(newValue)
-    }
-
     const sizeClass = s[size]
 
     return (
         <div className={`${s.inputWrapper} ${sizeClass}`}>
             {label && <label className={s.label}>{label}</label>}
             <input
+                type={type}
                 value={value}
-                onChange={handleChange}
+                onChange={onChange}
                 placeholder={placeholder}
                 className={`${s.input} ${sizeClass} ${inputVariantType[variant]} ${className || ''}`}
                 {...rest}

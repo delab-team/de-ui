@@ -25,7 +25,7 @@ const icon3 = <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" vie
 </svg>
 
 export const Playground: Story = {
-    render: ({ ...args }) => <ActionCell {...args} />,
+    render: ({ ...args }) => <div><ActionCell {...args} /></div>,
     args: {
         items: [
             {

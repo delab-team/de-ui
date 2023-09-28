@@ -45,6 +45,10 @@ yarn add @delab-team/de-ui
 
 - **Modal**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/modal/Readme.md)
 
+- **InfoCell**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/info-cell/Readme.md)
+
+- **Payment Cell**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/payment-cell/Readme.md)
+
 ## Common:
 
 - **Avatar**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/avatar/Readme.md)
