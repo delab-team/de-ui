@@ -1,6 +1,6 @@
 {
   "name": "@delab-team/de-ui",
-  "version": "0.0.12",
+  "version": "0.0.14",
   "description": "A versatile and customizable React UI library designed to streamline the development of beautiful and responsive user interfaces. Packed with a rich set of components and themes, it empowers developers to create stunning web applications with ease.",
   "repository": "https://github.com/delab-team/de-ui",
   "homepage": "https://ui.delabteam.com",
@@ -19,7 +19,7 @@
   "scripts": {
     "start": "webpack-dev-server --mode development",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode production",
+    "build": "npx tsc && yarn webpack --mode production",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },

@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
 @font-face {
   font-family: 'SF-PRO';
   font-display: swap;
-  src: local('SF-PRO'), local('SF-PRO-Regular'), url('../assets/fonts/SF-Pro-Text-Regular.otf') format('truetype');
+  src: local('SF-PRO'), local('SF-PRO-Regular'), url('../assets/fonts/SF-Pro-Text-Regular.woff2') format('truetype');
   font-weight: 410;
   font-style: normal;
 }
@@ -11,7 +9,7 @@
 @font-face {
   font-family: 'SF-PRO';
   font-display: swap;
-  src: local('SF-PRO'), local('SF-PRO-Medium'), url('../assets/fonts/SF-Pro-Text-Medium.otf') format('truetype');
+  src: local('SF-PRO'), local('SF-PRO-Medium'), url('../assets/fonts/SF-Pro-Text-Medium.woff2') format('truetype');
   font-weight: 540;
   font-style: normal;
 }
@@ -19,7 +17,7 @@
 @font-face {
   font-family: 'SF-PRO';
   font-display: swap;
-  src: local('SF-PRO'), local('SF-PRO-Semibold'), url('../assets/fonts/SF-Pro-Text-Semibold.otf') format('truetype');
+  src: local('SF-PRO'), local('SF-PRO-Semibold'), url('../assets/fonts/SF-Pro-Text-Semibold.woff2') format('truetype');
   font-weight: 760;
   font-style: normal;
 }
