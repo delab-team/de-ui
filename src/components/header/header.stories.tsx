@@ -8,7 +8,7 @@ import '../../styles/example.style.css'
 import { Button } from '../button/button'
 
 const story: Meta<HeaderProps> = {
-    title: 'Common/Header',
+    title: 'Headers/Header',
     component: Header,
     tags: [ 'autodocs' ]
 }

@@ -23,6 +23,10 @@ The `ActionCell` component is a React component designed to display a list of ac
 - Type: String
 - Description: Additional CSS class to be applied to the ActionCell container, allowing for custom styling.
 
+### `style` (optional)
+
+- Type: React.CSSProperties
+
 ## Example
 
 ```jsx

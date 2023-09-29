@@ -1,11 +1,10 @@
 .item {
-    padding: 6px 16px;
+    padding: 6px 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
-    border-radius: 10px;
 }
 
 .itemInfo {

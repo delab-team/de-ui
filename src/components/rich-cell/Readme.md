@@ -21,6 +21,8 @@ The `RichCellItem` component is designed to display a single rich content item. 
 - `date` (string): The date associated with the item.
 - `amount` (string): The amount or value associated with the item.
 - `variant` ('dark' | 'white'): The visual style variant for the component. It can be 'dark' for a dark background or 'white' for a light background.
+- `className (optional)`: className 
+- `style (optional)`: React.CSSProperties
 
 ### Usage Example
 
@@ -45,6 +47,8 @@ The `RichCell` component is designed to display a collection of rich content ite
 - `currency (string)`: The currency code or symbol associated with the item.
 - `allLink (React Node)`: A React Node representing a link or action that users can take to view all items.
 - `variant ('black' | 'white')`: The visual style variant for the component. It can be 'black' for a dark background or 'white' for a light background.
+- `className (optional)`: className 
+- `style (optional)`: React.CSSProperties
 
 ## Example 
 

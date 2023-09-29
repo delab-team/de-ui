@@ -6,9 +6,10 @@ export interface CheckboxProps {
     label?: string;
     disabled?: boolean;
     onChange: (checked: boolean) => void;
+    className?: string;
 }
 
-export const Checkbox: FC<CheckboxProps> = ({ checked, onChange, label, disabled }) => {
+export const Checkbox: FC<CheckboxProps> = ({ checked, onChange, label, disabled, className }) => {
     const handleCheckboxChange = () => {
         if (!disabled) {
             onChange(!checked)
@@ -16,7 +17,7 @@ export const Checkbox: FC<CheckboxProps> = ({ checked, onChange, label, disabled
     }
 
     return (
-        <label className={`${s['checkbox-container']} ${disabled ? s.disabled : ''}`}>
+        <label className={`${s['checkbox-container']} ${disabled ? s.disabled : ''} ${className || ''}`}>
             <div className={`${s.checkbox} ${checked ? s.checked : ''} ${disabled ? s.disabled : ''}`} onClick={handleCheckboxChange}>
                 <svg xmlns="http://www.w3.org/2000/svg" className={`${s['checkbox-icon']}`} viewBox="0 0 14 14" fill="none">
                     {checked && (

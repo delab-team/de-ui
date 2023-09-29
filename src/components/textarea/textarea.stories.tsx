@@ -17,5 +17,5 @@ export const Playground: Story = {
     render: ({ ...args }) => (
         <TextArea {...args} />
     ),
-    args: { placeholder: 'Type something...' }
+    args: { placeholder: 'Type something...', variant: 'black' }
 }

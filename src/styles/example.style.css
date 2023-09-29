@@ -1,5 +1,5 @@
 .header {
-  background-color: #333;
+  background-color: #333 !important;
   color: #fff;
   padding: 15px 0;
   display: flex;
@@ -33,4 +33,15 @@
 
 .nav a:hover {
   color: rgb(9, 174, 224);
+}
+
+
+
+.exampleLink {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #818C99;
+  transition: all 0.3s ease 0s;
 }

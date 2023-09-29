@@ -34,6 +34,11 @@ export const Playground: Story = {
         allLink: (
             <a href="#">See All</a>
         ),
-        variant: 'black'
+        variant: 'black',
+        style: {
+            paddingLeft: '10px',
+            paddingRight: '10px',
+            borderRadius: '10px'
+        }
     }
 }

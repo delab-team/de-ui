@@ -20,6 +20,11 @@ export const Playground: Story = {
                 label: 'Language',
                 text: 'English'
             }
-        ]
+        ],
+        style: {
+            paddingLeft: '15px',
+            paddingRight: '15px',
+            borderRadius: '10px'
+        }
     }
 }

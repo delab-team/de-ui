@@ -6,9 +6,10 @@ import s from '../../styles/tooltip.module.css'
 export interface TooltipProps {
     text: string
     children: React.ReactNode
+    className?: string
 }
 
-export const Tooltip: FC<TooltipProps> = ({ text, children }) => {
+export const Tooltip: FC<TooltipProps> = ({ text, children, className }) => {
     const [ isTooltipVisible, setTooltipVisible ] = useState<boolean>(false)
 
     const showTooltip = () => {
@@ -20,7 +21,7 @@ export const Tooltip: FC<TooltipProps> = ({ text, children }) => {
     }
 
     return (
-        <div className={s.tooltipContainer}>
+        <div className={`${s.tooltipContainer} ${className || ''}`}>
             <div
                 className={s.tooltipTrigger}
                 onMouseEnter={showTooltip}

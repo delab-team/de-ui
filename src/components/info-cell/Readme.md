@@ -29,6 +29,10 @@ The `InfoCell` component is a React component designed to display various inform
 - Type: String
 - Description: Additional CSS class to be applied to the InfoCell container, allowing for custom styling.
 
+### `style` (optional)
+
+- Type: React.CSSProperties
+
 ## Example
 
 ```jsx

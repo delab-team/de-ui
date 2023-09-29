@@ -1,0 +1,38 @@
+.header {
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.headerWhite {
+  background: #fff;
+}
+
+.headerWhite .title {
+  color: #000;
+}
+
+.headerBlack {
+  background: #000;
+}
+
+.headerBlack .title {
+  color: #fff;
+}
+
+.title {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 133.33%;
+  margin-bottom: 3px;
+}
+
+.subtitle {
+  font-size: 13px;
+  line-height: 123%;
+  letter-spacing: -0.078px;
+  color: #818C99;
+}

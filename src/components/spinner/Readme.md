@@ -5,6 +5,7 @@ The Spinner component is a reusable React component designed to display loading 
 ## Props
 - `size` (`'small'` | `'medium'` | `'large'`, optional): Specifies the size of the spinner. Default is 'medium'.
 - `color` (`string`, `optional`): Specifies the color of the spinner. You can use any valid CSS color value. Default is `'#000000'`.
+- `className` (`string`): The className of the spinner.
 
 ## Usage
 

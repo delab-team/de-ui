@@ -19,6 +19,10 @@ The `PaymentCell` component is a React component designed to manage and display 
 - Type: String
 - Description: Additional CSS class to be applied to the PaymentCell container, allowing for custom styling.
 
+### `style` (optional)
+
+- Type: React.CSSProperties
+
 ## Example
 
 ```jsx

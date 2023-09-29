@@ -8,6 +8,7 @@ The `FileUpload` component allows users to upload files by either dragging and d
 - `accept` (string, optional): Accepted file types, specified as a comma-separated list of file extensions (e.g., ".jpg,.png").
 - `uploadText` (string, optional): Text to display inside the drop zone. By default, it is set to "Drag & Drop files here or click to browse".
 - `fileInputRef` (React Ref, optional): A ref that can be used to control the file input element from outside the component. If provided, the component will use this ref to manage the input element.
+- `className` (string, optional): The className for the file upload body.
 
 ## Example
 

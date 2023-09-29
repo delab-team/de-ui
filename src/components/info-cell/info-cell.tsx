@@ -8,6 +8,7 @@ export interface InfoCellProps {
     connectedDevices?: number
     variant: 'white' | 'black'
     className?: string
+    style?: React.CSSProperties
 }
 
 const phoneIcon = (
@@ -42,7 +43,8 @@ export const InfoCell: FC<InfoCellProps> = ({
     email,
     connectedDevices,
     variant,
-    className
+    className,
+    style
 }) => {
     const formatPhoneNumber = (phoneNumber: string) => {
         if (!phoneNumber) return ''
@@ -67,7 +69,7 @@ export const InfoCell: FC<InfoCellProps> = ({
     }
 
     return (
-        <div className={`${s.inner} ${variant === 'white' ? s.innerWhite : s.innerBlack} ${className || ''}`}>
+        <div className={`${s.inner} ${variant === 'white' ? s.innerWhite : s.innerBlack} ${className || ''}`} style={style}>
             {phone && (
                 <div className={`${s.item} ${variant === 'white' ? s.itemWhite : s.itemBlack}`}>
                     <div className={s.itemInfo}>

@@ -11,6 +11,7 @@ The Toggle component accepts the following props:
 - `onChange (function, optional)`: A callback function that is called when the toggle state changes.
 - `size (string, optional)`: Size of the toggle ('small', 'default', 'large').
 - `color (string, optional)`: Color of the toggle ('red', 'green', 'purple', 'yellow', 'teal', 'orange').
+- `className (string)`: The className for the toggle body.
 
 ## Example 
 

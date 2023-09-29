@@ -9,6 +9,7 @@ export interface RangeProps {
     step?: number;
     value?: number;
     onChange?: (value: number) => void;
+    className?: string;
 }
 
 export const Range: FC<RangeProps> = ({
@@ -17,7 +18,8 @@ export const Range: FC<RangeProps> = ({
     max = 100,
     step = 1,
     value = min,
-    onChange
+    onChange,
+    className
 }) => {
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const newValue = parseFloat(event.target.value)
@@ -27,7 +29,7 @@ export const Range: FC<RangeProps> = ({
     }
 
     return (
-        <div className={s.rangeContainer}>
+        <div className={`${s.rangeContainer} ${className || ''}`}>
             <label className={s.label}>{label}</label>
             <input
                 type="range"

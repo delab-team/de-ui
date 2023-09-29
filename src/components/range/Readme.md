@@ -11,6 +11,7 @@ The Range component accepts the following props:
 - `step (number, optional)`: The step increment of the range (default is 1).
 - `value (number, optional)`: The initial value of the range (default is the minimum value).
 - `onChange (function, optional)`: A callback function that is called when the range value changes.
+- `className` (string, optional): The className for the range body.
 
 ## Styling
 The Range component supports custom styling through CSS. You can override the default styles by targeting the following CSS classes:

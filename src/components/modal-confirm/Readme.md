@@ -9,6 +9,7 @@ The `ModalConfirm` component is a reusable React modal component designed to dis
 - `message`: The message or content of the confirmation dialog (can be a React node).
 - `onConfirm`: A function to execute when the user confirms the action.
 - `onCancel`: A function to execute when the user cancels or closes the modal.
+- `className`: The class name of the modal body.
 
 ## Example
 

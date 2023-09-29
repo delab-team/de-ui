@@ -14,6 +14,8 @@ The `ProgressBar` component is a versatile component used to display progress vi
 
 - `label (string, optional)`: An optional label to display alongside the progress bar. If not provided, the progress percentage is used as the default label.
 
+- `className (string)`: The className for the progress bar.
+
 ## Example
 
 ```jsx

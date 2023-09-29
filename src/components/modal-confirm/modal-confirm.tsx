@@ -8,6 +8,7 @@ export interface ModalConfirmProps {
     message: React.ReactNode;
     onConfirm: () => void;
     onCancel: () => void;
+    className?: string;
 }
 
 export const ModalConfirm: FC<ModalConfirmProps> = ({
@@ -15,7 +16,8 @@ export const ModalConfirm: FC<ModalConfirmProps> = ({
     title,
     message,
     onConfirm,
-    onCancel
+    onCancel,
+    className
 }) => {
     const [ isClosing, setIsClosing ] = useState<boolean>(false)
 
@@ -35,7 +37,7 @@ export const ModalConfirm: FC<ModalConfirmProps> = ({
     if (!isOpen && !isClosing) return null
 
     return (
-        <div className={`${s.modal} ${isClosing ? s.closing : ''}`}>
+        <div className={`${s.modal} ${isClosing ? s.closing : ''} ${className || ''}`}>
             <div className={s.modalContent}>
                 <h2 className={s.title}>{title}</h2>
                 <p className={s.message}>{message}</p>

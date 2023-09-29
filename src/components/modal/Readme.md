@@ -7,6 +7,7 @@ The `Modal` component is a reusable React component that provides a modal dialog
 - `isOpen (boolean)`: Determines whether the modal is open or closed. When isOpen is true, the modal is displayed; when isOpen is false, the modal is hidden.
 - `onClose (function)`: A callback function that is called when the user closes the modal. You can define your custom logic for handling modal closure.
 - `children (ReactNode)`: The content you want to display within the modal. This can include any React elements or components.
+- `className (string)`: The className of the modal body.
 
 ## Example
 

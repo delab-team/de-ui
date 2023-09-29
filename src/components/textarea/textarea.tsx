@@ -9,6 +9,7 @@ export interface TextAreaProps {
     className?: string;
     isError?: boolean;
     isLarge?: boolean;
+    variant: 'white' | 'black';
 }
 
 export const TextArea: FC<TextAreaProps> = ({
@@ -17,7 +18,8 @@ export const TextArea: FC<TextAreaProps> = ({
     placeholder,
     className,
     isError,
-    isLarge
+    isLarge,
+    variant
 }) => {
     const handleChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
         const newValue = e.target.value
@@ -28,7 +30,8 @@ export const TextArea: FC<TextAreaProps> = ({
         s.textArea,
         className,
         isError ? s.error : '',
-        isLarge ? s.large : ''
+        isLarge ? s.large : '',
+        variant === 'white' ? s.textAreaWhite : s.textAreaBlack
     ].join(' ')
 
     return (

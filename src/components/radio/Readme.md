@@ -12,6 +12,8 @@ The `Radio` component is a customizable radio input element built for use in Rea
 
 - `onChange (function, required)`: A callback function that is invoked when the radio button's state changes. It receives a boolean argument representing the new checked state.
 
+- `className (string, optional)`: The className for the radio body.
+
 ## Example 
 
 ```jsx

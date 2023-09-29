@@ -20,6 +20,10 @@ The `ButtonsCell` component is a React component designed to display a list of b
 - Type: String
 - Description: Additional CSS class to be applied to the ButtonsCell container, allowing for custom styling.
 
+### `style` (optional)
+
+- Type: React.CSSProperties
+
 ## Example
 
 ```jsx

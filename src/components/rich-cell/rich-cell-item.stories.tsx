@@ -21,6 +21,11 @@ export const Playground: Story = {
         icon: icons,
         name: 'Bitcoin',
         date: 'today at 17:00',
-        amount: '+ 500 BTC'
+        amount: '+ 500 BTC',
+        style: {
+            paddingLeft: '10px',
+            paddingRight: '10px',
+            borderRadius: '10px'
+        }
     }
 }

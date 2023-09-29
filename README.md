@@ -34,8 +34,14 @@ yarn add @delab-team/de-ui
 ## Cells:
 
 - **ActionCell**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/action-cell/Readme.md)
+
 - **ButtonsCell**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/buttons-cell/Readme.md)
-- **Settings-Cell**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/settings-cell/Readme.md)
+
+- **InfoCell**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/info-cell/Readme.md)
+
+- **PaymentCell** [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/payment-cell/Readme.md)
+
+- **SettingsCell**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/settings-cell/Readme.md)
 
 ## Modals:
 
@@ -44,10 +50,6 @@ yarn add @delab-team/de-ui
 - **ModalConfirm**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/modal-confirm/Readme.md)
 
 - **Modal**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/modal/Readme.md)
-
-- **InfoCell**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/info-cell/Readme.md)
-
-- **Payment Cell**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/payment-cell/Readme.md)
 
 ## Common:
 
@@ -59,7 +61,7 @@ yarn add @delab-team/de-ui
 
 - **Footer**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/footer/Readme.md)
 
-- **Header**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/header/Readme.md)
+- **ProgressBar**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/progress-bar/Readme.md)
 
 - **Spinner**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/spinner/Readme.md)
 
@@ -67,15 +69,15 @@ yarn add @delab-team/de-ui
 
 - **Tooltip**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/tooltip/Readme.md)
 
-- **ProgressBar**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/progress-bar/Readme.md)
-
-- **Cell**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/cell/Readme.md)
-
 ## Forms:
+
+- **Checkbox**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/checkbox/Readme.md)
 
 - **FileUpload**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/file-upload/Readme.md)
 
 - **Input**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/input/Readme.md)
+
+- **Radio**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/radio/Readme.md)
 
 - **Range**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/range/Readme.md)
 
@@ -83,9 +85,19 @@ yarn add @delab-team/de-ui
 
 - **TextArea**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/textarea/Readme.md)
 
-- **Radio**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/radio/Readme.md)
+## Headers 
 
-- **Checkbox**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/checkbox/Readme.md)
+- **HeaderPanel**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/header-panel/Readme.md)
+
+- **HeaderSearchTabs**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/header-search-tabs/Readme.md)
+
+- **HeaderSearch**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/header-search/Readme.md)
+
+- **HeaderTabs**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/header-tabs/Readme.md)
+
+- **HeaderTitle**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/header-title/Readme.md)
+
+- **Header**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/header/Readme.md)
 
 ## Icons:
 
@@ -93,9 +105,9 @@ yarn add @delab-team/de-ui
 
 - **IconSelector**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/icon-selector/Readme.md)
 
-- **SocialIcons** [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/social-icons/Readme.md)
-
 - **LogoSelector** [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/logo-selector/Readme.md)
+
+- **SocialIcons** [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/social-icons/Readme.md)
 
 ## Mobile:
 

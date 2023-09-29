@@ -22,6 +22,7 @@ The `Alert` component is a customizable alert/notification component for React a
   - `'bottom-right'`: Display the alert in the bottom-right corner.
   - `'center'`: Center the alert on the screen.
 - `centered (boolean, optional)`: If set to `true`, the alert will be centered on the screen. Ignored if position is specified.
+- `className` (string, optional) : The className of the alert body.
 
 ## Example
 

@@ -1,0 +1,55 @@
+.inner {
+  padding: 15px 0;
+}
+
+.innerWhite {
+  background: #fff;
+}
+
+.innerBlack {
+  background: #000;
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 10px;
+}
+
+.tab {
+  font-size: 15px;
+  height: 30px;
+  line-height: 133.33%;
+  letter-spacing: -0.24px;
+  color: #939393;
+  cursor: pointer;
+}
+
+.activeTab {
+  position: relative;
+  color: #000;
+}
+
+.activeTab::after {
+  content: '';
+  position: absolute;
+  height: 2.8px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.innerBlack  .tabs .activeTab {
+  color: #fff;
+}
+
+.innerBlack  .tabs .activeTab:after {
+  background: #fff;
+}
+
+.innerWhite  .tabs .activeTab:after {
+  background: #000;
+}

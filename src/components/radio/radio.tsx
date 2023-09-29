@@ -7,14 +7,15 @@ export interface RadioProps {
     disabled?: boolean;
     label?: string;
     onChange: (checked: boolean) => void;
-
+    className?: string;
 }
 
 export const Radio: FC<RadioProps> = ({
     checked,
     disabled = false,
     label,
-    onChange
+    onChange,
+    className
 }) => {
     const handleChange = () => {
         if (!disabled) {
@@ -23,7 +24,7 @@ export const Radio: FC<RadioProps> = ({
     }
 
     return (
-        <div className={`${s['radio-container']} ${disabled ? s.disabled : ''}`}>
+        <div className={`${s['radio-container']} ${disabled ? s.disabled : ''} ${className || ''}`}>
             <span className={`${s.radio} ${checked ? s.checked : ''}`}  onClick={handleChange}>
                 {checked && (
                     <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">

@@ -8,6 +8,8 @@ export interface RichCellItemProps {
     date: string;
     amount: string;
     variant: 'dark' | 'white'
+    style?: React.CSSProperties;
+    className?: string;
 }
 
 export const RichCellItem: FC<RichCellItemProps> = ({
@@ -15,9 +17,11 @@ export const RichCellItem: FC<RichCellItemProps> = ({
     name,
     date,
     amount,
-    variant
+    variant,
+    style,
+    className
 }) => (
-    <div className={`${s.item} ${variant === 'dark' ? s.darkItem : s.whiteItem}`}>
+    <div className={`${s.item} ${variant === 'dark' ? s.darkItem : s.whiteItem} ${className || ''}`} style={style} >
         <div className={s.itemInfo}>
             <img src={icon} alt="icon" />
             <div className={s.itemContent}>

@@ -1,0 +1,40 @@
+.searchBody {
+  padding: 14px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.searchBody > svg {
+  height: 16px;
+  width: 16px;
+}
+
+.searchBodyWhite {
+  background: #FFF;
+}
+
+.searchBodyBlack {
+  background: #000;
+}
+
+.searchInput {
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  outline: none;
+  border: none;
+  font-size: 15px;
+}
+
+.searchBodyWhite .searchInput {
+  color: #000;
+}
+
+.searchBodyBlack .searchInput {
+  color: #fff;
+}
+
+.searchInput::placeholder {
+  color: #AEB7C2;
+}

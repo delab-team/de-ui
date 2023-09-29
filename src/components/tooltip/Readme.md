@@ -6,7 +6,8 @@ The Tooltip component displays helpful information on hover. It can be used to p
 
 - `text` (string, required): The text to display in the tooltip.
 - `children` (ReactNode, required): The content that triggers the tooltip on hover.
-
+- `className` (string): The className for the tooltip body.
+ 
 ## Example
 
 ```jsx

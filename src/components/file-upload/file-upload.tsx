@@ -2,20 +2,22 @@ import { FC, useRef } from 'react'
 
 import { IconSelector } from '../icon-selector/icon-selector'
 
-import styles from '../../styles/file-upload.module.css'
+import s from '../../styles/file-upload.module.css'
 
 export interface FileUploadProps {
     onFileUpload: (file: File) => void;
     accept?: string;
     uploadText?: string;
     fileInputRef?: React.RefObject<HTMLInputElement>;
+    className?: string;
 }
 
 export const FileUpload: FC<FileUploadProps> = ({
     onFileUpload,
     accept,
     uploadText = 'Drag & Drop files here or click to browse',
-    fileInputRef
+    fileInputRef,
+    className
 }) => {
     const internalFileInputRef = useRef<HTMLInputElement | null>(null)
 
@@ -48,9 +50,9 @@ export const FileUpload: FC<FileUploadProps> = ({
     }
 
     return (
-        <div className={styles.fileUploadContainer}>
+        <div className={`${s.fileUploadContainer} ${className || ''}`}>
             <div
-                className={styles.fileUpload}
+                className={s.fileUpload}
                 onClick={openFileDialog}
                 onDragOver={e => e.preventDefault()}
                 onDrop={(e) => {
@@ -63,10 +65,10 @@ export const FileUpload: FC<FileUploadProps> = ({
                     ref={fileInputRef || internalFileInputRef}
                     accept={accept}
                     onChange={e => handleFileUpload(e, 'change')}
-                    className={styles.fileInput}
+                    className={s.fileInput}
                 />
-                <IconSelector id="upload" className={styles.uploadIcon} />
-                <p className={styles.uploadText}>{uploadText}</p>
+                <IconSelector id="upload" className={s.uploadIcon} />
+                <p className={s.uploadText}>{uploadText}</p>
             </div>
         </div>
     )

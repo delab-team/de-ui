@@ -22,6 +22,10 @@ The `SettingsCell` component is a React component designed to display a list of 
 - Type: String
 - Description: Additional CSS class to be applied to the SettingsCell container, allowing for custom styling.
 
+### `style` (optional)
+
+- Type: React.CSSProperties
+
 ## Example
 
 ```jsx

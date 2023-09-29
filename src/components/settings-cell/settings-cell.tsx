@@ -10,10 +10,11 @@ export interface SettingsCellProps {
         onClick?: () => void
     }[];
     className?: string;
+    style?: React.CSSProperties;
 }
 
-export const SettingsCell: FC<SettingsCellProps> = ({ variant, items, className }) => (
-    <div className={`${s.inner} ${variant === 'white' ? s.innerWhite : s.innerBlack} ${className || ''}`}>
+export const SettingsCell: FC<SettingsCellProps> = ({ variant, items, className, style }) => (
+    <div className={`${s.inner} ${variant === 'white' ? s.innerWhite : s.innerBlack} ${className || ''}`} style={style}>
         <div className={s.innerTitle}>Settings</div>
         <ul>
             {items.map((el, i: number) => (

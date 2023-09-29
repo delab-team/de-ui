@@ -12,7 +12,8 @@ export interface SelectProps {
     options: Option[];
     selectedValue: string;
     onSelect: (value: string) => void;
-    variant: 'black' | 'white'
+    variant: 'black' | 'white';
+    className?: string;
 }
 
 const selectVariantType = {
@@ -25,7 +26,7 @@ const selectItemType = {
     white: s['select-item--type-white']
 }
 
-export const Select: FC<SelectProps> = ({ options, selectedValue, onSelect, variant = 'black' }) => {
+export const Select: FC<SelectProps> = ({ options, selectedValue, onSelect, variant = 'black', className }) => {
     const [ isOpen, setIsOpen ] = useState<boolean>(false)
 
     const toggleSelect = () => {
@@ -38,7 +39,7 @@ export const Select: FC<SelectProps> = ({ options, selectedValue, onSelect, vari
     }
 
     return (
-        <div className={`${s.customSelect} ${selectVariantType[variant]}`}>
+        <div className={`${s.customSelect} ${selectVariantType[variant]} ${className || ''}`}>
             <div className={`${s.selectHeader} ${isOpen ? s.open : ''}`} onClick={toggleSelect}>
                 <div className={s.selectedValue}>{selectedValue}</div>
                 <div className={s.arrowIcon}>

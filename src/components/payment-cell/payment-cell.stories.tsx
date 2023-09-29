@@ -15,13 +15,19 @@ type Story = StoryObj<PaymentCellProps>
 function Example () {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [ paymentMethods, setPaymentMethods ] = useState<string[]>([])
-    console.log('🚀 ~ file: payment-cell.stories.tsx:19 ~ App ~ paymentMethods:', paymentMethods)
+
+    const styles =  {
+        paddingLeft: '15px',
+        paddingRight: '15px',
+        borderRadius: '10px'
+    }
 
     return (
         <div>
             <PaymentCell
                 initialPaymentMethods={paymentMethods}
                 variant='black'
+                style={styles}
             />
         </div>
     )

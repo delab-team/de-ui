@@ -13,6 +13,8 @@ The Checkbox component accepts the following props:
 
 - `onChange (function, required)`: A callback function that is invoked when the checkbox state changes. It receives a boolean argument representing the new checked state.
 
+- `className (string, optional)`: The className for the checkbox body.
+
 ## Example 
 
 ```jsx

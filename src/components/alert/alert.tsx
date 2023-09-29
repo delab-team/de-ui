@@ -12,9 +12,10 @@ export interface AlertProps {
     autoCloseTimeout?: number;
     position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center';
     centered?: boolean;
+    className?: string;
 }
 
-export const Alert: React.FC<AlertProps> = ({ type, onClose, icon, children, autoCloseTimeout, position, centered }) => {
+export const Alert: React.FC<AlertProps> = ({ type, onClose, icon, children, autoCloseTimeout, position, centered, className }) => {
     const [ isVisible, setIsVisible ] = useState<boolean>(true)
 
     const getAlertClass = () => {
@@ -76,7 +77,7 @@ export const Alert: React.FC<AlertProps> = ({ type, onClose, icon, children, aut
     }
 
     return isVisible ? (
-        <div className={`${s.alert} ${getAlertClass()} ${getAlertPositionClass()}`}>
+        <div className={`${s.alert} ${getAlertClass()} ${getAlertPositionClass()} ${className || ''}`}>
             {icon && <div className={s.alertIcon}>{icon}</div>}
             <div className={s.alertContent}>{children}</div>
             {onClose && (

@@ -9,12 +9,14 @@ export interface PaymentCellProps {
     initialPaymentMethods: string[];
     variant: 'white' | 'black';
     className?: string;
+    style?: React.CSSProperties;
 }
 
 export const PaymentCell: FC<PaymentCellProps> = ({
     initialPaymentMethods,
     variant,
-    className
+    className,
+    style
 }) => {
     const [ paymentMethods, setPaymentMethods ] = useState<string[]>(initialPaymentMethods)
     const [ newPaymentMethod, setNewPaymentMethod ] = useState<string>('')
@@ -35,7 +37,7 @@ export const PaymentCell: FC<PaymentCellProps> = ({
     }
 
     return (
-        <div className={`${s.inner} ${className || ''} ${variant === 'white' ? s.innerWhite : s.innerBlack}`}>
+        <div className={`${s.inner} ${className || ''} ${variant === 'white' ? s.innerWhite : s.innerBlack}`} style={style}>
             <div className={s.title}>Payment methods</div>
             <div>
                 {showInput ? (

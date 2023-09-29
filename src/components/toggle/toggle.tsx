@@ -9,6 +9,7 @@ export interface ToggleProps {
     onChange?: (isChecked: boolean) => void;
     size?: 'small' | 'default' | 'large';
     color?: 'red' | 'green' | 'purple' | 'yellow' | 'teal' | 'orange';
+    className?: string;
 }
 
 export const Toggle: FC<ToggleProps> = ({
@@ -17,7 +18,8 @@ export const Toggle: FC<ToggleProps> = ({
     checked = false,
     onChange,
     size = 'default',
-    color = 'default'
+    color = 'default',
+    className
 }) => {
     const [ isChecked, setIsChecked ] = useState<boolean>(checked)
 
@@ -33,7 +35,7 @@ export const Toggle: FC<ToggleProps> = ({
     }
 
     return (
-        <div className={`${s.toggle} ${disabled ? s.disabled : ''} ${s[size]} ${s[color]}`}>
+        <div className={`${s.toggle} ${disabled ? s.disabled : ''} ${s[size]} ${s[color]} ${className || ''}`}>
             {label && <label className={s.label}>{label}</label>}
             <div className={`${s.switch} ${isChecked ? s.checked : ''}`} onClick={toggleHandler}>
                 <div className={`${s.slider} ${isChecked ? s.sliderOn : ''}`} />

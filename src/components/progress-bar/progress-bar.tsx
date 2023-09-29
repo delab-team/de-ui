@@ -8,6 +8,7 @@ export interface ProgressBarProps {
     color: 'dark' | 'blue' | 'green' | 'red' | 'purple'
     progress: number
     label?: string
+    className?: string
 }
 
 export const ProgressBar: FC<ProgressBarProps> = ({
@@ -15,7 +16,8 @@ export const ProgressBar: FC<ProgressBarProps> = ({
     size,
     color,
     progress,
-    label
+    label,
+    className
 }) => {
     const getProgressBarClass = () => {
         let progressBarClass = s.progressBar
@@ -56,7 +58,7 @@ export const ProgressBar: FC<ProgressBarProps> = ({
 
     return (
         <div className={s.progressBarContainer}>
-            <div className={getProgressBarClass()} style={{ width: `${progress}%` }}>
+            <div className={`${getProgressBarClass()} ${className || ''}`} style={{ width: `${progress}%` }}>
                 {type === 'withLabel' && (
                     <div className={s.label}>{label}</div>
                 )}

@@ -1,10 +1,21 @@
 .textArea {
   width: 100%;
   padding: 10px;
-  font-size: 16px;
+  font-size: 15px;
+  line-height: 133.33%;
   border: 1px solid #ccc;
   border-radius: 5px;
   resize: none;
+}
+
+.textAreaWhite {
+  color: #000;
+  background: #fff;
+}
+
+.textAreaBlack {
+  color: #fff;
+  background: #000;
 }
 
 .textArea:focus {

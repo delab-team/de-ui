@@ -65,6 +65,10 @@ export interface ButtonProps
      * children
      */
     children?: ReactNode
+    /**
+     * className
+    */
+    className?: string
 }
 
 export const Button = ({
@@ -77,6 +81,7 @@ export const Button = ({
     endIcon,
     disabled = false,
     loading,
+    className,
     ...restProps
 }: ButtonProps): JSX.Element => (
     <button
@@ -88,6 +93,7 @@ export const Button = ({
           ${buttonRounded[rounded]}
           ${disabled && s['btn-disabled']}
           ${loading && s['btn-loading']}
+          ${className || ''}
         `}
         disabled={disabled}
         {...restProps}

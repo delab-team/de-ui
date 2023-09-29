@@ -1,0 +1,30 @@
+# HeaderPanel Component
+
+The `HeaderPanel` component is designed to create header panels or sections in your web application. It allows you to display a title, customize the appearance with visual variants, add left and right actions, and control the maximum container width.
+
+## Props
+
+The `HeaderPanel` component accepts the following props:
+
+- `title` (string): The main title text to be displayed in the header panel.
+- `className` (string, optional): Additional CSS class names to be applied to the header panel for custom styling.
+- `containerWidth` (number): The maximum width (in pixels) of the header panel container. It controls the width of the entire header panel component.
+- `variant` ('white' | 'black'): The visual style variant for the header panel. It can be 'white' for a light background or 'black' for a dark background.
+- `actionLeft` (React Node, optional): A React Node representing an action or content to be displayed on the left side of the header panel.
+- `actionRight` (React Node, optional): A React Node representing an action or content to be displayed on the right side of the header panel.
+- `style` (React.CSSProperties, optional): Additional inline CSS styles to be applied to the header panel.
+
+## Usage Example
+
+```jsx
+const Example = () => {
+  return (
+    <HeaderPanel
+      title="Home"
+      containerWidth={800}
+      variant="black"
+      actionLeft={<div className="exampleLink">Back</div>}
+      actionRight={<div>+</div>}
+    />
+  );
+};

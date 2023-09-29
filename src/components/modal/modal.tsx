@@ -6,16 +6,18 @@ export interface ModalProps {
     isOpen: boolean;
     onClose: () => void;
     children: React.ReactNode;
+    className?: string;
 }
 
 export const Modal: FC<ModalProps> = ({
     children,
     onClose,
-    isOpen
+    isOpen,
+    className
 }) => (
     <>
         {isOpen && (
-            <div className={s.modalBackdrop}>
+            <div className={`${s.modalBackdrop} ${className || ''}`}>
                 <div className={s.modalContent}>
                     <button className={s.closeButton} onClick={onClose}>
                       &times;
