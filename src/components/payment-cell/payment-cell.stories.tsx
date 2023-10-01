@@ -2,7 +2,9 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { useState } from 'react'
+
 import { PaymentCell, PaymentCellProps } from './payment-cell'
+import { AppInner } from '../app-inner/app-inner'
 
 const meta: Meta<PaymentCellProps> = {
     title: 'Cells/PaymentCell',
@@ -23,13 +25,13 @@ function Example () {
     }
 
     return (
-        <div>
+        <AppInner isTg={false}>
             <PaymentCell
                 initialPaymentMethods={paymentMethods}
                 variant='black'
                 style={styles}
             />
-        </div>
+        </AppInner>
     )
 }
 

@@ -19,6 +19,7 @@ export const Playground: Story = {
     ),
     args: {
         id: 'ton-symbol',
-        size: '32px'
+        height: '32px',
+        width: '32px'
     }
 }

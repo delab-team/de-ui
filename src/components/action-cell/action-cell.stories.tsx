@@ -2,6 +2,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { ActionCell, ActionCellProps } from './action-cell'
+import { AppInner } from '../app-inner/app-inner'
 
 const meta: Meta<ActionCellProps> = {
     title: 'Cells/ActionCell',
@@ -25,7 +26,7 @@ const icon3 = <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" vie
 </svg>
 
 export const Playground: Story = {
-    render: ({ ...args }) => <ActionCell {...args} />,
+    render: ({ ...args }) => <AppInner isTg={true}><ActionCell {...args} /></AppInner>,
     args: {
         items: [
             {
@@ -46,6 +47,7 @@ export const Playground: Story = {
             paddingLeft: '15px',
             paddingRight: '15px',
             borderRadius: '10px'
-        }
+        },
+        tgStyles: {}
     }
 }

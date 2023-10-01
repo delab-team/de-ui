@@ -8,7 +8,7 @@ The Footer component is a reusable React component designed to create footer sec
 - `contactInfo` (ContactInfo, optional): An object containing contact information with phoneNumber, email, and address properties.
 - `backgroundColor` (string, optional): Specifies the background color of the footer.
 - `children` (React.ReactNode, optional): Additional custom content that you want to include in the footer.
-- `footerClass` (string, optional): Additional CSS classes to apply to the footer.
+- `className` (string, optional): Additional CSS classes to apply to the footer.
 - `menuItems2` (MenuItem[], optional): An additional array of menu items for a secondary menu.
 - `menuItems3` (MenuItem[], optional): An additional array of menu items for a tertiary menu.
 

@@ -14,7 +14,7 @@ The Title component can be used to create text elements with various styles. It 
 
 - `color (optional)`: Defines the text color. You can use any valid CSS color value, such as 'red', '#007bff', or 'rgba(0, 0, 0, 0.5)'.
 
-- `customClassName (optional)`: Allows you to add custom CSS class names to the component for additional styling.
+- `className (optional)`: Allows you to add custom CSS class names to the component for additional styling.
 
 ## Usage 
 

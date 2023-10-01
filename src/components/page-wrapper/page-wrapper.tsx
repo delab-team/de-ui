@@ -1,4 +1,6 @@
-import { FC } from 'react'
+import { CSSProperties, FC } from 'react'
+
+import { useAppSelector } from '../../store'
 
 import s from '../../styles/page-wrapper.module.css'
 
@@ -12,6 +14,12 @@ export interface PageWrapperProps {
     headerClassName?: string;
     mainClassName?: string;
     footerClassName?: string;
+    tgStyles?: {
+        wrapperStyles?: CSSProperties | undefined;
+        headerStyles?: CSSProperties | undefined;
+        mainStyles?: CSSProperties | undefined;
+        footerStyles?: CSSProperties | undefined;
+    }
 }
 
 export const PageWrapper: FC<PageWrapperProps> = ({
@@ -23,7 +31,8 @@ export const PageWrapper: FC<PageWrapperProps> = ({
     className,
     headerClassName,
     mainClassName,
-    footerClassName
+    footerClassName,
+    tgStyles
 }) => {
     document.title = pageTitle
 
@@ -31,15 +40,22 @@ export const PageWrapper: FC<PageWrapperProps> = ({
 
     const wrapperClassName = `${s.pageWrapper} ${className || ''}`
 
+    const isTg = useAppSelector(state => state.tg.isTg)
+
+    const mergedStyles = isTg ? { ...containerStyle, ...tgStyles?.wrapperStyles } : containerStyle
+    const headerStyles = isTg ? tgStyles?.headerStyles : undefined
+    const mainStyles = isTg ? tgStyles?.mainStyles : undefined
+    const footerStyles = isTg ? tgStyles?.footerStyles : undefined
+
     return (
-        <div className={wrapperClassName} style={containerStyle}>
-            <div className={headerClassName}>
+        <div className={wrapperClassName} style={mergedStyles}>
+            <div className={headerClassName} style={headerStyles}>
                 {header}
             </div>
-            <main className={`${s.main} ${mainClassName || ''}`}>
+            <main className={`${s.main} ${mainClassName || ''}`} style={mainStyles}>
                 {content}
             </main>
-            <div className={`${s.footer} ${footerClassName || ''}`}>
+            <div className={`${s.footer} ${footerClassName || ''}`} style={footerStyles}>
                 {footer}
             </div>
         </div>

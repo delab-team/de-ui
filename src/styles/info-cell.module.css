@@ -29,16 +29,8 @@
   color: #fff;
 }
 
-.itemBlack > .itemInfo > svg > path {
-  fill: #fff;
-}
-
 .itemWhite > .itemInfo > .itemTitle {
   color: #000;
-}
-
-.itemWhite > .itemInfo > svg > path {
-  fill: #232323;
 }
 
 .itemTitle {

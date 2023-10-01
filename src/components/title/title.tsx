@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-shadow */
 import { FC } from 'react'
 
 import s from '../../styles/title.module.css'
@@ -7,7 +8,7 @@ export interface TitleProps {
     fontWeight?: 'normal' | 'bold' | 'light' | 'medium' | 'semibold';
     fontFamily?: string;
     color?: string;
-    customClassName?: string;
+    className?: string;
     children: React.ReactNode;
 }
 
@@ -16,14 +17,14 @@ export const Title: FC<TitleProps> = ({
     fontWeight,
     fontFamily,
     color,
-    customClassName,
+    className,
     children
 }) => {
     const classNames = [
         s.Typography,
         s[`Typography-${variant}`],
         fontWeight && s[`Typography-${fontWeight}`],
-        customClassName
+        className
     ]
         .filter(className => className)
         .join(' ')

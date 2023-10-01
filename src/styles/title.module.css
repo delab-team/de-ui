@@ -29,19 +29,19 @@
 }
 
 .Typography-normal {
-  font-weight: normal;
+  font-weight: 400;
 }
 
 .Typography-bold {
-  font-weight: bold;
+  font-weight: 800;
 }
 
 .Typography-light {
-  font-weight: light;
+  font-weight: 300;
 }
 
 .Typography-medium {
-  font-weight: medium;
+  font-weight: 500;
 }
 
 .Typography-semibold {

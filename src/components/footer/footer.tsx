@@ -19,7 +19,7 @@ export interface FooterProps {
     contactInfo?: ContactInfo;
     backgroundColor?: string;
     children?: React.ReactNode;
-    footerClass?: string;
+    className?: string;
     menuItems2?: MenuItem[];
     menuItems3?: MenuItem[];
     logoSize?: number;
@@ -32,13 +32,13 @@ export const Footer: FC<FooterProps> = ({
     contactInfo,
     backgroundColor = '#333',
     children,
-    footerClass,
+    className,
     menuItems2,
     menuItems3,
     logoSize,
     logoWidth
 }) => (
-    <footer className={`${styles.footer} ${footerClass}`} style={{ backgroundColor }}>
+    <footer className={`${styles.footer} ${className}`} style={{ backgroundColor }}>
         <div className={styles['footer-content']}>
             <div className={styles['footer-logo']}>
                 <img src={logo} alt="Logo" height={logoSize} width={logoWidth} />

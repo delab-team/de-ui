@@ -8,6 +8,7 @@ export interface HeaderProps {
     after?: React.ReactNode;
     width: string;
     className?: string;
+    containerWidth?: number | string
     position?: 'fixed' | 'absolute' | 'relative' | 'static';
     style?: CSSProperties;
 }
@@ -19,13 +20,21 @@ export const Header: FC<HeaderProps> = ({
     after,
     className,
     position = 'static',
-    style
-}) => (
-    <header className={`${s.header} ${s[position]} ${className}`} style={style}>
-        <div className={s['header-in']} style={{ width }}>
-            <div className={s['header-before']}>{before}</div>
-            <div className={s['header-children']}>{children}</div>
-            <div className={s['header-after']}>{after}</div>
-        </div>
-    </header>
-)
+    style,
+    containerWidth
+}) => {
+    const styles = {
+        ...style,
+        maxWidth: `${containerWidth}px`
+    }
+
+    return (
+        <header className={`${s.header} ${s[position]} ${className}`} style={styles}>
+            <div className={s['header-in']} style={{ width }}>
+                <div className={s['header-before']}>{before}</div>
+                <div className={s['header-children']}>{children}</div>
+                <div className={s['header-after']}>{after}</div>
+            </div>
+        </header>
+    )
+}

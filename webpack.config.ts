@@ -62,6 +62,7 @@ const config: Configuration = {
             patterns: [
                 { from: 'src/styles', to: '../dist/styles' },
                 { from: 'src/assets', to: '../dist/assets' },
+                { from: 'src/store', to: '../dist/store' },
             ],
         }),
     ],

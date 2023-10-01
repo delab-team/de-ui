@@ -1,6 +1,6 @@
 /* eslint-disable consistent-return */
 /* eslint-disable max-len */
-import { ReactNode, useState, useEffect } from 'react'
+import { ReactNode, useState, useEffect, CSSProperties } from 'react'
 
 import s from '../../styles/alert.module.css'
 
@@ -13,9 +13,11 @@ export interface AlertProps {
     position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center';
     centered?: boolean;
     className?: string;
+    isTg?: boolean;
+    tgStyles?: CSSProperties
 }
 
-export const Alert: React.FC<AlertProps> = ({ type, onClose, icon, children, autoCloseTimeout, position, centered, className }) => {
+export const Alert: React.FC<AlertProps> = ({ type, onClose, icon, children, autoCloseTimeout, position, centered, className, tgStyles }) => {
     const [ isVisible, setIsVisible ] = useState<boolean>(true)
 
     const getAlertClass = () => {
@@ -77,7 +79,7 @@ export const Alert: React.FC<AlertProps> = ({ type, onClose, icon, children, aut
     }
 
     return isVisible ? (
-        <div className={`${s.alert} ${getAlertClass()} ${getAlertPositionClass()} ${className || ''}`}>
+        <div className={`${s.alert} ${getAlertClass()} ${getAlertPositionClass()} ${className || ''}`} style={tgStyles}>
             {icon && <div className={s.alertIcon}>{icon}</div>}
             <div className={s.alertContent}>{children}</div>
             {onClose && (

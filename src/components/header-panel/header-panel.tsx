@@ -5,7 +5,7 @@ import s from '../../styles/header-panel.module.css'
 export interface HeaderPanelProps {
     title: string
     className?: string
-    containerWidth: number
+    containerWidth?: number | string
     variant: 'white' | 'black'
     actionLeft?: React.ReactNode
     actionRight?: React.ReactNode

@@ -7,7 +7,7 @@ export interface HeaderSearchProps {
     type?: string
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
     className?: string
-    containerWidth: number
+    containerWidth?: number | string
     variant?: 'white' | 'black'
     style?: React.CSSProperties
 }

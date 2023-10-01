@@ -26,7 +26,6 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
-  white-space: nowrap;
   opacity: 0.9;
   font-size: 14px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);

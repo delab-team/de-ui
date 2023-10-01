@@ -2,8 +2,9 @@
 /* eslint-disable import/no-default-export */
 /* eslint-disable import/no-extraneous-dependencies */
 import { Meta, StoryObj } from '@storybook/react'
-import { Button } from '../button/button'
 
+import { AppInner } from '../app-inner/app-inner'
+import { Button } from '../button/button'
 import { ButtonsCell, ButtonsCellProps } from './buttons-cell'
 
 const story: Meta<ButtonsCellProps> = {
@@ -23,7 +24,7 @@ const buttonsArray = [
 
 export const Playground: Story = {
     render: ({ ...args }) => (
-        <ButtonsCell {...args} />
+        <AppInner isTg={false}><ButtonsCell {...args} /></AppInner>
     ),
     args: {
         buttons: buttonsArray,

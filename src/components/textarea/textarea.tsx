@@ -1,10 +1,10 @@
-import { ChangeEvent, FC } from 'react'
+import { FC } from 'react'
 
 import s from '../../styles/textarea.module.css'
 
 export interface TextAreaProps {
     value: string;
-    onChange: (newValue: string) => void;
+    onChange: (...args: any[]) => void;
     placeholder?: string;
     className?: string;
     isError?: boolean;
@@ -21,11 +21,6 @@ export const TextArea: FC<TextAreaProps> = ({
     isLarge,
     variant
 }) => {
-    const handleChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
-        const newValue = e.target.value
-        onChange(newValue)
-    }
-
     const classNames = [
         s.textArea,
         className,
@@ -38,7 +33,7 @@ export const TextArea: FC<TextAreaProps> = ({
         <textarea
             className={classNames}
             value={value}
-            onChange={handleChange}
+            onChange={onChange}
             placeholder={placeholder}
         />
     )

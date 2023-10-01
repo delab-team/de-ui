@@ -5,23 +5,23 @@
 }
 
 .Text-normal {
-  font-weight: normal;
+  font-weight: 400;
 }
 
 .Text-bold {
-  font-weight: bold;
+  font-weight: 800;
 }
 
 .Text-light {
-  font-weight: lighter;
+  font-weight: 300;
 }
 
 .Text-medium {
-  font-weight: medium;
+  font-weight: 500;
 }
 
 .Text-semibold {
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .Text-small {

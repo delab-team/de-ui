@@ -1,11 +1,9 @@
 .header {
-  height: 90px;
   width: 100%;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
   border-radius: 5px;
   z-index: 10;
 }

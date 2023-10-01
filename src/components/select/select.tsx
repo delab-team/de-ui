@@ -43,19 +43,21 @@ export const Select: FC<SelectProps> = ({ options, selectedValue, onSelect, vari
             <div className={`${s.selectHeader} ${isOpen ? s.open : ''}`} onClick={toggleSelect}>
                 <div className={s.selectedValue}>{selectedValue}</div>
                 <div className={s.arrowIcon}>
-                    {isOpen ? <IconSelector id="chevron-top-2" color={variant === 'black' ? '#fff' : '#000'} size="23px" /> : <IconSelector id="chevron-bottom-2" color={variant === 'black' ? '#fff' : '#000'} size="23px" />}
+                    {isOpen ? <IconSelector id="chevron-up" color={variant === 'black' ? '#fff' : '#000'} size="23px" /> : <IconSelector id="chevron-down" color={variant === 'black' ? '#fff' : '#000'} size="23px" />}
                 </div>
             </div>
             {isOpen && (
                 <ul className={`${s.optionList} ${selectItemType[variant]}`}>
                     {options.map(option => (
-                        <li
-                            key={option.value}
-                            className={`${s.optionItem}`}
-                            onClick={() => handleOptionClick(option.value)}
-                        >
-                            {option.label}
-                        </li>
+                        option.value !== selectedValue && (
+                            <li
+                                key={option.value}
+                                className={`${s.optionItem}`}
+                                onClick={() => handleOptionClick(option.value)}
+                            >
+                                {option.label}
+                            </li>
+                        )
                     ))}
                 </ul>
             )}

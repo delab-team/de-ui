@@ -6,7 +6,7 @@ export interface HeaderTitleProps {
     title: string
     subtitle: string
     variant: 'white' | 'black'
-    className: string
+    className?: string
     containerWidth: number
     style: React.CSSProperties
 }

@@ -4,7 +4,7 @@ import s from '../../styles/mobile-menu.module.css'
 
 export interface MobileMenuItemProps {
     icon?: React.ReactNode;
-    text: string;
+    text?: string;
     backgroundColor?: string;
     textColor?: string;
     onClick?: () => void;

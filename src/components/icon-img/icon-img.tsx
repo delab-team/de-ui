@@ -15,13 +15,13 @@ export const IconImg: FC<IconImgProps> = ({
     size = 24,
     type = 'default',
     alt = 'Icon',
-    className = '',
+    className,
     ...restProps
 }) => (
     <img
         src={src}
         alt={alt}
         {...restProps}
-        className={`${s.icon} ${s[`icon-${size}`]} ${s[`${type}-icon`]} ${className}`}
+        className={`${s.icon} ${s[`icon-${size}`]} ${s[`${type}-icon`]} ${className || ''}`}
     />
 )

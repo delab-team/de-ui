@@ -1,8 +1,8 @@
 import { ButtonHTMLAttributes, ReactNode } from 'react'
 
-import s from '../../styles/button.module.css'
-
 import { Spinner } from '../spinner/spinner'
+
+import s from '../../styles/button.module.css'
 
 const buttonSize = { small: s['button--size-s'], medium: s['button--size-m'], large: s['button--size-l'], stretched: s['button--size-str'] }
 

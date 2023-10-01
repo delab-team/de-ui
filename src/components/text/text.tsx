@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-shadow */
 import { FC } from 'react'
 import s from '../../styles/text.module.css'
 
@@ -6,7 +7,7 @@ export interface TextProps {
     fontWeight?: 'normal' | 'bold' | 'light' | 'medium' | 'semibold';
     fontFamily?: string;
     color?: string;
-    customClassName?: string;
+    className?: string;
     children: React.ReactNode;
 }
 
@@ -15,14 +16,14 @@ export const Text: FC<TextProps> = ({
     fontWeight,
     fontFamily,
     color,
-    customClassName,
+    className,
     children
 }) => {
     const classNames = [
         s.Text,
         fontSize && s[`Text-${fontSize}`],
         fontWeight && s[`Text-${fontWeight}`],
-        customClassName
+        className
     ]
         .filter(className => className)
         .join(' ')

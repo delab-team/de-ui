@@ -7,7 +7,7 @@ import s from '../../styles/header-search-tabs.module.css'
 
 export interface HeaderSearchTabsProps {
     variant: 'black' | 'white'
-    containerWidth: number
+    containerWidth?: number | string
     searchValue: string
     searchOnChange: (e: React.ChangeEvent<HTMLInputElement>) => void
     tabsContent: Tab[]
@@ -34,7 +34,7 @@ export const HeaderSearchTabs: FC<HeaderSearchTabsProps> = ({
                 value={searchValue}
                 onChange={searchOnChange}
                 variant={variant}
-                containerWidth={containerWidth}
+                containerWidth={containerWidth || ''}
             />
             <HeaderTabs tabs={tabsContent} variant={variant} />
         </header>
