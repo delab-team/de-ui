@@ -1,5 +1,7 @@
 import { FC, useRef, useEffect } from 'react'
 
+import { useIsTg } from '../../hooks/useIsTg'
+
 import s from '../../styles/modal.module.css'
 
 export interface ModalProps {
@@ -7,9 +9,13 @@ export interface ModalProps {
     onClose: () => void;
     children: React.ReactNode;
     className?: string;
+    tgStyles?: {
+        modalContent?: React.CSSProperties | undefined;
+        closeButton?: React.CSSProperties | undefined;
+    }
 }
 
-export const Modal: FC<ModalProps> = ({ children, onClose, isOpen, className }) => {
+export const Modal: FC<ModalProps> = ({ children, onClose, isOpen, className, tgStyles }) => {
     const modalRef = useRef<HTMLDivElement | null>(null)
 
     useEffect(() => {
@@ -30,12 +36,17 @@ export const Modal: FC<ModalProps> = ({ children, onClose, isOpen, className }) 
         }
     }, [ isOpen, onClose ])
 
+    const isTg = useIsTg()
+
+    const contentStyles = isTg ? tgStyles?.modalContent : undefined
+    const closeStyles = isTg ? tgStyles?.closeButton : undefined
+
     return (
         <>
             {isOpen && (
                 <div className={s.modalBackdrop} ref={modalRef}>
-                    <div className={`${s.modalContent} ${className || ''}`}>
-                        <button className={s.closeButton} onClick={onClose}>
+                    <div className={`${s.modalContent} ${className || ''}`} style={contentStyles}>
+                        <button className={s.closeButton} onClick={onClose} style={closeStyles}>
                             &times;
                         </button>
                         {children}

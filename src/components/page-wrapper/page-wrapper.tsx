@@ -1,6 +1,6 @@
 import { CSSProperties, FC } from 'react'
 
-import { useAppSelector } from '../../store'
+import { useIsTg } from '../../hooks/useIsTg'
 
 import s from '../../styles/page-wrapper.module.css'
 
@@ -40,7 +40,7 @@ export const PageWrapper: FC<PageWrapperProps> = ({
 
     const wrapperClassName = `${s.pageWrapper} ${className || ''}`
 
-    const isTg = useAppSelector(state => state.tg.isTg)
+    const isTg = useIsTg()
 
     const mergedStyles = isTg ? { ...containerStyle, ...tgStyles?.wrapperStyles } : containerStyle
     const headerStyles = isTg ? tgStyles?.headerStyles : undefined

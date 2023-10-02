@@ -1,5 +1,7 @@
 import { FC } from 'react'
 
+import { useIsTg } from '../../hooks/useIsTg'
+
 import s from '../../styles/page-wrapper-sidebar.module.css'
 
 export interface PageWrapperSidebarProps {
@@ -10,6 +12,14 @@ export interface PageWrapperSidebarProps {
     sidebar: React.ReactNode;
     containerWidth?: string;
     className?: string;
+    tgStyles?: {
+        wrapper?: React.CSSProperties | undefined;
+        header?: React.CSSProperties | undefined;
+        contentWrapper?: React.CSSProperties | undefined;
+        sidebar?: React.CSSProperties | undefined;
+        main?: React.CSSProperties | undefined;
+        footer?: React.CSSProperties | undefined;
+    };
 }
 
 export const PageWrapperSidebar: FC<PageWrapperSidebarProps> = ({
@@ -19,7 +29,8 @@ export const PageWrapperSidebar: FC<PageWrapperSidebarProps> = ({
     sidebar,
     children,
     containerWidth,
-    className
+    className,
+    tgStyles
 }) => {
     document.title = pageTitle
 
@@ -27,20 +38,29 @@ export const PageWrapperSidebar: FC<PageWrapperSidebarProps> = ({
 
     const wrapperClassName = `${s.pageWrapper} ${className || ''}`
 
+    const isTg = useIsTg()
+
+    const wrapperStyles = isTg ? { ...containerStyle, ...tgStyles?.wrapper } : containerStyle
+    const headerStyle = isTg ? tgStyles?.header : undefined
+    const wrapperStyle = isTg ? tgStyles?.contentWrapper : undefined
+    const sidebarStyle = isTg ? tgStyles?.sidebar : undefined
+    const mainStyle = isTg ? tgStyles?.main : undefined
+    const footerStyle = isTg ? tgStyles?.footer : undefined
+
     return (
-        <div className={wrapperClassName} style={containerStyle}>
-            <div className={s.header}>
+        <div className={wrapperClassName} style={wrapperStyles}>
+            <div className={s.header} style={headerStyle}>
                 {header}
             </div>
-            <div className={s.contentWrapper}>
-                <aside className={s.sidebar}>
+            <div className={s.contentWrapper} style={wrapperStyle}>
+                <aside className={s.sidebar} style={sidebarStyle}>
                     {sidebar}
                 </aside>
-                <main className={s.main}>
+                <main className={s.main} style={mainStyle}>
                     {children}
                 </main>
             </div>
-            <div className={s.footer}>
+            <div className={s.footer} style={footerStyle}>
                 {footer}
             </div>
         </div>

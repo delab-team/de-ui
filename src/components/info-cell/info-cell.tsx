@@ -1,6 +1,6 @@
 import { CSSProperties, FC } from 'react'
 
-import { useAppSelector } from '../../store'
+import { useIsTg } from '../../hooks/useIsTg'
 
 import s from '../../styles/info-cell.module.css'
 
@@ -49,7 +49,7 @@ export const InfoCell: FC<InfoCellProps> = ({
         return `${username.charAt(0)}${'*'.repeat(username.length - 1)}@${domain}`
     }
 
-    const isTg = useAppSelector(store => store.tg.isTg)
+    const isTg = useIsTg()
 
     let iconsStyles: string | undefined = ''
 

@@ -6,6 +6,8 @@ import { Button } from '../button/button'
 
 import { Modal, ModalProps } from './modal'
 
+import { AppInner } from '../app-inner/app-inner'
+
 const story: Meta<ModalProps> = {
     title: 'Modals/Modal',
     component: Modal,
@@ -40,6 +42,8 @@ const ModalExample = () => {
 
 export const Playground: Story = {
     render: () => (
-        <ModalExample />
+        <AppInner isTg={true}>
+            <ModalExample />
+        </AppInner>
     )
 }

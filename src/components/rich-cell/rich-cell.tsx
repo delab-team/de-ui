@@ -35,7 +35,7 @@ export const RichCell: FC<RichCellProps> = ({ items, allLink, variant, style, cl
                     <img src={item.icon} alt="icon" />
                     <div className={s.richItemInfo}>
                         <div className={s.richItemContent}>
-                            <div className={`${s.richItemTitle}  ${variant === 'black' ? s.richItemTitleBlack : s.richItemTitleWhite}`}>{item.name}</div>
+                            <div className={`${s.richItemTitle} ${variant === 'black' ? s.richItemTitleBlack : s.richItemTitleWhite}`}>{item.name}</div>
                             <span className={`${s.richItemAmount} ${variant === 'black' ? s.richItemAmountBlack : s.richItemAmountWhite}`}>{item.amount}</span>
                             <span className={s.richItemCurrency}>{item.currency}</span>
                         </div>

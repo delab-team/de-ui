@@ -1,6 +1,7 @@
 /* eslint-disable import/no-default-export */
 import type { Meta, StoryObj } from '@storybook/react'
 
+import { AppInner } from '../app-inner/app-inner'
 import { RichCellItem, RichCellItemProps } from './rich-cell-item'
 
 const meta: Meta<RichCellItemProps> = {
@@ -15,7 +16,11 @@ type Story = StoryObj<RichCellItemProps>
 const icons = 'https://cryptologos.cc/logos/bitcoin-btc-logo.png?v=026'
 
 export const Playground: Story = {
-    render: ({ ...args }) => <RichCellItem {...args} />,
+    render: ({ ...args }) => (
+        <AppInner isTg={false}>
+            <RichCellItem {...args} />
+        </AppInner>
+    ),
     args: {
         variant: 'dark',
         icon: icons,
@@ -26,6 +31,7 @@ export const Playground: Story = {
             paddingLeft: '10px',
             paddingRight: '10px',
             borderRadius: '10px'
-        }
+        },
+        tgStyles: {}
     }
 }

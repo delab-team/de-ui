@@ -3,6 +3,8 @@
 import { Meta, StoryObj } from '@storybook/react'
 import { IconSelector, IconSelectorProps } from './icon-selector'
 
+import { AppInner } from '../app-inner/app-inner'
+
 const story: Meta<IconSelectorProps> = {
     title: 'Icons/IconSelector',
     component: IconSelector,
@@ -15,11 +17,14 @@ type Story = StoryObj<IconSelectorProps>
 
 export const Playground: Story = {
     render: ({ ...args }) => (
-        <IconSelector {...args} />
+        <AppInner isTg={true}>
+            <IconSelector {...args} />
+        </AppInner>
     ),
     args: {
         id: 'bell',
         size: '32px',
-        color: 'transparent'
+        color: 'transparent',
+        tgStyles: { stroke: 'orange' }
     }
 }

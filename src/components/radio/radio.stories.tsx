@@ -3,6 +3,8 @@
 import { Meta, StoryObj } from '@storybook/react'
 import { useState } from 'react'
 
+import { AppInner } from '../app-inner/app-inner'
+
 import { Radio, RadioProps } from './radio'
 
 const story: Meta<RadioProps> = {
@@ -41,7 +43,9 @@ const RadioExample = () => {
 
 export const Playground: Story = {
     render: () => (
-        <RadioExample />
+        <AppInner isTg={false}>
+            <RadioExample />
+        </AppInner>
     ),
     args: {}
 }

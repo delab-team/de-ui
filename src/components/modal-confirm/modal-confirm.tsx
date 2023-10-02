@@ -1,5 +1,7 @@
 import { FC, useState } from 'react'
 
+import { useIsTg } from '../../hooks/useIsTg'
+
 import s from '../../styles/modal-confirm.module.css'
 
 export interface ModalConfirmProps {
@@ -9,6 +11,11 @@ export interface ModalConfirmProps {
     onConfirm: () => void;
     onCancel: () => void;
     className?: string;
+    tgStyles?: {
+        modalContent?: React.CSSProperties | undefined;
+        title?: React.CSSProperties | undefined
+        message?: React.CSSProperties | undefined
+    }
 }
 
 export const ModalConfirm: FC<ModalConfirmProps> = ({
@@ -17,9 +24,16 @@ export const ModalConfirm: FC<ModalConfirmProps> = ({
     message,
     onConfirm,
     onCancel,
-    className
+    className,
+    tgStyles
 }) => {
     const [ isClosing, setIsClosing ] = useState<boolean>(false)
+
+    const isTg = useIsTg()
+
+    const contentStyles = isTg ? tgStyles?.modalContent : undefined
+    const titleStyles = isTg ? tgStyles?.title : undefined
+    const messageStyles = isTg ? tgStyles?.message : undefined
 
     const handleClose = () => {
         setIsClosing(true)
@@ -38,9 +52,9 @@ export const ModalConfirm: FC<ModalConfirmProps> = ({
 
     return (
         <div className={`${s.modal} ${isClosing ? s.closing : ''} ${className || ''}`}>
-            <div className={s.modalContent}>
-                <h2 className={s.title}>{title}</h2>
-                <p className={s.message}>{message}</p>
+            <div className={s.modalContent} style={contentStyles}>
+                <h2 className={s.title} style={titleStyles}>{title}</h2>
+                <p className={s.message} style={messageStyles}>{message}</p>
                 <div className={s.buttonContainer}>
                     <button className={s.confirmButton} onClick={handleConfirm}>
                       Confirm

@@ -4,6 +4,8 @@ import { Meta, StoryObj } from '@storybook/react'
 
 import { HeaderPanel, HeaderPanelProps } from './header-panel'
 
+import { AppInner } from '../app-inner/app-inner'
+
 import '../../styles/example.style.css'
 
 const story: Meta<HeaderPanelProps> = {
@@ -26,7 +28,9 @@ const plus = <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" view
 
 export const Playground: Story = {
     render: ({ ...args }) => (
-        <HeaderPanel {...args} />
+        <AppInner isTg={false}>
+            <HeaderPanel {...args} />
+        </AppInner>
     ),
     args: {
         title: 'Home',
@@ -38,6 +42,7 @@ export const Playground: Story = {
             paddingLeft: '10px',
             paddingRight: '10px',
             borderRadius: '10px'
-        }
+        },
+        tgStyles: {}
     }
 }

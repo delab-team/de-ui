@@ -1,6 +1,9 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable import/no-default-export */
 import { Meta, StoryObj } from '@storybook/react'
+
+import { AppInner } from '../app-inner/app-inner'
+
 import { ProgressBar, ProgressBarProps } from './progress-bar'
 
 const story: Meta<ProgressBarProps> = {
@@ -15,7 +18,9 @@ type Story = StoryObj<ProgressBarProps>
 
 export const Playground: Story = {
     render: ({ ...args }) => (
-        <ProgressBar {...args} />
+        <AppInner isTg={false}>
+            <ProgressBar {...args} />
+        </AppInner>
     ),
     args: {
         type: 'percentOnly',

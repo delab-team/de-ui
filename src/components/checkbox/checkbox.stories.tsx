@@ -4,6 +4,7 @@ import { Meta, StoryObj } from '@storybook/react'
 import { useState } from 'react'
 
 import { Checkbox, CheckboxProps } from './checkbox'
+import { AppInner } from '../app-inner/app-inner'
 
 const story: Meta<CheckboxProps> = {
     title: 'Forms/Checkbox',
@@ -49,7 +50,9 @@ const CheckboxExample = () => {
 
 export const Playground: Story = {
     render: () => (
-        <CheckboxExample />
+        <AppInner isTg={false}>
+            <CheckboxExample />
+        </AppInner>
     ),
     args: {}
 }

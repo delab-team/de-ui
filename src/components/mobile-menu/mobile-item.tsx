@@ -8,6 +8,8 @@ export interface MobileMenuItemProps {
     backgroundColor?: string;
     textColor?: string;
     onClick?: () => void;
+    textStyle?: React.CSSProperties | undefined;
+    itemStyle?: React.CSSProperties | undefined;
 }
 
 export const MobileMenuItem: FC<MobileMenuItemProps> = ({
@@ -15,14 +17,16 @@ export const MobileMenuItem: FC<MobileMenuItemProps> = ({
     text,
     backgroundColor = 'transparent',
     textColor = 'black',
-    onClick
+    onClick,
+    textStyle,
+    itemStyle
 }) => (
     <div
         className={s.mobileMenuItem}
-        style={{ backgroundColor, color: textColor }}
+        style={{ backgroundColor, color: textColor, ...itemStyle }}
         onClick={onClick}
     >
         {icon}
-        <span>{text}</span>
+        <span style={textStyle}>{text}</span>
     </div>
 )

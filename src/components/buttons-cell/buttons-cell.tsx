@@ -1,6 +1,6 @@
 import { FC, Fragment } from 'react'
 
-import { useAppSelector } from '../../store'
+import { useIsTg } from '../../hooks/useIsTg'
 
 import s from '../../styles/cell-buttons.module.css'
 
@@ -25,7 +25,7 @@ export const ButtonsCell: FC<ButtonsCellProps> = ({
     style,
     tgStyles
 }) => {
-    const isTg = useAppSelector(state => state.tg.isTg)
+    const isTg = useIsTg()
 
     const mergedStyles = isTg ? { ...style, ...tgStyles } : style
 

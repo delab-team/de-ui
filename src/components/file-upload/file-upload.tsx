@@ -2,6 +2,8 @@ import { FC, useRef } from 'react'
 
 import { IconSelector } from '../icon-selector/icon-selector'
 
+import { useIsTg } from '../../hooks/useIsTg'
+
 import s from '../../styles/file-upload.module.css'
 
 export interface FileUploadProps {
@@ -10,14 +12,20 @@ export interface FileUploadProps {
     uploadText?: string;
     fileInputRef?: React.RefObject<HTMLInputElement>;
     className?: string;
+    tgStyles?: {
+        uploadContainer?: React.CSSProperties | undefined;
+        icon?: string;
+        uploadText?: React.CSSProperties | undefined;
+    }
 }
 
 export const FileUpload: FC<FileUploadProps> = ({
     onFileUpload,
     accept,
-    uploadText = 'Drag & Drop files here or click to browse',
+    uploadText = 'Click to browse',
     fileInputRef,
-    className
+    className,
+    tgStyles
 }) => {
     const internalFileInputRef = useRef<HTMLInputElement | null>(null)
 
@@ -49,6 +57,12 @@ export const FileUpload: FC<FileUploadProps> = ({
         }
     }
 
+    const isTg = useIsTg()
+
+    const uploadStyles = isTg ? tgStyles?.uploadContainer : undefined
+    const iconStyles = isTg ? tgStyles?.icon : undefined
+    const textStyles = isTg ? tgStyles?.uploadText : undefined
+
     return (
         <div className={`${s.fileUploadContainer} ${className || ''}`}>
             <div
@@ -59,6 +73,7 @@ export const FileUpload: FC<FileUploadProps> = ({
                     e.preventDefault()
                     handleFileUpload(e, 'drop')
                 }}
+                style={uploadStyles}
             >
                 <input
                     type="file"
@@ -67,8 +82,8 @@ export const FileUpload: FC<FileUploadProps> = ({
                     onChange={e => handleFileUpload(e, 'change')}
                     className={s.fileInput}
                 />
-                <IconSelector id="upload" className={s.uploadIcon} />
-                <p className={s.uploadText}>{uploadText}</p>
+                <IconSelector id="upload" className={s.uploadIcon} color={iconStyles} />
+                <p className={s.uploadText} style={textStyles}>{uploadText}</p>
             </div>
         </div>
     )

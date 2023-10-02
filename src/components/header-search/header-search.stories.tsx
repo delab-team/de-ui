@@ -4,6 +4,7 @@ import { Meta, StoryObj } from '@storybook/react'
 import { useState } from 'react'
 
 import { HeaderSearch, HeaderSearchProps } from './header-search'
+import { AppInner } from '../app-inner/app-inner'
 
 const story: Meta<HeaderSearchProps> = {
     title: 'Headers/HeaderSearch',
@@ -35,7 +36,7 @@ const Example = () => {
 
 export const Playground: Story = {
     render: () => (
-        <Example/>
+        <AppInner isTg={false}><Example/></AppInner>
     ),
     args: {}
 }

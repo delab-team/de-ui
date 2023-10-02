@@ -1,9 +1,11 @@
 /* eslint-disable import/no-default-export */
 import type { Meta, StoryObj } from '@storybook/react'
 import { useState } from 'react'
+
 import { Button } from '../button/button'
 
 import { Alert, AlertProps } from './alert'
+import { AppInner } from '../app-inner/app-inner'
 
 const meta: Meta<AlertProps> = {
     title: 'Modals/Alert',
@@ -44,6 +46,6 @@ const AlertExample = () => {
 }
 
 export const Playground: Story = {
-    render: () => <AlertExample />,
+    render: () => <AppInner isTg={false}><AlertExample /></AppInner>,
     args: {}
 }

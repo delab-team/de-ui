@@ -1,3 +1,5 @@
+import { useIsTg } from '../../hooks/useIsTg'
+
 import s from '../../styles/input.module.css'
 
 export interface InputProps {
@@ -10,6 +12,13 @@ export interface InputProps {
     size?: 'xsmall' | 'small' | 'medium' | 'large';
     variant: 'black' | 'white'
     className?: string;
+    style?: React.CSSProperties
+    tgStyles?: {
+        inputWrapper?: React.CSSProperties | undefined;
+        label?: React.CSSProperties | undefined;
+        error?: React.CSSProperties | undefined;
+        input?: React.CSSProperties | undefined;
+    }
 }
 
 const inputVariantType = {
@@ -27,22 +36,33 @@ export const Input: React.FC<InputProps> = ({
     size = 'medium',
     variant = 'black',
     className,
+    style,
+    tgStyles,
     ...rest
 }) => {
     const sizeClass = s[size]
 
+    const isTg = useIsTg()
+
+    const wrapperStyles = isTg ? tgStyles?.inputWrapper : undefined
+    const labelStyles = isTg ? tgStyles?.label : undefined
+    const errorStyles = isTg ? tgStyles?.error : undefined
+
+    const inputStyles = isTg ? { ...style, ...tgStyles?.input } : undefined
+
     return (
-        <div className={`${s.inputWrapper} ${sizeClass}`}>
-            {label && <label className={s.label}>{label}</label>}
+        <div className={`${s.inputWrapper} ${sizeClass}`} style={wrapperStyles}>
+            {label && <label className={s.label} style={labelStyles}>{label}</label>}
             <input
                 type={type}
                 value={value}
                 onChange={onChange}
                 placeholder={placeholder}
                 className={`${s.input} ${sizeClass} ${inputVariantType[variant]} ${className || ''}`}
+                style={inputStyles}
                 {...rest}
             />
-            {error && <div className={s.error}>{error}</div>}
+            {error && <div className={s.error} style={errorStyles}>{error}</div>}
         </div>
     )
 }

@@ -2,7 +2,10 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable import/no-default-export */
 import { Meta, StoryObj } from '@storybook/react'
+
 import { FileUpload, FileUploadProps } from './file-upload'
+
+import { AppInner } from '../app-inner/app-inner'
 
 const story: Meta<FileUploadProps> = {
     title: 'Forms/FileUpload',
@@ -20,11 +23,11 @@ const handleFileUpload = (file: any): any => {
 
 export const Playground: Story = {
     render: ({ ...args }) => (
-        <FileUpload {...args} />
+        <AppInner isTg={false}><FileUpload {...args} /></AppInner>
     ),
     args: {
         onFileUpload: handleFileUpload,
         accept: '.jpg,.png',
-        uploadText: 'Drag files here or click to select'
+        uploadText: 'Click to browse'
     }
 }

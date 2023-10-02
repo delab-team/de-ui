@@ -1,5 +1,8 @@
 /* eslint-disable @typescript-eslint/no-shadow */
 import { FC } from 'react'
+
+import { useIsTg } from '../../hooks/useIsTg'
+
 import s from '../../styles/text.module.css'
 
 export interface TextProps {
@@ -9,6 +12,7 @@ export interface TextProps {
     color?: string;
     className?: string;
     children: React.ReactNode;
+    tgStyles?: React.CSSProperties;
 }
 
 export const Text: FC<TextProps> = ({
@@ -17,7 +21,8 @@ export const Text: FC<TextProps> = ({
     fontFamily,
     color,
     className,
-    children
+    children,
+    tgStyles
 }) => {
     const classNames = [
         s.Text,
@@ -33,5 +38,9 @@ export const Text: FC<TextProps> = ({
         fontFamily: fontFamily || undefined
     }
 
-    return <p className={classNames} style={textStyle}>{children}</p>
+    const isTg = useIsTg()
+
+    const textStyles = isTg ? { ...textStyle, ...tgStyles } : textStyle
+
+    return <p className={classNames} style={textStyles}>{children}</p>
 }

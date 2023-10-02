@@ -3,7 +3,13 @@
 import { Meta, StoryObj } from '@storybook/react'
 
 import { useState } from 'react'
+
 import { HeaderSearchTabs, HeaderSearchTabsProps } from './header-search-tabs'
+import { AppInner } from '../app-inner/app-inner'
+
+const bnbIcon = 'https://cryptologos.cc/logos/bnb-bnb-logo.png?v=026'
+
+const btcIcon = 'https://cryptologos.cc/logos/bitcoin-btc-logo.png?v=026'
 
 const story: Meta<HeaderSearchTabsProps> = {
     title: 'Headers/HeaderSearchTabs',
@@ -18,15 +24,23 @@ type Story = StoryObj<HeaderSearchTabsProps>
 const tabs = [
     {
         title: 'Tab 1',
-        content: <div>Contents of tab 1</div>
+        content: (
+            <div>
+                <img src={bnbIcon} width={40} height={40} alt="icon" />
+            </div>
+        )
     },
     {
         title: 'Tab 2',
-        content: <div>Contents of tab 2</div>
+        content: (
+            <div>
+                <img src={btcIcon} width={40} height={40} alt="icon" />
+            </div>
+        )
     },
     {
         title: 'Tab 3',
-        content: <div>Contents of tab 3</div>
+        content: <div><img src={bnbIcon} width={40} height={40} alt="icon" /></div>
     }
 ]
 
@@ -57,7 +71,7 @@ const Example = () => {
 
 export const Playground: Story = {
     render: () => (
-        <Example />
+        <AppInner isTg={false}><Example /></AppInner>
     ),
     args: {}
 }

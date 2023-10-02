@@ -1,6 +1,8 @@
-import { ButtonHTMLAttributes, ReactNode } from 'react'
+import { ButtonHTMLAttributes, CSSProperties, ReactNode } from 'react'
 
 import { Spinner } from '../spinner/spinner'
+
+import { useIsTg } from '../../hooks/useIsTg'
 
 import s from '../../styles/button.module.css'
 
@@ -69,6 +71,10 @@ export interface ButtonProps
      * className
     */
     className?: string
+    /**
+     * TgStyles
+     */
+    tgStyles?: CSSProperties | undefined
 }
 
 export const Button = ({
@@ -82,25 +88,32 @@ export const Button = ({
     disabled = false,
     loading,
     className,
+    tgStyles,
     ...restProps
-}: ButtonProps): JSX.Element => (
-    <button
-        className={`
-          ${s.btn}
-          ${buttonSize[size]}
-          ${buttonType[variant]}
-          ${buttonAlign[textAlign]}
-          ${buttonRounded[rounded]}
-          ${disabled && s['btn-disabled']}
-          ${loading && s['btn-loading']}
-          ${className || ''}
-        `}
-        disabled={disabled}
-        {...restProps}
-    >
-        {loading && <Spinner size="small" />}
-        {!!startIcon && <img src={startIcon} alt={startIcon} />}
-        {children}
-        {!!endIcon && <img src={endIcon} alt={endIcon} />}
-    </button>
-)
+}: ButtonProps): JSX.Element => {
+    const isTg = useIsTg()
+
+    const btnStyles = isTg ? tgStyles : undefined
+    return (
+        <button
+            className={`
+            ${s.btn}
+            ${buttonSize[size]}
+            ${buttonType[variant]}
+            ${buttonAlign[textAlign]}
+            ${buttonRounded[rounded]}
+            ${disabled && s['btn-disabled']}
+            ${loading && s['btn-loading']}
+            ${className || ''}
+            `}
+            disabled={disabled}
+            style={btnStyles}
+            {...restProps}
+        >
+            {loading && <Spinner size="small" />}
+            {!!startIcon && <img src={startIcon} alt={startIcon} />}
+            {children}
+            {!!endIcon && <img src={endIcon} alt={endIcon} />}
+        </button>
+    )
+}

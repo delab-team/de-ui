@@ -1,19 +1,32 @@
 import React, { FC } from 'react'
 
+import { useIsTg } from '../../hooks/useIsTg'
+
 export interface LogoSelectorProps {
     id: 'ton-symbol' | 'vector-evescale' | 'everscale' | 'venom' | 'delab'
     height?: string
     width?: string
     className?: string
+    color?: string
+    tgStyles?: {
+        icon?: string
+    }
 }
 
-export const LogoSelector: FC<LogoSelectorProps> = ({ id, height, width, className }) => {
+export const LogoSelector: FC<LogoSelectorProps> = ({
+    id,
+    color,
+    height,
+    width,
+    className,
+    tgStyles
+}) => {
     const logoArray = [
         {
             id: 'ton-symbol',
             svg: (
                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
-                    <g clip-path="url(#clip0_7_13045)">
+                    <g clipPath="url(#clip0_7_13045)">
                         <path
                             d="M37.5 19C37.5 29.2173 29.2173 37.5 19 37.5C8.78271 37.5 0.5 29.2173 0.5 19C0.5 8.78271 8.78271 0.5 19 0.5C29.2173 0.5 37.5 8.78271 37.5 19Z"
                             stroke="black"
@@ -105,12 +118,39 @@ export const LogoSelector: FC<LogoSelectorProps> = ({ id, height, width, classNa
         return null
     }
 
+    const isTg = useIsTg()
+
+    const iconColor = { stroke: color, fill: color }
+
+    const svgColor = isTg ? { fill: tgStyles?.icon, stroke: tgStyles?.icon } : iconColor
+
     return (
         <div style={{ width, height }}>
             {React.cloneElement(selectedIcon.svg, {
                 height,
                 width,
-                className
+                className,
+                children: React.Children.map(selectedIcon.svg.props.children, (child) => {
+                    if (child.type === 'path') {
+                        return React.cloneElement(child, {
+                            style: svgColor
+                        // eslint-disable-next-line object-curly-newline
+                        })
+                    }
+                    if (child.type === 'circle') {
+                        return React.cloneElement(child, {
+                            style: svgColor
+                        // eslint-disable-next-line object-curly-newline
+                        })
+                    }
+                    if (child.type === 'ellipse') {
+                        return React.cloneElement(child, {
+                            style: svgColor
+                        // eslint-disable-next-line object-curly-newline
+                        })
+                    }
+                    return child
+                })
             })}
         </div>
     )

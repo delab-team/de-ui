@@ -1,6 +1,8 @@
 /* eslint-disable max-len */
 import React, { FC } from 'react'
 
+import { useIsTg } from '../../hooks/useIsTg'
+
 export interface IconSelectorProps {
     id:
     | 'arrow-down-left'
@@ -114,13 +116,15 @@ export interface IconSelectorProps {
     | 'zoom-out'
     | 'info-2'
     | 'upload'
-    | 'mail'
     size?: string
     color?: string
     className?: string
+    tgStyles?: {
+        stroke?: string
+    }
 }
 
-export const IconSelector: FC<IconSelectorProps> = ({ id, size, color = 'transparent', className }) => {
+export const IconSelector: FC<IconSelectorProps> = ({ id, size, color = '#000', className, tgStyles }) => {
     const base = [
         {
             id: 'arrow-down-left',
@@ -2890,6 +2894,12 @@ export const IconSelector: FC<IconSelectorProps> = ({ id, size, color = 'transpa
         return null
     }
 
+    const isTg = useIsTg()
+
+    const iconColor = { stroke: color }
+
+    const svgColor = isTg ? { ...iconColor, ...tgStyles } : iconColor
+
     return (
         <div style={{ width: size, height: size }}>
             {React.cloneElement(selectedIcon.svg, {
@@ -2899,19 +2909,19 @@ export const IconSelector: FC<IconSelectorProps> = ({ id, size, color = 'transpa
                 children: React.Children.map(selectedIcon.svg.props.children, (child) => {
                     if (child.type === 'path') {
                         return React.cloneElement(child, {
-                            style: { stroke: color }
+                            style: svgColor
                         // eslint-disable-next-line object-curly-newline
                         })
                     }
                     if (child.type === 'circle') {
                         return React.cloneElement(child, {
-                            style: { stroke: color }
+                            style: svgColor
                         // eslint-disable-next-line object-curly-newline
                         })
                     }
                     if (child.type === 'ellipse') {
                         return React.cloneElement(child, {
-                            style: { stroke: color }
+                            style: svgColor
                         // eslint-disable-next-line object-curly-newline
                         })
                     }

@@ -5,6 +5,8 @@ import { Button } from '../button/button'
 
 import { ModalConfirm, ModalConfirmProps } from './modal-confirm'
 
+import { AppInner } from '../app-inner/app-inner'
+
 const meta: Meta<ModalConfirmProps> = {
     title: 'Modals/ModalConfirm',
     component: ModalConfirm,
@@ -46,6 +48,6 @@ const ModalConfirmExample = () => {
 }
 
 export const Playground: Story = {
-    render: () => <ModalConfirmExample />,
+    render: () => <AppInner isTg={false}><ModalConfirmExample /></AppInner>,
     args: {}
 }

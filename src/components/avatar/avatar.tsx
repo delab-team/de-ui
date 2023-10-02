@@ -1,5 +1,7 @@
 import { FC } from 'react'
 
+import { useIsTg } from '../../hooks/useIsTg'
+
 import s from '../../styles/avatar.module.css'
 
 type GradientColor = keyof typeof gradientStyles
@@ -21,6 +23,10 @@ export interface AvatarProps {
     initials?: string;
     fallbackIcon?: string;
     children?: React.ReactNode;
+    tgStyles?: {
+        avatarInner?: React.CSSProperties;
+        initials?: React.CSSProperties | undefined;
+    }
 }
 
 export const Avatar: FC<AvatarProps> = ({
@@ -30,18 +36,26 @@ export const Avatar: FC<AvatarProps> = ({
     initials,
     fallbackIcon,
     children,
+    tgStyles,
     ...restProps
 }: AvatarProps) => {
     const gradientClass = gradientColor ? gradientStyles[gradientColor] : ''
 
+    const isTg = useIsTg()
+
+    const innerStyles = { width: size, height: size }
+
+    const innerStyle = isTg ? { ...innerStyles, ...tgStyles } : innerStyles
+    const initialsStyle = isTg ? tgStyles?.initials : undefined
+
     return (
         <div
             className={`${s.Avatar} ${gradientClass} ${className}`}
-            style={{ width: size, height: size }}
+            style={innerStyle}
             {...restProps}
         >
             {initials && (
-                <div className={s.Avatar__initials}>
+                <div className={s.Avatar__initials} style={initialsStyle}>
                     {initials}
                 </div>
             )}

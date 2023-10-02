@@ -2,6 +2,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Meta, StoryObj } from '@storybook/react'
 
+import { AppInner } from '../app-inner/app-inner'
 import { Table, TableProps } from './table'
 
 const story: Meta<TableProps> = {
@@ -24,8 +25,15 @@ const columnWidths = [ 100, 150, 80 ]
 const rowHeights = [ 40, 30, 50 ]
 
 export const Playground: Story = {
-    render: () => (
-        <Table data={data} columnWidths={columnWidths} rowHeights={rowHeights} containerWidth='30%' />
+    render: ({ ...args }) => (
+        <AppInner isTg={false}>
+            <Table {...args} />
+        </AppInner>
     ),
-    args: {}
+    args: {
+        data,
+        columnWidths,
+        rowHeights,
+        containerWidth: '30%'
+    }
 }

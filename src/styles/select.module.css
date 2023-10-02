@@ -47,7 +47,7 @@
     position: absolute;
     top: 91%;
     left: -1px;
-    max-width: 100%;
+    width: 100.5%;
     max-height: 200px;
     overflow-y: auto;
     border-bottom-left-radius: 6px;

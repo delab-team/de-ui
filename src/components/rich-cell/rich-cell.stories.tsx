@@ -1,6 +1,7 @@
 /* eslint-disable import/no-default-export */
 import type { Meta, StoryObj } from '@storybook/react'
 
+import { AppInner } from '../app-inner/app-inner'
 import { RichCell, RichCellProps } from './rich-cell'
 
 const meta: Meta<RichCellProps> = {
@@ -28,7 +29,7 @@ const itemsArray = [
 ]
 
 export const Playground: Story = {
-    render: ({ ...args }) => <RichCell {...args} />,
+    render: ({ ...args }) => <AppInner isTg={false}><RichCell {...args} /></AppInner>,
     args: {
         items: itemsArray,
         allLink: (

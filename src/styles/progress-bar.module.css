@@ -1,7 +1,6 @@
 .progressBarContainer {
     display: flex;
     align-items: center;
-    background-color: #e5e7eb;
     border-radius: 5px;
 }
 

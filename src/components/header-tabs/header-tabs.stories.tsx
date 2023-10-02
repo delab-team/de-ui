@@ -2,6 +2,7 @@
 /* eslint-disable import/no-default-export */
 import { Meta, StoryObj } from '@storybook/react'
 
+import { AppInner } from '../app-inner/app-inner'
 import { HeaderTabs, HeaderTabsProps } from './header-tabs'
 
 const story: Meta<HeaderTabsProps> = {
@@ -10,6 +11,10 @@ const story: Meta<HeaderTabsProps> = {
     tags: [ 'autodocs' ]
 }
 
+const bnbIcon = 'https://cryptologos.cc/logos/bnb-bnb-logo.png?v=026'
+
+const btcIcon = 'https://cryptologos.cc/logos/bitcoin-btc-logo.png?v=026'
+
 export default story
 
 type Story = StoryObj<HeaderTabsProps>
@@ -17,34 +22,42 @@ type Story = StoryObj<HeaderTabsProps>
 const tabs = [
     {
         title: 'Tab 1',
-        content: <div>Contents of tab 1</div>
+        content: (
+            <div>
+                <img src={bnbIcon} width={40} height={40} alt="icon" />
+            </div>
+        )
     },
     {
         title: 'Tab 2',
-        content: <div>Contents of tab 2</div>
+        content: (
+            <div>
+                <img src={btcIcon} width={40} height={40} alt="icon" />
+            </div>
+        )
     },
     {
         title: 'Tab 3',
-        content: <div>Contents of tab 3</div>
+        content: <div><img src={bnbIcon} width={40} height={40} alt="icon" /></div>
     }
 ]
 
-const Example = () => {
-    const styles = {
-        paddingLeft: '10px',
-        paddingRight: '10px',
-        borderRadius: '10px'
-    }
-
-    return (
-        <div>
-            <HeaderTabs tabs={tabs} variant='white' style={styles} />
-        </div>
-    )
+const styles = {
+    paddingLeft: '10px',
+    paddingRight: '10px',
+    borderRadius: '10px'
 }
+
 export const Playground: Story = {
-    render: () => (
-        <Example />
+    render: ({ ...args }) => (
+        <AppInner isTg={true}>
+            <HeaderTabs {...args} />
+        </AppInner>
     ),
-    args: {}
+    args: {
+        tabs,
+        variant: 'white',
+        style: styles,
+        tgStyles: {}
+    }
 }

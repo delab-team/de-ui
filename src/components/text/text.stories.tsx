@@ -3,6 +3,8 @@
 import { Meta, StoryObj } from '@storybook/react'
 import { Text, TextProps } from './text'
 
+import { AppInner } from '../app-inner/app-inner'
+
 const story: Meta<TextProps> = {
     title: 'Typography/Text',
     component: Text,
@@ -15,7 +17,7 @@ type Story = StoryObj<TextProps>
 
 export const Playground: Story = {
     render: ({ children, ...args }) => (
-        <Text {...args} >{children}</Text>
+        <AppInner isTg={false}><Text {...args}>{children}</Text></AppInner>
     ),
-    args: { children: 'Lorem text' }
+    args: { children: 'Lorem text', tgStyles: { color: 'red' } }
 }

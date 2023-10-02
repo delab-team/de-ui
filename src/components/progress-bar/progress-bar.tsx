@@ -1,5 +1,7 @@
 import { FC } from 'react'
 
+import { useIsTg } from '../../hooks/useIsTg'
+
 import s from '../../styles/progress-bar.module.css'
 
 export interface ProgressBarProps {
@@ -9,6 +11,10 @@ export interface ProgressBarProps {
     progress: number
     label?: string
     className?: string
+    tgStyles?: {
+        progressBar?: React.CSSProperties | undefined;
+        label?: React.CSSProperties | undefined
+    }
 }
 
 export const ProgressBar: FC<ProgressBarProps> = ({
@@ -17,7 +23,8 @@ export const ProgressBar: FC<ProgressBarProps> = ({
     color,
     progress,
     label,
-    className
+    className,
+    tgStyles
 }) => {
     const getProgressBarClass = () => {
         let progressBarClass = s.progressBar
@@ -56,11 +63,18 @@ export const ProgressBar: FC<ProgressBarProps> = ({
         return progressBarClass
     }
 
+    const isTg = useIsTg()
+
+    const barStyle = { width: `${progress}%` }
+
+    const progressBarStyles = isTg ? { ...barStyle, ...tgStyles?.progressBar } : undefined
+    const labelStyles = isTg ? tgStyles?.label : undefined
+
     return (
         <div className={s.progressBarContainer}>
-            <div className={`${getProgressBarClass()} ${className || ''}`} style={{ width: `${progress}%` }}>
+            <div className={`${getProgressBarClass()} ${className || ''}`} style={progressBarStyles}>
                 {type === 'withLabel' && (
-                    <div className={s.label}>{label}</div>
+                    <div className={s.label} style={labelStyles}>{label}</div>
                 )}
                 {type === 'percentOnly' && `${progress}%`}
             </div>

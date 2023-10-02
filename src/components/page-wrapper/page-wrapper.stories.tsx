@@ -94,7 +94,7 @@ export const Playground: Story = {
                             Your Content
                         </main>
                     }
-                    tgStyles={{ mainStyles: { background: '#000' } }
+                    tgStyles={{ mainStyles: { background: '#000', color: '#fff' } }
                     }
                 />
             </Router>
