@@ -7,6 +7,8 @@ import { Button } from '../button/button'
 
 import { Range, RangeProps } from './range'
 
+import { AppInner } from '../app-inner/app-inner'
+
 const story: Meta<RangeProps> = {
     title: 'Forms/Range',
     component: Range,
@@ -55,7 +57,9 @@ const RangeExample = () => {
 
 export const Playground: Story = {
     render: () => (
-        <RangeExample />
+        <AppInner isTg={false}>
+            <RangeExample />
+        </AppInner>
     ),
     args: {}
 }

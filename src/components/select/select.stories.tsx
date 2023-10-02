@@ -2,7 +2,10 @@
 /* eslint-disable import/no-default-export */
 import { Meta, StoryObj } from '@storybook/react'
 import { useState } from 'react'
+
 import { Select, SelectProps } from './select'
+
+import { AppInner } from '../app-inner/app-inner'
 
 const story: Meta<SelectProps> = {
     title: 'Forms/Select',
@@ -34,7 +37,9 @@ const SelectExample = () => {
 
 export const Playground: Story = {
     render: () => (
-        <SelectExample />
+        <AppInner isTg={false}>
+            <SelectExample />
+        </AppInner>
     ),
     args: {}
 }

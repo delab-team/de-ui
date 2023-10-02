@@ -29,6 +29,19 @@ yarn add @delab-team/de-ui
 
 ## [Documentation](https://ui.delabteam.com/)
 
+**
+It is necessary to wrap your entire application within the AppInner component. Failure to do so may result in the application not working as expected.
+```jsx
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
+
+root.render(
+  <AppInner isTg={true}>
+    {/* Your application's root component goes here */}
+  </AppInner>,
+)
+```
+**
+
 ### **Here's a list of components included in our library:**
 
 ## Cells:

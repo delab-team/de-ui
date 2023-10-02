@@ -3,6 +3,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { Meta, StoryObj } from '@storybook/react'
 
+import { AppInner } from '../app-inner/app-inner'
 import { MobileHeader, MobileHeaderProps } from './mobile-header'
 
 import { IconSelector } from '../icon-selector/icon-selector'
@@ -33,20 +34,22 @@ type Story = StoryObj<MobileHeaderProps>
 
 export const Playground: Story = {
     render: () => (
-        <div style={{ maxWidth: '400px', margin: '0 auto' }}>
-            <MobileHeader
-                mobileTop={mobileTopItems}
-                mobileBottom={mobileBottomItems}
-                mobileClassName="custom-mobile-header"
-                mobileTopClassName="custom-top-item"
-                mobileBottomClassName="custom-bottom-item"
-                backgroundHeader="#333"
-                borderRadiusHeader='20px'
-                inactiveBottomColor='#fff'
-                activeTopColor="#007bff"
-                inactiveTopColor='white'
-            />
-        </div>
+        <AppInner isTg={false}>
+            <div style={{ maxWidth: '400px', margin: '0 auto' }}>
+                <MobileHeader
+                    mobileTop={mobileTopItems}
+                    mobileBottom={mobileBottomItems}
+                    mobileClassName="custom-mobile-header"
+                    mobileTopClassName="custom-top-item"
+                    mobileBottomClassName="custom-bottom-item"
+                    backgroundHeader="#333"
+                    borderRadiusHeader='20px'
+                    inactiveBottomColor='#fff'
+                    activeTopColor="#007bff"
+                    inactiveTopColor='white'
+                />
+            </div>
+        </AppInner>
     )
 
 }

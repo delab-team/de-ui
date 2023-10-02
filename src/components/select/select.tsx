@@ -1,6 +1,8 @@
 import { FC, useState } from 'react'
 import { IconSelector } from '../icon-selector/icon-selector'
 
+import { useIsTg } from '../../hooks/useIsTg'
+
 import s from '../../styles/select.module.css'
 
 interface Option {
@@ -14,6 +16,10 @@ export interface SelectProps {
     onSelect: (value: string) => void;
     variant: 'black' | 'white';
     className?: string;
+    tgStyles?: {
+        selectInner?: React.CSSProperties | undefined;
+        optionItem?: React.CSSProperties | undefined;
+    }
 }
 
 const selectVariantType = {
@@ -26,7 +32,7 @@ const selectItemType = {
     white: s['select-item--type-white']
 }
 
-export const Select: FC<SelectProps> = ({ options, selectedValue, onSelect, variant = 'black', className }) => {
+export const Select: FC<SelectProps> = ({ options, selectedValue, onSelect, variant = 'black', className, tgStyles }) => {
     const [ isOpen, setIsOpen ] = useState<boolean>(false)
 
     const toggleSelect = () => {
@@ -38,8 +44,13 @@ export const Select: FC<SelectProps> = ({ options, selectedValue, onSelect, vari
         toggleSelect()
     }
 
+    const isTg = useIsTg()
+
+    const selectInner = isTg ? tgStyles?.selectInner : undefined
+    const optionItem = isTg ? tgStyles?.optionItem : undefined
+
     return (
-        <div className={`${s.customSelect} ${selectVariantType[variant]} ${className || ''}`}>
+        <div className={`${s.customSelect} ${selectVariantType[variant]} ${className || ''}`} style={selectInner}>
             <div className={`${s.selectHeader} ${isOpen ? s.open : ''}`} onClick={toggleSelect}>
                 <div className={s.selectedValue}>{selectedValue}</div>
                 <div className={s.arrowIcon}>
@@ -47,13 +58,14 @@ export const Select: FC<SelectProps> = ({ options, selectedValue, onSelect, vari
                 </div>
             </div>
             {isOpen && (
-                <ul className={`${s.optionList} ${selectItemType[variant]}`}>
+                <ul className={`${s.optionList} ${selectItemType[variant]}`} style={selectInner}>
                     {options.map(option => (
                         option.value !== selectedValue && (
                             <li
                                 key={option.value}
                                 className={`${s.optionItem}`}
                                 onClick={() => handleOptionClick(option.value)}
+                                style={optionItem}
                             >
                                 {option.label}
                             </li>
