@@ -122,9 +122,7 @@ root.render(
 
 - **SocialIcons** [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/social-icons/Readme.md)
 
-## Mobile:
-
-- **MobileHeader**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/mobile-header/Readme.md)
+## Menu:
 
 - **MobileMenu**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/mobile-menu/Readme.md)
 

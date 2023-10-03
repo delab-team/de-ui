@@ -8,7 +8,7 @@ import { MobileMenu, MobileMenuProps } from './mobile-menu'
 import { IconSelector } from '../icon-selector/icon-selector'
 
 const story: Meta<MobileMenuProps> = {
-    title: 'Mobile/MobileMenu',
+    title: 'Menu/MobileMenu',
     component: MobileMenu,
     tags: [ 'autodocs' ]
 }

@@ -243,14 +243,14 @@ export type { LogoSelectorProps } from './components/logo-selector/logo-selector
 export { SocialIcons } from './components/social-icons/social-icons'
 export type { SocialIconsProps } from './components/social-icons/social-icons'
 
-// Mobile
+// Menu
 
-/**
- * MobileHeader
-*/
+// /**
+//  * MobileHeader
+// */
 
-export { MobileHeader } from './components/mobile-header/mobile-header'
-export type { MobileHeaderProps } from './components/mobile-header/mobile-header'
+// export { MobileHeader } from './components/mobile-header/mobile-header'
+// export type { MobileHeaderProps } from './components/mobile-header/mobile-header'
 
 /**
  * MobileMenu

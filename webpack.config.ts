@@ -63,6 +63,7 @@ const config: Configuration = {
                 { from: 'src/styles', to: '../dist/styles' },
                 { from: 'src/assets', to: '../dist/assets' },
                 { from: 'src/store', to: '../dist/store' },
+                { from: 'src/hooks', to: '../dist/hooks' },
             ],
         }),
     ],
