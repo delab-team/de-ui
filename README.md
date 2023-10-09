@@ -40,7 +40,7 @@ index.html
 
 App.tsx
 ```jsx
-
+import { AppInner } from '@delab-team/de-ui' 
 import { useEffect, useState } from 'react'
 
 declare global {
