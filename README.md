@@ -67,7 +67,7 @@ export const App: React.FC = () => {
 
     return (
       <AppInner isTg={isTg}>
-            {/* Your application's root component goes here */}
+            {/* Your application's goes here */}
       </AppInner>,
     )
 
