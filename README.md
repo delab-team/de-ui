@@ -57,7 +57,6 @@ export const App: React.FC = () => {
     useEffect(() => {
         const isTgCheck = window.Telegram.WebApp.initData !== ''
         const TgObj = window.Telegram.WebApp
-        const bodyStyle = document.body.style
 
         setIsTg(isTgCheck)
         if (isTgCheck) {
