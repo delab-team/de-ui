@@ -24,6 +24,9 @@ const config: Configuration = {
                 test: /\.tsx?$/,
                 use: 'ts-loader',
                 exclude: /node_modules/,
+                options: {
+                    allowTsInNodeModules: true,
+                },
             },
             {
                 test: /\.css$/,

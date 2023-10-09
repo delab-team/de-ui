@@ -33,13 +33,13 @@
 }
 
 .uploadIcon {
-  width: 48px;
-  height: 48px;
+  width: 35px;
+  height: 35px;
   /* fill: #007bff; */
 }
 
 .uploadText {
-  margin-top: 8px;
+  margin-top: 5px;
 }
 
 .fileInput {
