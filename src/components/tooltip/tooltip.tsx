@@ -20,7 +20,7 @@ export interface TooltipProps {
 }
 
 export const Tooltip: FC<TooltipProps> = ({ text, children, className, iconColor, tgStyles }) => {
-    const [ isTooltipVisible, setTooltipVisible ] = useState<boolean>(true)
+    const [ isTooltipVisible, setTooltipVisible ] = useState<boolean>(false)
 
     const isTg = useIsTg()
 
