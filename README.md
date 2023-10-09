@@ -39,13 +39,10 @@ index.html
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 ```
 
-index.tsx
+App.tsx
 ```jsx
 
 import { useEffect, useState } from 'react'
-import ReactDOM from 'react-dom/client'
-
-import { App } from './App'
 
 declare global {
     interface Window {
@@ -53,6 +50,7 @@ declare global {
     }
 }
 
+export const App: React.FC = () => {
     const [ firstRender, setFirstRender ] = useState<boolean>(false)
     const [ isTg, setIsTg ] = useState<boolean>(false)
 
@@ -69,13 +67,13 @@ declare global {
         }
     }, [ firstRender ])
 
-const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
-
-root.render(
+return (
   <AppInner isTg={isTg}>
-    <App />
+        {/* Your application's root component goes here */}
   </AppInner>,
 )
+
+}
 ```
 
 ### **Here's a list of components included in our library:**
