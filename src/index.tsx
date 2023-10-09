@@ -313,3 +313,10 @@ export type { TitleProps } from './components/title/title'
 
 export { Text } from './components/text/text'
 export type { TextProps } from './components/text/text'
+
+/**
+ * AppInner
+*/
+
+export { AppInner } from './components/app-inner/app-inner'
+export type { AppInnerProps } from './components/app-inner/app-inner'

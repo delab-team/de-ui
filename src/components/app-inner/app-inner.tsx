@@ -5,7 +5,7 @@ import { store, useAppDispatch } from '../../store'
 
 import { setIsTg } from '../../store/tgSlice.slice'
 
-interface AppInnerProps {
+export interface AppInnerProps {
     isTg: boolean;
     children: React.ReactNode;
 }
