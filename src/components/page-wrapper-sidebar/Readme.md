@@ -15,6 +15,8 @@ Once you have the PageWrapperSidebar component set up, you can use it to structu
 - `children` (React.ReactNode, required): The main content of the page that goes inside the <main> element.
 - `containerWidth` - container width
 - `className` - wrapper className
+- `tgStyles` - `{ wrapper?: React.CSSProperties; header?: React.CSSProperties; contentWrapper?: React.CSSProperties; sidebar?: React.CSSProperties; main?: React.CSSProperties; footer?: React.CSSProperties }`
+
 ## Example
 
 ```jsx
@@ -25,7 +27,6 @@ Once you have the PageWrapperSidebar component set up, you can use it to structu
             footer={<footer>Footer Content</footer>}
             sidebar={<aside>Sidebar Content</aside>}
         >
-            {/* Main content goes here */}
             <main>
                 {/* Your page's main content */}
             </main>

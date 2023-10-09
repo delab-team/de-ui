@@ -9,7 +9,7 @@ export interface HeaderSearchProps {
     type?: string
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
     className?: string
-    containerWidth?: number | string
+    containerWidth?: string
     variant?: 'white' | 'black'
     style?: React.CSSProperties,
     tgStyles?: {
@@ -31,7 +31,7 @@ export const HeaderSearch: FC<HeaderSearchProps> = ({
 }) => {
     const styles: React.CSSProperties = {
         ...style,
-        maxWidth: `${containerWidth}px`
+        maxWidth: `${containerWidth}`
     }
 
     const isTg = useIsTg()

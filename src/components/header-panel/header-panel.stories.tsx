@@ -39,10 +39,9 @@ export const Playground: Story = {
         actionLeft: <div className="exampleLink">{chevronLeft} Back</div>,
         actionRight: <div>{plus}</div>,
         style: {
-            paddingLeft: '10px',
-            paddingRight: '10px',
+            padding: '10px',
             borderRadius: '10px'
         },
-        tgStyles: {}
+        tgStyles: { header: { background: '#3D3D3D' } }
     }
 }

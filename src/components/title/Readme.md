@@ -16,10 +16,12 @@ The Title component can be used to create text elements with various styles. It 
 
 - `className (optional)`: Allows you to add custom CSS class names to the component for additional styling.
 
+- `tgStyles (optional)`: An optional object that allows you to specify inline CSS styles for the title. These styles will be applied conditionally based on whether the component detects a specific environment (e.g., "tg" or "telegram"). It's useful for platform-specific styling.
+
 ## Usage 
 
 ```jsx
-      <Title variant="h1" fontWeight="bold" color="blue">
+      <Title variant="h1" fontWeight="bold" color="blue" tgStyles={{ color: '#2E7DDB' }}>
         Heading 1
       </Title>
       <Title variant="h2" fontFamily="Helvetica" color="green">

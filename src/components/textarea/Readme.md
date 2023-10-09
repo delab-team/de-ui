@@ -22,6 +22,7 @@ Once you have installed the TextArea component, you can start using it in your R
                 placeholder="Type something..."
                 isError={text.length > 100}
                 isLarge={text.length > 50}
+                tgStyles={{ background: '#2E7DDB', color: '#fff' }}
             />
         </div>
   );

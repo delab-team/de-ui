@@ -42,12 +42,17 @@ const ModalConfirmExample = () => {
                 message="Are you sure you want to perform this action?"
                 onConfirm={handleConfirm}
                 onCancel={handleCloseModal}
+                tgStyles={{ modalContent: { backgroundColor: '#2E7DDB', color: '#fff' } }}
             />
         </div>
     )
 }
 
 export const Playground: Story = {
-    render: () => <AppInner isTg={false}><ModalConfirmExample /></AppInner>,
+    render: () => (
+        <AppInner isTg={false}>
+            <ModalConfirmExample />
+        </AppInner>
+    ),
     args: {}
 }

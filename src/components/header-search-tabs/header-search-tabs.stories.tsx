@@ -60,11 +60,19 @@ const Example = () => {
     return (
         <HeaderSearchTabs
             variant="black"
-            containerWidth={800}
+            containerWidth="800px"
             tabsContent={tabs}
             searchValue={searchValue}
             searchOnChange={changeEvent}
             style={styles}
+            tgStyles={{
+                headerInner: { backgroundColor: '#2E7DDB' },
+                headerTabs: {
+                    inner: { backgroundColor: '#2E7DDB' },
+                    tabItem: { color: '#fff' }
+                },
+                headerSearch: { searchBody: { backgroundColor: '#2E7DDB' }, icon: '#fff' }
+            }}
         />
     )
 }

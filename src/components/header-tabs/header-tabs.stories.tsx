@@ -50,7 +50,7 @@ const styles = {
 
 export const Playground: Story = {
     render: ({ ...args }) => (
-        <AppInner isTg={true}>
+        <AppInner isTg={false}>
             <HeaderTabs {...args} />
         </AppInner>
     ),
@@ -58,6 +58,6 @@ export const Playground: Story = {
         tabs,
         variant: 'white',
         style: styles,
-        tgStyles: {}
+        tgStyles: { inner: { background: '#2E7DDB' }, tabItem: { color: '#fff' } }
     }
 }

@@ -45,7 +45,7 @@ export const Avatar: FC<AvatarProps> = ({
 
     const innerStyles = { width: size, height: size }
 
-    const innerStyle = isTg ? { ...innerStyles, ...tgStyles } : innerStyles
+    const innerStyle = isTg ? { ...innerStyles, ...tgStyles?.avatarInner } : innerStyles
     const initialsStyle = isTg ? tgStyles?.initials : undefined
 
     return (

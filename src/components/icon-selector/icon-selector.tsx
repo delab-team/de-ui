@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import React, { FC } from 'react'
+import React, { CSSProperties, FC } from 'react'
 
 import { useIsTg } from '../../hooks/useIsTg'
 
@@ -122,9 +122,10 @@ export interface IconSelectorProps {
     tgStyles?: {
         stroke?: string
     }
+    style?: CSSProperties | undefined
 }
 
-export const IconSelector: FC<IconSelectorProps> = ({ id, size, color = '#000', className, tgStyles }) => {
+export const IconSelector: FC<IconSelectorProps> = ({ id, size, color = '#000', className, tgStyles, style }) => {
     const base = [
         {
             id: 'arrow-down-left',
@@ -2906,6 +2907,7 @@ export const IconSelector: FC<IconSelectorProps> = ({ id, size, color = '#000', 
                 height: size,
                 width: size,
                 className,
+                style,
                 children: React.Children.map(selectedIcon.svg.props.children, (child) => {
                     if (child.type === 'path') {
                         return React.cloneElement(child, {

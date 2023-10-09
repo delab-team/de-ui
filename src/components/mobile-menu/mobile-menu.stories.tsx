@@ -44,7 +44,8 @@ export const Playground: Story = {
                         onClick: () => {}
                     }
                 ]}
-                style={{ backgroundColor: '#333', borderRadius: '100px' }}
+                style={{ borderRadius: '100px' }}
+                tgStyles={{ menuContainer: { background: '#2E7DDB' } }}
                 />
             </div>
         </AppInner>

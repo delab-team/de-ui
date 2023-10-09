@@ -22,13 +22,13 @@ export const Playground: Story = {
     args: {
         title: 'Home',
         subtitle: 'Home',
-        containerWidth: 800,
+        containerWidth: '800px',
         variant: 'black',
         style: {
             paddingLeft: '10px',
             paddingRight: '10px',
             borderRadius: '10px'
         },
-        tgStyles: {}
+        tgStyles: { header: { background: '#2E7DDB' }, title: { color: '#fff' }, subtitle: { color: '#fff' } }
     }
 }

@@ -11,6 +11,12 @@ The Footer component is a reusable React component designed to create footer sec
 - `className` (string, optional): Additional CSS classes to apply to the footer.
 - `menuItems2` (MenuItem[], optional): An additional array of menu items for a secondary menu.
 - `menuItems3` (MenuItem[], optional): An additional array of menu items for a tertiary menu.
+- `tgStyles` Description: An optional object that allows you to specify platform-specific CSS styles for different parts of the footer component. It can contain the following properties:
+  - `footerInner`: CSS styles for the inner footer container.
+  - `logo`: CSS styles for the logo image.
+  - `menuLi`: CSS styles for individual menu items.
+  - `phoneNumber`: CSS styles for the phone number link.
+  - `email`: CSS styles for the email link.
 
 ## Example 
 

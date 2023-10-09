@@ -1,9 +1,6 @@
 import { FC, useRef } from 'react'
-
 import { IconSelector } from '../icon-selector/icon-selector'
-
 import { useIsTg } from '../../hooks/useIsTg'
-
 import s from '../../styles/file-upload.module.css'
 
 export interface FileUploadProps {
@@ -12,9 +9,10 @@ export interface FileUploadProps {
     uploadText?: string;
     fileInputRef?: React.RefObject<HTMLInputElement>;
     className?: string;
+    variant?: 'white' | 'black'
     tgStyles?: {
         uploadContainer?: React.CSSProperties | undefined;
-        icon?: string;
+        icon?: React.CSSProperties | undefined;
         uploadText?: React.CSSProperties | undefined;
     }
 }
@@ -25,6 +23,7 @@ export const FileUpload: FC<FileUploadProps> = ({
     uploadText = 'Click to browse',
     fileInputRef,
     className,
+    variant,
     tgStyles
 }) => {
     const internalFileInputRef = useRef<HTMLInputElement | null>(null)
@@ -37,21 +36,12 @@ export const FileUpload: FC<FileUploadProps> = ({
         }
     }
 
-    const handleFileUpload = (
-        e: React.ChangeEvent<HTMLInputElement> | React.DragEvent<HTMLDivElement>,
-        eventType?: 'change' | 'drop'
-    ) => {
-        if (eventType === 'change' && e.target instanceof HTMLInputElement) {
+    const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+        if (e.target instanceof HTMLInputElement) {
             const fileInput = e.target
             const files = fileInput.files
             if (files && files.length > 0) {
                 const file = files[0]
-                onFileUpload(file)
-            }
-        } else if (eventType === 'drop' && e instanceof DragEvent) {
-            e.preventDefault()
-            const file = e.dataTransfer?.files[0]
-            if (file) {
                 onFileUpload(file)
             }
         }
@@ -66,23 +56,18 @@ export const FileUpload: FC<FileUploadProps> = ({
     return (
         <div className={`${s.fileUploadContainer} ${className || ''}`}>
             <div
-                className={s.fileUpload}
+                className={`${s.fileUpload} ${variant === 'white' ? s.fileUploadWhite : s.fileUploadBlack}`}
                 onClick={openFileDialog}
-                onDragOver={e => e.preventDefault()}
-                onDrop={(e) => {
-                    e.preventDefault()
-                    handleFileUpload(e, 'drop')
-                }}
                 style={uploadStyles}
             >
                 <input
                     type="file"
                     ref={fileInputRef || internalFileInputRef}
                     accept={accept}
-                    onChange={e => handleFileUpload(e, 'change')}
+                    onChange={handleFileUpload}
                     className={s.fileInput}
                 />
-                <IconSelector id="upload" className={s.uploadIcon} color={iconStyles} />
+                <IconSelector id="upload" className={s.uploadIcon} style={iconStyles} />
                 <p className={s.uploadText} style={textStyles}>{uploadText}</p>
             </div>
         </div>

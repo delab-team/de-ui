@@ -17,7 +17,7 @@ type Story = StoryObj<TitleProps>
 
 export const Playground: Story = {
     render: ({ children, ...args }) => (
-        <AppInner isTg={true}><Title {...args}>{children}</Title></AppInner>
+        <AppInner isTg={false}><Title {...args}>{children}</Title></AppInner>
     ),
-    args: { children: 'Lorem text' }
+    args: { children: 'Lorem text', tgStyles: { color: '#2E7DDB' } }
 }

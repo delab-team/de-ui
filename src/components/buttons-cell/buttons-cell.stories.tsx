@@ -33,6 +33,7 @@ export const Playground: Story = {
             paddingLeft: '15px',
             paddingRight: '15px',
             borderRadius: '10px'
-        }
+        },
+        tgStyles: { cellInner: { backgroundColor: '#2E7DDB' } }
     }
 }

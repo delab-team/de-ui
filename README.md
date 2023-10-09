@@ -22,131 +22,167 @@
 
 ## Install
 
-- **as local project package** 
+-   **as local project package**
+
 ```jsx
 yarn add @delab-team/de-ui
 ```
 
 ## [Documentation](https://ui.delabteam.com/)
 
-**
-It is necessary to wrap your entire application within the AppInner component. Failure to do so may result in the application not working as expected.
+\*\*
+It is necessary to wrap your entire application within the AppInner component. Failure to do so may result in the application not working as expected. You also have the option to manually set the value to true in order to witness the application's outcome adorned with Telegram styles.
+
+index.html
+
 ```jsx
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+```
+
+index.tsx
+```jsx
+
+import { useEffect, useState } from 'react'
+import ReactDOM from 'react-dom/client'
+
+import { App } from './App'
+
+declare global {
+    interface Window {
+        Telegram?: any
+    }
+}
+
+    const [ firstRender, setFirstRender ] = useState<boolean>(false)
+    const [ isTg, setIsTg ] = useState<boolean>(false)
+
+    useEffect(() => {
+        const isTgCheck = window.Telegram.WebApp.initData !== ''
+        const TgObj = window.Telegram.WebApp
+        const bodyStyle = document.body.style
+
+        setIsTg(isTgCheck)
+        if (isTgCheck) {
+            TgObj.ready()
+            TgObj.enableClosingConfirmation()
+            TgObj.expand()
+        }
+    }, [ firstRender ])
+
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 
 root.render(
-  <AppInner isTg={true}>
-    {/* Your application's root component goes here */}
+  <AppInner isTg={isTg}>
+    <App />
   </AppInner>,
 )
 ```
-**
 
 ### **Here's a list of components included in our library:**
 
 ## Cells:
 
-- **ActionCell**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/action-cell/Readme.md)
+-   **ActionCell**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/action-cell/Readme.md)
 
-- **ButtonsCell**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/buttons-cell/Readme.md)
+-   **ButtonsCell**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/buttons-cell/Readme.md)
 
-- **InfoCell**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/info-cell/Readme.md)
+-   **InfoCell**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/info-cell/Readme.md)
 
-- **PaymentCell** [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/payment-cell/Readme.md)
+-   **PaymentCell** [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/payment-cell/Readme.md)
 
-- **SettingsCell**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/settings-cell/Readme.md)
+-   **SettingsCell**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/settings-cell/Readme.md)
 
 ## Modals:
 
-- **Alert**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/alert/Readme.md)
+-   **Alert**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/alert/Readme.md)
 
-- **ModalConfirm**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/modal-confirm/Readme.md)
+-   **ModalConfirm**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/modal-confirm/Readme.md)
 
-- **Modal**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/modal/Readme.md)
+-   **Modal**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/modal/Readme.md)
 
 ## Common:
 
-- **Avatar**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/avatar/Readme.md)
+-   **Avatar**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/avatar/Readme.md)
 
-- **Button**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/button/Readme.md)
+-   **Button**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/button/Readme.md)
 
-- **Font**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/font/Readme.md)
+-   **Font**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/font/Readme.md)
 
-- **Footer**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/footer/Readme.md)
+-   **Footer**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/footer/Readme.md)
 
-- **ProgressBar**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/progress-bar/Readme.md)
+-   **ProgressBar**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/progress-bar/Readme.md)
 
-- **Spinner**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/spinner/Readme.md)
+-   **Spinner**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/spinner/Readme.md)
 
-- **Toggle**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/toggle/Readme.md)
+-   **Toggle**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/toggle/Readme.md)
 
-- **Tooltip**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/tooltip/Readme.md)
+-   **Tooltip**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/tooltip/Readme.md)
 
 ## Forms:
 
-- **Checkbox**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/checkbox/Readme.md)
+-   **Checkbox**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/checkbox/Readme.md)
 
-- **FileUpload**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/file-upload/Readme.md)
+-   **FileUpload**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/file-upload/Readme.md)
 
-- **Input**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/input/Readme.md)
+-   **Input**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/input/Readme.md)
 
-- **Radio**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/radio/Readme.md)
+-   **Radio**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/radio/Readme.md)
 
-- **Range**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/range/Readme.md)
+-   **Range**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/range/Readme.md)
 
-- **Select**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/select/Readme.md)
+-   **Select**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/select/Readme.md)
 
-- **TextArea**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/textarea/Readme.md)
+-   **TextArea**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/textarea/Readme.md)
 
-## Headers 
+## Headers
 
-- **HeaderPanel**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/header-panel/Readme.md)
+-   **HeaderPanel**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/header-panel/Readme.md)
 
-- **HeaderSearchTabs**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/header-search-tabs/Readme.md)
+-   **HeaderSearchTabs**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/header-search-tabs/Readme.md)
 
-- **HeaderSearch**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/header-search/Readme.md)
+-   **HeaderSearch**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/header-search/Readme.md)
 
-- **HeaderTabs**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/header-tabs/Readme.md)
+-   **HeaderTabs**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/header-tabs/Readme.md)
 
-- **HeaderTitle**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/header-title/Readme.md)
+-   **HeaderTitle**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/header-title/Readme.md)
 
-- **Header**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/header/Readme.md)
+-   **Header**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/header/Readme.md)
 
 ## Icons:
 
-- **IconImg**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/icon-img/Readme.md)
+-   **IconImg**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/icon-img/Readme.md)
 
-- **IconSelector**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/icon-selector/Readme.md)
+-   **IconSelector**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/icon-selector/Readme.md)
 
-- **LogoSelector** [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/logo-selector/Readme.md)
+-   **LogoSelector** [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/logo-selector/Readme.md)
 
-- **SocialIcons** [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/social-icons/Readme.md)
+-   **SocialIcons** [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/social-icons/Readme.md)
 
 ## Menu:
 
-- **MobileMenu**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/mobile-menu/Readme.md)
+-   **MobileMenu**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/mobile-menu/Readme.md)
 
 ## Wrappers:
 
-- **PageWrapper**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/page-wrapper/Readme.md)
+-   **PageWrapper**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/page-wrapper/Readme.md)
 
-- **PageWrapperSidebar**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/page-wrapper-sidebar/Readme.md)
+-   **PageWrapperSidebar**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/page-wrapper-sidebar/Readme.md)
 
 ## RichCells:
 
-- **RichCellItem**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/rich-cell/Readme.md)
+-   **RichCellItem**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/rich-cell/Readme.md)
 
-- **RichCell**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/rich-cell/Readme.md)
+-   **RichCell**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/rich-cell/Readme.md)
 
 ## Tables:
 
-- **Table**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/table/Readme.md)
+-   **Table**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/table/Readme.md)
 
 ## Typography:
 
-- **Title**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/title/Readme.md)
+-   **Title**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/title/Readme.md)
 
-- **Text**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/text/Readme.md)
+-   **Text**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/text/Readme.md)
 
 # License
 

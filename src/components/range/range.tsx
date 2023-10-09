@@ -1,5 +1,7 @@
 import { FC } from 'react'
 
+import { useIsTg } from '../../hooks/useIsTg'
+
 import s from '../../styles/range.module.css'
 
 export interface RangeProps {
@@ -10,6 +12,12 @@ export interface RangeProps {
     value?: number;
     onChange?: (value: number) => void;
     className?: string;
+    tgStyles?: {
+        rangeInner?: React.CSSProperties | undefined;
+        label?: React.CSSProperties | undefined;
+        range?: React.CSSProperties | undefined;
+        output?: React.CSSProperties | undefined;
+    }
 }
 
 export const Range: FC<RangeProps> = ({
@@ -19,7 +27,8 @@ export const Range: FC<RangeProps> = ({
     step = 1,
     value = min,
     onChange,
-    className
+    className,
+    tgStyles
 }) => {
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const newValue = parseFloat(event.target.value)
@@ -28,9 +37,16 @@ export const Range: FC<RangeProps> = ({
         }
     }
 
+    const isTg = useIsTg()
+
+    const rangeInnerTgStyles = isTg ? tgStyles?.rangeInner : undefined
+    const labelTgStyles = isTg ? tgStyles?.label : undefined
+    const rangeTgStyles = isTg ? tgStyles?.range : undefined
+    const outputTgStyles = isTg ? tgStyles?.output : undefined
+
     return (
-        <div className={`${s.rangeContainer} ${className || ''}`}>
-            <label className={s.label}>{label}</label>
+        <div className={`${s.rangeContainer} ${className || ''}`} style={rangeInnerTgStyles}>
+            <label className={s.label} style={labelTgStyles}>{label}</label>
             <input
                 type="range"
                 min={min}
@@ -39,8 +55,9 @@ export const Range: FC<RangeProps> = ({
                 value={value}
                 onChange={handleChange}
                 className={s.input}
+                style={rangeTgStyles}
             />
-            <output className={s.output}>{value}</output>
+            <output className={s.output} style={outputTgStyles}>{value}</output>
         </div>
     )
 }

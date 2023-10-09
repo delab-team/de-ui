@@ -41,6 +41,7 @@ const RangeExample = () => {
                 step={rangeStyle.step}
                 value={volume}
                 onChange={handleRangeChange}
+                tgStyles={{ label: { color: '#2E7DDB' }, output: { color: '#2E7DDB' } }}
             />
             <p>Current Volume: {volume}</p>
             <div style={{ display: 'flex', gap: '5px', marginTop: '10px' }}>

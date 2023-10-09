@@ -2,6 +2,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Meta, StoryObj } from '@storybook/react'
 import { TextArea, TextAreaProps } from './textarea'
+import { AppInner } from '../app-inner/app-inner'
 
 const story: Meta<TextAreaProps> = {
     title: 'Forms/Textarea',
@@ -15,7 +16,9 @@ type Story = StoryObj<TextAreaProps>
 
 export const Playground: Story = {
     render: ({ ...args }) => (
-        <TextArea {...args} />
+        <AppInner isTg={false}>
+            <TextArea {...args} />
+        </AppInner>
     ),
-    args: { placeholder: 'Type something...', variant: 'black' }
+    args: { placeholder: 'Type something...', variant: 'black', tgStyles: { background: '#2E7DDB', color: '#fff' } }
 }

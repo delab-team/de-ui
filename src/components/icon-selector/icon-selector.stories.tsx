@@ -17,7 +17,7 @@ type Story = StoryObj<IconSelectorProps>
 
 export const Playground: Story = {
     render: ({ ...args }) => (
-        <AppInner isTg={true}>
+        <AppInner isTg={false}>
             <IconSelector {...args} />
         </AppInner>
     ),
@@ -25,6 +25,6 @@ export const Playground: Story = {
         id: 'bell',
         size: '32px',
         color: 'transparent',
-        tgStyles: { stroke: 'orange' }
+        tgStyles: { stroke: '#e00cf3' }
     }
 }

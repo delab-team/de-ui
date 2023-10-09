@@ -30,6 +30,7 @@ function Example () {
                 initialPaymentMethods={paymentMethods}
                 variant='black'
                 style={styles}
+                tgStyles={{ inner: { backgroundColor: '#2E7DDB' }, addText: { color: '#fff' } }}
             />
         </AppInner>
     )

@@ -13,11 +13,22 @@ variant ('default' | 'outline' | 'secondary' | 'tentery', optional): Specifies t
 - `disabled` (boolean, optional): Specifies whether the button is disabled.
 - `loading` (boolean, optional): Specifies whether the button is in a loading state.
 - `children` (ReactNode, optional): The text or content to be displayed within the button.
-
+- `tgStyles` (Optional): 
+ - Type: Object (CSSProperties)
+ - Description: An object that allows you to specify styles that are specifically tailored for rendering in Telegram.
 ## Example 
 
 ```jsx
-            <Button size="s" variant="default" textAlign="center" rounded="s">
+            <Button 
+                size="s" 
+                variant="default" 
+                textAlign="center" 
+                rounded="s"
+                tgStyles={{
+                    background: '#2E7DDB',
+                    color: '#fff'
+                }}
+            >
                 Default Button
             </Button>
             <Button size="m" variant="outline" textAlign="center" rounded="m" startIcon="start-icon.png">

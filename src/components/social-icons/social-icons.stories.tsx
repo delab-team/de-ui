@@ -25,7 +25,7 @@ export const Playground: Story = {
     args: {
         id: 'github',
         size: '32px',
-        color: 'red',
-        tgStyles: { icon: 'orange' }
+        color: '#000',
+        tgStyles: { icon: '#2E7DDB' }
     }
 }

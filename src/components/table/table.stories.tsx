@@ -34,6 +34,7 @@ export const Playground: Story = {
         data,
         columnWidths,
         rowHeights,
-        containerWidth: '30%'
+        containerWidth: '30%',
+        tgStyles: { td: { color: '#fff' }, tableContainer: { background: '#2E7DDB' } }
     }
 }

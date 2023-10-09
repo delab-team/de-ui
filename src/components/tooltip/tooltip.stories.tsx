@@ -18,7 +18,7 @@ type Story = StoryObj<TooltipProps>
 
 export const Playground: Story = {
     render: ({ children, text, iconColor, tgStyles }) => (
-        <AppInner isTg={false}>
+        <AppInner isTg={true}>
             <Tooltip text={text} iconColor={iconColor} tgStyles={tgStyles}>
                 {children}
             </Tooltip>
@@ -28,6 +28,6 @@ export const Playground: Story = {
         children: 'Hover over me',
         text: 'And one more element',
         iconColor: '#000',
-        tgStyles: { iconButton: 'black' }
+        tgStyles: { iconButton: '#2E7DDB' }
     }
 }

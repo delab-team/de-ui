@@ -16,10 +16,12 @@ The `ProgressBar` component is a versatile component used to display progress vi
 
 - `className (string)`: The className for the progress bar.
 
+- `tgStyles`: `{ progressBar: undefined, label: undefined }`  Allows you to define custom styles for different parts of the progress bar when it is used in a Telegram (tg) context. You can define custom styles for the progress bar (progressBar) and the label (label).
+
 ## Example
 
 ```jsx
-<ProgressBar type="default" size="default" color="blue" progress={50} />
+<ProgressBar type="default" size="default" color="blue" progress={50} tgStyles={{ progressBar: { backgroundColor: 'purple' } }} />
 <ProgressBar type="withLabel" size="large" color="green" progress={75} label="Loading..." />
 <ProgressBar type="percentOnly" size="small" color="red" progress={25} label="25%" />
 ```

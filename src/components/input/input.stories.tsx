@@ -17,7 +17,7 @@ type Story = StoryObj<InputProps>
 
 export const Playground: Story = {
     render: ({ ...args }) => (
-        <AppInner isTg={true}>
+        <AppInner isTg={false}>
             <Input {...args} />
         </AppInner>
     ),
@@ -25,6 +25,6 @@ export const Playground: Story = {
         variant: 'black',
         placeholder: 'Enter your username',
         error: 'Username is required',
-        tgStyles: {}
+        tgStyles: { input: { background: '#2E7DDB', border: '1px solid #fff', color: '#fff' } }
     }
 }

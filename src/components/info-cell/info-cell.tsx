@@ -12,6 +12,7 @@ export interface InfoCellProps {
     className?: string
     style?: React.CSSProperties
     tgStyles?: {
+        inner?: CSSProperties | undefined,
         iconColor?: string | undefined,
         titleItem?: CSSProperties | undefined,
         contacts?: CSSProperties | undefined
@@ -61,6 +62,7 @@ export const InfoCell: FC<InfoCellProps> = ({
         iconsStyles = tgStyles?.iconColor
     }
 
+    const innerStyle = isTg ? { ...style, ...tgStyles?.inner } : style
     const titleStyles = isTg ? tgStyles?.titleItem : undefined
     const contactsStyles = isTg ? tgStyles?.contacts : undefined
 
@@ -92,7 +94,7 @@ export const InfoCell: FC<InfoCellProps> = ({
     )
 
     return (
-        <div className={`${s.inner} ${variant === 'white' ? s.innerWhite : s.innerBlack} ${className || ''}`} style={style}>
+        <div className={`${s.inner} ${variant === 'white' ? s.innerWhite : s.innerBlack} ${className || ''}`} style={innerStyle}>
             {phone && (
                 <div className={`${s.item} ${variant === 'white' ? s.itemWhite : s.itemBlack}`}>
                     <div className={s.itemInfo}>

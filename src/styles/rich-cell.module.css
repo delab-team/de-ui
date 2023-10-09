@@ -81,11 +81,11 @@
 }
 
 .richItemBlack:not(:last-child) {
-    border-bottom: 1px solid #373737 !important;
+    border-bottom: 1px solid #373737;
 }
 
 .richItemWhite:not(:last-child) {
-  border-bottom: 1px solid #EEE !important;
+  border-bottom: 1px solid #EEE;
 }
 
 .richItemInfo {

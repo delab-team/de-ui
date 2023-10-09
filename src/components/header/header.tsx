@@ -8,7 +8,7 @@ export interface HeaderProps {
     children?: React.ReactNode;
     before?: React.ReactNode;
     after?: React.ReactNode;
-    width: string;
+    width?: string;
     className?: string;
     containerWidth?: number | string
     position?: 'fixed' | 'absolute' | 'relative' | 'static';
@@ -34,7 +34,7 @@ export const Header: FC<HeaderProps> = ({
 }) => {
     const styles = {
         ...style,
-        maxWidth: `${containerWidth}px`
+        maxWidth: `${containerWidth}`
     }
 
     const isTg = useIsTg()

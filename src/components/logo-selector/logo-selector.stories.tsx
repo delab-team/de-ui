@@ -22,9 +22,9 @@ export const Playground: Story = {
         </AppInner>
     ),
     args: {
-        id: 'ton-symbol',
+        id: 'venom',
         height: '32px',
-        width: '32px',
+        width: '92px',
         tgStyles: { icon: 'orange' }
     }
 }

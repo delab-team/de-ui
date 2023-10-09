@@ -67,7 +67,7 @@ export const ProgressBar: FC<ProgressBarProps> = ({
 
     const barStyle = { width: `${progress}%` }
 
-    const progressBarStyles = isTg ? { ...barStyle, ...tgStyles?.progressBar } : undefined
+    const progressBarStyles = isTg ? { ...barStyle, ...tgStyles?.progressBar } : barStyle
     const labelStyles = isTg ? tgStyles?.label : undefined
 
     return (

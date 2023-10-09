@@ -25,6 +25,11 @@ export const Playground: Story = {
             paddingRight: '15px',
             borderRadius: '10px'
         },
-        tgStyles: { contacts: { color: '#fff' } }
+        tgStyles: {
+            contacts: { color: '#fff' },
+            inner: { background: '#2E7DDB' },
+            iconColor: '#fff',
+            titleItem: { fontSize: '16px' }
+        }
     }
 }

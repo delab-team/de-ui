@@ -9,7 +9,7 @@ import s from '../../styles/header-search-tabs.module.css'
 
 export interface HeaderSearchTabsProps {
     variant: 'black' | 'white'
-    containerWidth?: number | string
+    containerWidth?: string
     searchValue: string
     searchOnChange: (e: React.ChangeEvent<HTMLInputElement>) => void
     tabsContent: Tab[]
@@ -42,7 +42,7 @@ export const HeaderSearchTabs: FC<HeaderSearchTabsProps> = ({
 }) => {
     const styles = {
         ...style,
-        maxWidth: `${containerWidth}px`
+        maxWidth: `${containerWidth}`
     }
 
     const isTg = useIsTg()

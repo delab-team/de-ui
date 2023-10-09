@@ -13,7 +13,6 @@ const story: Meta<ButtonProps> = {
 }
 
 export default story
-
 type Story = StoryObj<ButtonProps>
 
 export const Playground: Story = {
@@ -24,6 +23,7 @@ export const Playground: Story = {
     ),
     args: {
         children: 'Button',
-        size: 'small'
+        size: 'small',
+        tgStyles: { background: '#2E7DDB', color: '#fff' }
     }
 }

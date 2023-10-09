@@ -32,7 +32,7 @@ const ModalExample = () => {
     return (
         <div>
             <Button onClick={handleOpenModal}>Show Modal</Button>
-            <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
+            <Modal isOpen={isModalOpen} onClose={handleCloseModal} tgStyles={{ modalContent: { background: '#2E7DDB', color: '#fff' } }}>
                 <h2>Modal window title</h2>
                 <p>Contents of the modal window</p>
             </Modal>
@@ -42,7 +42,7 @@ const ModalExample = () => {
 
 export const Playground: Story = {
     render: () => (
-        <AppInner isTg={true}>
+        <AppInner isTg={false}>
             <ModalExample />
         </AppInner>
     )

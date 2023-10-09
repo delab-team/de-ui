@@ -14,7 +14,11 @@ The `HeaderTitle` component accepts the following props:
 - `subtitle` (string): The subtitle or additional text displayed below the main title.
 - `variant` ('white' | 'black'): The visual style variant for the header. It can be 'white' for a light background or 'black' for a dark background.
 - `className` (string): Additional CSS class names to be applied to the header for custom styling.
-- `containerWidth` (number): The maximum width (in pixels) of the header container. It controls the width of the entire header component.
+- `containerWidth` (string): The maximum width of the header container. It controls the width of the entire header component.
+- `tgStyles` (Optional): An object that allows you to specify styles that are specifically tailored for rendering in Telegram. This object has the following properties:
+  - `header`: (Optional): React.CSSProperties - Styles for the header container.
+  - `title`:  (Optional): React.CSSProperties - Styles for the title text.
+  - `subtitle`: (Optional): React.CSSProperties - Styles for the subtitle text.
 
 ## Usage Example
 
@@ -27,5 +31,16 @@ Here's an example of how to use the `HeaderTitle` component in your React applic
       variant="white"
       className="custom-header"
       containerWidth={1200}
+      tgStyles={{
+        header: {
+          backgroundColor: '#2E7DDB',
+        },
+        title: {
+          color: '#fff'
+        },
+        subtitle: {
+          color: '#fff'
+        },
+      }}
     />
 };

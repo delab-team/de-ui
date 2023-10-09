@@ -4,8 +4,15 @@ A reusable Select component for React with modular styles, TypeScript typings, i
 
 ## Props
 - `options (Array)`: An array of options for the select component.
+  - `value (string, required)`: The value associated with the option.
+  - `label (string, required)`: The label or display text for the option.
 - `selectedValue (String)`: The currently selected value.
+- `variant`: 'black' | 'white'
 - `onSelect (Function)`: A callback function that is called when an option is selected.
+- `className (String)`: Additional CSS class names to be applied to the select component.
+- `tgStyles`: An object that allows you to provide custom styles for various elements of the select component when in a Telegram-specific environment. It has the following properties:
+    - `selectInner` (object, optional): Custom CSS styles for the inner container of the select component.
+    - `optionItem` (object, optional): Custom CSS styles for each individual option item in the dropdown.
 
 ## Usage
 
@@ -29,7 +36,7 @@ export const App: FC = () => {
 
   return (
     <div>
-      <Select options={options} selectedValue={selectedValue} onSelect={handleSelect} />
+      <Select options={options} selectedValue={selectedValue} onSelect={handleSelect} tgStyles={{ selectInner: { background: '#2E7DDB' } }} />
       <p>Selected Value: {selectedValue}</p>
     </div>
   );

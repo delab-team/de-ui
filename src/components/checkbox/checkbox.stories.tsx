@@ -29,6 +29,10 @@ const CheckboxExample = () => {
                 checked={isChecked}
                 label="Select this option"
                 onChange={handleCheckboxChange}
+                tgStyles={{
+                    checkbox: { border: '1px solid #2E7DDB' },
+                    label: { color: '#2E7DDB' }
+                }}
             />
             <br />
             <Checkbox

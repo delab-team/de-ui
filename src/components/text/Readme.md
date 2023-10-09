@@ -14,14 +14,16 @@ The Text component accepts the following props:
 
 - `color (optional)`: Sets the color of the text. You can provide a valid CSS color value as a string.
 
-- `customClassName (optional)`: Allows you to add custom CSS classes to the Text component.
+- `className (optional)`: Allows you to add custom CSS classes to the Text component.
 
 - `children (required)`: The content that you want to display within the Text component. This can be text or other React elements.
+
+- `tgStyles (optional)`: An object containing CSS styles that can be applied conditionally based on a certain condition (likely related to isTg).
 
 ## Usage 
 
 ```jsx
-     <Text fontSize="medium" fontWeight="bold" color="blue">
+     <Text fontSize="medium" fontWeight="bold" color="blue" tgStyles={{ color: '#2E7DDB' }}>
         This is a bold and blue text.
       </Text>
 ```

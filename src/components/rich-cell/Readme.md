@@ -9,27 +9,43 @@ This README provides documentation for two React components, `RichCellItem` and 
 1. [RichCellItem Component](#richcellitem-component)
 2. [RichCell Component](#richcell-component)
 
-
 ## RichCellItem Component
 
 The `RichCellItem` component is designed to display a single rich content item. It is typically used within a list or grid of items, such as a transaction history or a list of recent activities.
 
 ### Props
 
-- `icon` (string): The URL or path to the icon image representing the item.
-- `name` (string): The name or title of the item.
-- `date` (string): The date associated with the item.
-- `amount` (string): The amount or value associated with the item.
-- `variant` ('dark' | 'white'): The visual style variant for the component. It can be 'dark' for a dark background or 'white' for a light background.
-- `className (optional)`: className 
-- `style (optional)`: React.CSSProperties
+-   `icon` (string): The URL or path to the icon image representing the item.
+-   `name` (string): The name or title of the item.
+-   `date` (string): The date associated with the item.
+-   `amount` (string): The amount or value associated with the item.
+-   `variant` ('dark' | 'white'): The visual style variant for the component. It can be 'dark' for a dark background or 'white' for a light background.
+-   `className (optional)`: className
+-   `style (optional)`: React.CSSProperties
+-   `tgStyles`: {
+    innerStyle?: React.CSSProperties | undefined;
+    itemTitle?: React.CSSProperties | undefined;
+    itemDate?: React.CSSProperties | undefined;
+    itemSum?: React.CSSProperties | undefined;
+    }
 
 ### Usage Example
 
 **rich-cell-item**:
+
 ```jsx
   const icons = 'https://cryptologos.cc/logos/bitcoin-btc-logo.png?v=026'
-  <RichCellItem variant="dark" icons={icons} name="Bitcoin" date="today at 17:00" amount="+ 500 BTC" />
+  <RichCellItem 
+    variant="dark" 
+    icons={icons} 
+    name="Bitcoin" 
+    date="today at 17:00" 
+    amount="+ 500 BTC"
+    tgStyles={{ 
+      innerStyle: { background: '#2E7DDB' }, 
+      itemDate: { color: '#fff' }
+    }} 
+    />
 ```
 
 <hr />
@@ -40,17 +56,26 @@ The `RichCell` component is designed to display a collection of rich content ite
 
 ## Props
 
-- `items (array of objects)`: An array of rich content items to be displayed. Each item should have the following structure:
-- `icon (string)`: The URL or path to the icon image representing the item.
-- `name (string)`: The name or title of the item.
-- `amount (number)`: The numeric amount or value associated with the item.
-- `currency (string)`: The currency code or symbol associated with the item.
-- `allLink (React Node)`: A React Node representing a link or action that users can take to view all items.
-- `variant ('black' | 'white')`: The visual style variant for the component. It can be 'black' for a dark background or 'white' for a light background.
-- `className (optional)`: className 
-- `style (optional)`: React.CSSProperties
+-   `items (array of objects)`: An array of rich content items to be displayed. Each item should have the following structure:
+-   `icon (string)`: The URL or path to the icon image representing the item.
+-   `name (string)`: The name or title of the item.
+-   `amount (number)`: The numeric amount or value associated with the item.
+-   `currency (string)`: The currency code or symbol associated with the item.
+-   `allLink (React Node)`: A React Node representing a link or action that users can take to view all items.
+-   `variant ('black' | 'white')`: The visual style variant for the component. It can be 'black' for a dark background or 'white' for a light background.
+-   `className (optional)`: className
+-   `style (optional)`: React.CSSProperties
+-   `tgStyles (optional)`: {
+    inner?: React.CSSProperties | undefined
+    title?: React.CSSProperties | undefined
+    menuAction?: React.CSSProperties | undefined
+    itemStyle?: React.CSSProperties | undefined
+    titleItemStyle?: React.CSSProperties | undefined
+    amountItemStyle?: React.CSSProperties | undefined
+    currencyItemStyle?: React.CSSProperties | undefined
+    }
 
-## Example 
+## Example
 
 ```jsx
 const itemsArray = [
@@ -72,5 +97,9 @@ const itemsArray = [
       items={itemsArray}
       allLink={<a href="/view-all">See All</a>}
       variant="black"
+      tgStyles={{
+        inner: { backgroundColor: '#2E7DDB' },
+        currencyItemStyle: { color: '#fff' }
+      }}
     />
 ```

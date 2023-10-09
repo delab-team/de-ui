@@ -30,6 +30,7 @@ const RadioExample = () => {
                 checked={selectedOption}
                 onChange={handleRadioChange}
                 label="Example"
+                tgStyles={{ label: { color: '#2E7DDB' } }}
             />
             <Radio
                 checked={false}

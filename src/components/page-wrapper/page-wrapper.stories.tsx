@@ -30,13 +30,19 @@ export const Playground: Story = {
             <Router>
                 <PageWrapper
                     pageTitle="My Page Title"
-                    containerWidth='900px'
+                    containerWidth="900px"
                     header={
                         <Header
                             width="100%"
                             position="static"
                             className="header"
-                            before={<img src="https://avatars.githubusercontent.com/u/116884789?s=200&v=4" alt="Logo" className="logo" />}
+                            before={
+                                <img
+                                    src="https://avatars.githubusercontent.com/u/116884789?s=200&v=4"
+                                    alt="Logo"
+                                    className="logo"
+                                />
+                            }
                             children={
                                 <nav className="nav">
                                     <ul>
@@ -55,9 +61,7 @@ export const Playground: Story = {
                                     </ul>
                                 </nav>
                             }
-                            after={
-                                <Button size="large">Войти</Button>
-                            }
+                            after={<Button size="large">Войти</Button>}
                         />
                     }
                     footer={
@@ -80,7 +84,6 @@ export const Playground: Story = {
                                 { id: '8', link: <Link to="portfolio">Portfolio</Link> },
                                 { id: '9', link: <Link to="events">Events</Link> }
                             ]}
-
                             contactInfo={{
                                 phoneNumber: '+1 (123) 456-7890',
                                 email: 'info@example.com',
@@ -89,13 +92,8 @@ export const Playground: Story = {
                             backgroundColor="#333"
                         />
                     }
-                    content={
-                        <main>
-                            Your Content
-                        </main>
-                    }
-                    tgStyles={{ mainStyles: { background: '#000', color: '#fff' } }
-                    }
+                    content={<main>Your Content</main>}
+                    tgStyles={{ mainStyles: { background: '#2E7DDB', color: '#fff' } }}
                 />
             </Router>
         </AppInner>

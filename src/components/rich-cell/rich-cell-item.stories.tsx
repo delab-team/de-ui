@@ -32,6 +32,6 @@ export const Playground: Story = {
             paddingRight: '10px',
             borderRadius: '10px'
         },
-        tgStyles: {}
+        tgStyles: { innerStyle: { background: '#2E7DDB' }, itemDate: { color: '#fff' } }
     }
 }

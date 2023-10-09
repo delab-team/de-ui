@@ -14,10 +14,13 @@ The `Radio` component is a customizable radio input element built for use in Rea
 
 - `className (string, optional)`: The className for the radio body.
 
+- `tgStyles (object, optional)`:  An object that allows you to provide custom styles for the radio button and label. It has the following properties:
+  - `radio (object, optional)`: Custom CSS styles for the radio button.
+  - `label (object, optional)`: Custom CSS styles for the label.
+
 ## Example 
 
 ```jsx
-
     const [isChecked, setIsChecked] = useState<boolean>(false);
 
     const handleRadioChange = (newCheckedState: boolean) => {
@@ -29,6 +32,7 @@ The `Radio` component is a customizable radio input element built for use in Rea
         checked={isChecked}
         label="Select this option"
         onChange={handleRadioChange}
+        tgStyles={{ label: { color: '#2E7DDB' } }}
       />
     );
 ```

@@ -26,6 +26,7 @@ export const Playground: Story = {
         type: 'percentOnly',
         size: 'default',
         color: 'blue',
-        progress: 95
+        progress: 95,
+        tgStyles: { progressBar: { backgroundColor: 'purple' } }
     }
 }

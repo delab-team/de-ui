@@ -30,7 +30,7 @@ export const HeaderPanel: FC<HeaderPanelProps> = ({
 }) => {
     const headerStyles: React.CSSProperties = {
         ...style,
-        maxWidth: `${containerWidth}px`
+        maxWidth: `${containerWidth}`
     }
 
     const isTg = useIsTg()

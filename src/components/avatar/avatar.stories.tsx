@@ -11,14 +11,15 @@ const meta: Meta<AvatarProps> = {
 }
 
 export default meta
+
 type Story = StoryObj<AvatarProps>
 
 export const Playground: Story = {
     render: ({ ...args }) => <AppInner isTg={false}><Avatar {...args} /></AppInner>,
     args: {
         size: 48,
-        gradientColor: 'blue',
+        gradientColor: 'l-blue',
         initials: 'EX',
-        tgStyles: {}
+        tgStyles: { avatarInner: { backgroundColor: '#2E7DDB' }, initials: { color: '#fff' } }
     }
 }

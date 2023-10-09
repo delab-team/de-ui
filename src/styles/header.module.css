@@ -15,7 +15,6 @@
   align-items: center;
   justify-content: space-between;
   position: relative;
-  padding: 0 16px 0 16px;
   box-sizing: border-box;
   z-index: 11;
 }
@@ -25,7 +24,6 @@
 }
 
 .header-children {
-  height: 90px;
   left: 0;
   right: 0;
   margin-left: auto;

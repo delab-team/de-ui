@@ -5,23 +5,41 @@
 }
 
 .fileUpload {
-  border: 2px dashed #ccc;
-  padding: 20px;
+  width: 100%;
+  border-radius: 20px;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
 }
 
+.fileUploadWhite {
+  border: 3px dashed #FFF;
+  color: #fff;
+}
+
+.fileUploadBlack {
+  border: 3px dashed #000;
+  color: #000;
+}
+
+.fileUploadWhite > .uploadIcon {
+  fill: #fff;
+}
+
+.fileUploadBlack > .uploadIcon {
+  fill: #fff;
+}
+
 .uploadIcon {
   width: 48px;
   height: 48px;
-  fill: #007bff;
+  /* fill: #007bff; */
 }
 
 .uploadText {
   margin-top: 8px;
-  color: #333;
 }
 
 .fileInput {

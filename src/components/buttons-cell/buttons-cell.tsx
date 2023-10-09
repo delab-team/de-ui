@@ -27,7 +27,7 @@ export const ButtonsCell: FC<ButtonsCellProps> = ({
 }) => {
     const isTg = useIsTg()
 
-    const mergedStyles = isTg ? { ...style, ...tgStyles } : style
+    const mergedStyles = isTg ? { ...style, ...tgStyles?.cellInner } : style
 
     return (
         <div className={`${s.inner} ${className || ''} ${variant === 'white' ? s.innerWhite : s.innerBlack}`} style={mergedStyles}>

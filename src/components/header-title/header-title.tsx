@@ -9,7 +9,7 @@ export interface HeaderTitleProps {
     subtitle: string
     variant: 'white' | 'black'
     className?: string
-    containerWidth: number
+    containerWidth?: string
     style: React.CSSProperties
     tgStyles: {
         header?: React.CSSProperties | undefined
@@ -29,7 +29,7 @@ export const HeaderTitle: FC<HeaderTitleProps> = ({
 }) => {
     const styles: React.CSSProperties = {
         ...style,
-        maxWidth: `${containerWidth}px`
+        maxWidth: `${containerWidth}`
     }
 
     const isTg = useIsTg()

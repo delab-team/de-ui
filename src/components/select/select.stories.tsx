@@ -31,7 +31,7 @@ const SelectExample = () => {
     }
 
     return (
-        <Select variant="black" options={example} selectedValue={selectedValue} onSelect={handleSelect} />
+        <Select variant="black" options={example} selectedValue={selectedValue} onSelect={handleSelect} tgStyles={{ selectInner: { background: '#2E7DDB' } }} />
     )
 }
 

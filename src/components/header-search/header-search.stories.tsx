@@ -30,7 +30,10 @@ const Example = () => {
     }
 
     return (
-        <HeaderSearch value={value} onChange={onChange} containerWidth={800} variant='black' style={style}  />
+        <HeaderSearch value={value} onChange={onChange} containerWidth='800px' variant='black' style={style} tgStyles={{
+            icon: '#fff',
+            searchBody: { background: '#2E7DDB' }
+        }}  />
     )
 }
 

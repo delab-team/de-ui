@@ -19,5 +19,5 @@ export const Playground: Story = {
     render: ({ children, ...args }) => (
         <AppInner isTg={false}><Text {...args}>{children}</Text></AppInner>
     ),
-    args: { children: 'Lorem text', tgStyles: { color: 'red' } }
+    args: { children: 'Lorem text', tgStyles: { color: '#2E7DDB' } }
 }

@@ -19,6 +19,14 @@
   width: 400px;
 }
 
+@media (max-width: 440px) {
+  .modalContent {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
 .closeButton {
   position: absolute;
   top: 10px;

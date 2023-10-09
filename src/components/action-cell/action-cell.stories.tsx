@@ -11,6 +11,7 @@ const meta: Meta<ActionCellProps> = {
 }
 
 export default meta
+
 type Story = StoryObj<ActionCellProps>
 
 const icon1 = <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
@@ -26,7 +27,7 @@ const icon3 = <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" vie
 </svg>
 
 export const Playground: Story = {
-    render: ({ ...args }) => <AppInner isTg={true}><ActionCell {...args} /></AppInner>,
+    render: ({ ...args }) => <AppInner isTg={false}><ActionCell {...args} /></AppInner>,
     args: {
         items: [
             {
@@ -48,6 +49,9 @@ export const Playground: Story = {
             paddingRight: '15px',
             borderRadius: '10px'
         },
-        tgStyles: {}
+        tgStyles: {
+            cellInner: { background: '#2E7DDB' },
+            title: { color: '#fff' }
+        }
     }
 }

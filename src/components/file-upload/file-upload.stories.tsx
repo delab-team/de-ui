@@ -28,6 +28,12 @@ export const Playground: Story = {
     args: {
         onFileUpload: handleFileUpload,
         accept: '.jpg,.png',
-        uploadText: 'Click to browse'
+        uploadText: 'Click to browse',
+        variant: 'black',
+        tgStyles: {
+            uploadText: { color: '#fff' },
+            uploadContainer: { background: '#2E7DDB' },
+            icon: { fill: '#fff' }
+        }
     }
 }

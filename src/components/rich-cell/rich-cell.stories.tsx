@@ -40,6 +40,7 @@ export const Playground: Story = {
             paddingLeft: '10px',
             paddingRight: '10px',
             borderRadius: '10px'
-        }
+        },
+        tgStyles: { inner: { backgroundColor: '#2E7DDB' }, currencyItemStyle: { color: '#fff' } }
     }
 }

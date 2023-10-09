@@ -28,10 +28,6 @@ const buttonRounded = { s: s['button--rounded-small'], m: s['button--rounded-med
 export interface ButtonProps
     extends React.DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
     /**
-     * icon
-     */
-    icon?: string
-    /**
      * start Icon
      */
     startIcon?: string

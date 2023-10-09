@@ -2,6 +2,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Meta, StoryObj } from '@storybook/react'
 import { Spinner, SpinnerProps } from './spinner'
+import { AppInner } from '../app-inner/app-inner'
 
 const story: Meta<SpinnerProps> = {
     title: 'Common/Spinner',
@@ -15,10 +16,13 @@ type Story = StoryObj<SpinnerProps>
 
 export const Playground: Story = {
     render: ({ ...args }) => (
-        <Spinner {...args} />
+        <AppInner isTg={false}>
+            <Spinner {...args} />
+        </AppInner>
     ),
     args: {
         size: 'medium',
-        color: '#000000'
+        color: '#000000',
+        tgStyles: '#2E7DDB'
     }
 }
