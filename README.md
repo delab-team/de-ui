@@ -30,7 +30,6 @@ yarn add @delab-team/de-ui
 
 ## [Documentation](https://ui.delabteam.com/)
 
-\*\*
 It is necessary to wrap your entire application within the AppInner component. Failure to do so may result in the application not working as expected. You also have the option to manually set the value to true in order to witness the application's outcome adorned with Telegram styles.
 
 index.html
@@ -41,7 +40,7 @@ index.html
 
 App.tsx
 ```jsx
-
+import { AppInner } from '@delab-team/de-ui' 
 import { useEffect, useState } from 'react'
 
 declare global {
@@ -66,11 +65,11 @@ export const App: React.FC = () => {
         }
     }, [ firstRender ])
 
-return (
-  <AppInner isTg={isTg}>
-        {/* Your application's root component goes here */}
-  </AppInner>,
-)
+    return (
+      <AppInner isTg={isTg}>
+            {/* Your application's goes here */}
+      </AppInner>,
+    )
 
 }
 ```
