@@ -11,7 +11,6 @@ The IconSelector component is a reusable React component designed to display ico
    - `stroke` (optional): String - Specifies the stroke color of the icon when rendered in a Telegram environment.
 - `style` (optional): CSS styles that will be applied to the icon.
 
- 
 ## Example
 
 ```jsx

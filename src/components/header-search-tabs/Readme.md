@@ -45,7 +45,7 @@ const tabs = [
 ]
 
 const Example = () => {
-    const [searchValue, setSearchValue] = useState < string > ''
+    const [searchValue, setSearchValue] = useState<string>('')
 
     const changeEvent = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSearchValue(e.target.value)
