@@ -34,7 +34,7 @@ export const PageWrapperSidebar: FC<PageWrapperSidebarProps> = ({
 }) => {
     document.title = pageTitle
 
-    const containerStyle = containerWidth ? { width: containerWidth } : undefined
+    const containerStyle = containerWidth ? { maxWidth: containerWidth } : undefined
 
     const wrapperClassName = `${s.pageWrapper} ${className || ''}`
 
