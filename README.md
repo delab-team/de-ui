@@ -102,6 +102,8 @@ export const App: React.FC = () => {
 
 -   **Button**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/button/Readme.md)
 
+-   **Div**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/div/Readme.md)
+
 -   **Font**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/font/Readme.md)
 
 -   **Footer**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/footer/Readme.md)

@@ -2,6 +2,8 @@
 /* eslint-disable max-len */
 import { ReactNode, useState, useEffect, CSSProperties } from 'react'
 
+import { useIsTg } from '../../hooks/useIsTg'
+
 import s from '../../styles/alert.module.css'
 
 export interface AlertProps {
@@ -13,7 +15,6 @@ export interface AlertProps {
     position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center';
     centered?: boolean;
     className?: string;
-    isTg?: boolean;
     tgStyles?: CSSProperties
 }
 
@@ -78,8 +79,10 @@ export const Alert: React.FC<AlertProps> = ({ type, onClose, icon, children, aut
         }
     }
 
+    const isTg = useIsTg()
+
     return isVisible ? (
-        <div className={`${s.alert} ${getAlertClass()} ${getAlertPositionClass()} ${className || ''}`} style={tgStyles}>
+        <div className={`${s.alert} ${getAlertClass()} ${getAlertPositionClass()} ${className || ''}`} style={isTg ? tgStyles : {}}>
             {icon && <div className={s.alertIcon}>{icon}</div>}
             <div className={s.alertContent}>{children}</div>
             {onClose && (

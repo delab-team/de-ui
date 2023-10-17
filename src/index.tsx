@@ -320,3 +320,10 @@ export type { TextProps } from './components/text/text'
 
 export { AppInner } from './components/app-inner/app-inner'
 export type { AppInnerProps } from './components/app-inner/app-inner'
+
+/**
+ * Div
+*/
+
+export { Div } from './components/div/div'
+export type { DivProps } from './components/div/div'
