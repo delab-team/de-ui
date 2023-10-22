@@ -136,6 +136,10 @@
   background: #0c6af8;
 }
 
+.payButton:hover {
+  background: #0459da;
+}
+
 @media (max-width: 440px) {
     .modal {
         border-radius: 20px 20px 0px 0px;
