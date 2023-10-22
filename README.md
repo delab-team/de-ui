@@ -54,6 +54,9 @@ export const App: React.FC = () => {
     const [ isTg, setIsTg ] = useState<boolean>(false)
 
     useEffect(() => {
+      if (!firstRender) {
+        setFirstRender(true)
+
         const isTgCheck = window.Telegram.WebApp.initData !== ''
         const TgObj = window.Telegram.WebApp
 
@@ -63,6 +66,8 @@ export const App: React.FC = () => {
             TgObj.enableClosingConfirmation()
             TgObj.expand()
         }
+      }
+
     }, [ firstRender ])
 
     return (
