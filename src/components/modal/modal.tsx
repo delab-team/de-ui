@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { FC, useRef, useEffect } from 'react'
 
 import { useIsTg } from '../../hooks/useIsTg'
@@ -13,9 +14,10 @@ export interface ModalProps {
         modalContent?: React.CSSProperties | undefined;
         closeButton?: React.CSSProperties | undefined;
     }
+    isCloseButton?: boolean;
 }
 
-export const Modal: FC<ModalProps> = ({ children, onClose, isOpen, className, tgStyles }) => {
+export const Modal: FC<ModalProps> = ({ children, onClose, isOpen, className, tgStyles, isCloseButton = true }) => {
     const modalRef = useRef<HTMLDivElement | null>(null)
 
     useEffect(() => {
@@ -46,9 +48,11 @@ export const Modal: FC<ModalProps> = ({ children, onClose, isOpen, className, tg
             {isOpen && (
                 <div className={s.modalBackdrop} ref={modalRef}>
                     <div className={`${s.modalContent} ${className || ''}`} style={contentStyles}>
-                        <button className={s.closeButton} onClick={onClose} style={closeStyles}>
-                            &times;
-                        </button>
+                        {isCloseButton && (
+                            <button className={s.closeButton} onClick={onClose} style={closeStyles}>
+                                &times;
+                            </button>
+                        )}
                         {children}
                     </div>
                 </div>

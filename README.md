@@ -96,6 +96,14 @@ export const App: React.FC = () => {
 
 -   **Modal**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/modal/Readme.md)
 
+-   **AlertStatus** [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/alert-status/Readme.md)
+
+-   **ModalSearchList** [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/modal-search-list/Readme.md)
+
+-   **ModalInfoCard** [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/modal-info-card/Readme.md)
+
+-   **ModalPay** [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/modal-pay/Readme.md)
+
 ## Common:
 
 -   **Avatar**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/avatar/Readme.md)
@@ -115,6 +123,8 @@ export const App: React.FC = () => {
 -   **Toggle**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/toggle/Readme.md)
 
 -   **Tooltip**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/tooltip/Readme.md)
+
+-   **Li**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/li/Readme.md)
 
 ## Forms:
 

@@ -12,7 +12,8 @@ export interface InputProps {
     size?: 'xsmall' | 'small' | 'medium' | 'large';
     variant: 'black' | 'white'
     className?: string;
-    style?: React.CSSProperties
+    style?: React.CSSProperties;
+    readonly?: boolean;
     tgStyles?: {
         inputWrapper?: React.CSSProperties | undefined;
         label?: React.CSSProperties | undefined;
@@ -36,6 +37,7 @@ export const Input: React.FC<InputProps> = ({
     size = 'medium',
     variant = 'black',
     className,
+    readonly,
     style,
     tgStyles,
     ...rest
@@ -60,6 +62,7 @@ export const Input: React.FC<InputProps> = ({
                 placeholder={placeholder}
                 className={`${s.input} ${sizeClass} ${inputVariantType[variant]} ${className || ''}`}
                 style={inputStyles}
+                readOnly={readonly}
                 {...rest}
             />
             {error && <div className={s.error} style={errorStyles}>{error}</div>}
