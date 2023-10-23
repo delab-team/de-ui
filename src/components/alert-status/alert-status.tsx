@@ -2,7 +2,6 @@
 import { FC } from 'react'
 
 import { Modal } from '../modal/modal'
-import { Button } from '../button/button'
 import { Text } from '../text/text'
 
 import { useIsTg } from '../../hooks/useIsTg'
@@ -83,7 +82,7 @@ export const AlertStatus: FC<AlertStatusProps> = ({
                 <div className={s.modalContent}>{children}</div>
             )}
 
-            <Button className={`${s.modalButton} ${classNameButton || ''}`} tgStyles={modalButtonStyles} onClick={onClose}>Ok</Button>
+            <button className={`${s.modalButton} ${classNameButton || ''}`} style={modalButtonStyles} onClick={onClose}>Ok</button>
         </Modal>
     )
 }

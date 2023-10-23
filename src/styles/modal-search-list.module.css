@@ -51,12 +51,14 @@
 }
 
 .modalTopButton {
-    height: auto;
     color: #1c77ff;
     font-size: 13px;
     font-weight: 510;
     padding: 0;
+    border: none;
+    cursor: pointer;
     background: transparent;
+    transition: all 0.3s ease 0s;
 }
 
 .modalTopButton:hover {

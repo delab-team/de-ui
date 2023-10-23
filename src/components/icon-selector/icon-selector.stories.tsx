@@ -22,9 +22,9 @@ export const Playground: Story = {
         </AppInner>
     ),
     args: {
-        id: 'bell',
+        id: 'grid',
         size: '32px',
-        color: 'transparent',
+        color: '#000',
         tgStyles: { stroke: '#e00cf3' }
     }
 }

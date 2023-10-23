@@ -29,10 +29,13 @@ export interface ModalSearchListProps {
     isOpen: boolean;
     tgStyles?: {
         modal?: React.CSSProperties | undefined
+        modalButton?: React.CSSProperties | undefined
         modalTitle?: React.CSSProperties | undefined;
         modalListItem?: React.CSSProperties | undefined;
         modalListItemTitle?: React.CSSProperties | undefined
         modalListItemInfo?: React.CSSProperties | undefined
+        modalInput?: React.CSSProperties | undefined
+        modalInputBody?: React.CSSProperties | undefined
     }
     variant?: 'white' | 'black'
     className?: string;
@@ -59,17 +62,26 @@ export const ModalSearchList: FC<ModalSearchListProps> = ({
     const modalListItem = isTg ? tgStyles?.modalListItem : {}
     const modalListItemTitle = isTg ? tgStyles?.modalListItemTitle : {}
     const modalListItemInfo = isTg ? tgStyles?.modalListItemInfo : {}
+    const modalButton = isTg ? tgStyles?.modalButton : {}
+
+    const modalInput = isTg ? tgStyles?.modalInput : {}
+    const modalSearchBody = isTg ? tgStyles?.modalInputBody : {}
 
     return (
         <Modal isOpen={isOpen} tgStyles={{ modalContent: tgStyles?.modal || {} }} onClose={onClose} isCloseButton={false} className={` ${s.modal} ${className} ${variant === 'white' ? s.white : s.black}`}>
             <div className={s.modalTop}>
-                <Button className={s.modalTopButton} onClick={onClose}>
+                <button className={s.modalTopButton} onClick={onClose} style={modalButton}>
                   Отмена
-                </Button>
+                </button>
                 <Text className={s.modalTitle} tgStyles={modalTitleStyles}>{modalTitle}</Text>
             </div>
 
-            <HeaderSearch className={s.modalSearch} value={searchValue} onChange={onChangeSearch} variant="white" />
+            <HeaderSearch className={s.modalSearch} value={searchValue} onChange={onChangeSearch} variant="white"
+                tgStyles={{
+                    input: modalInput,
+                    searchBody: modalSearchBody
+                }}
+            />
 
             <ul className={s.modalList}>
                 {modalData.map(el => (

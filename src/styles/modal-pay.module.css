@@ -1,38 +1,63 @@
 .modal {
     border-radius: 20px;
+    background: inherit;
 }
 
 .white {
     background: #f9f9f9;
 }
 
+.white > .modalTop > .modalTitle {
+    color: #000;
+}
+
+.white > .modalTokensList > .tokenItem > .tokenDetail > .tokenItemAmount {
+    color: #000;
+}
+
+.white > .modalTokensList > .tokenItemActive > .tokenDetail > .tokenItemAmount {
+    color: #000;
+}
+
+.black .modalPayAmount .modalPayAmountInput {
+    color: #000;
+}
+
+.black > .modalPayAmount > .modalPayAmountToken {
+    color: #000;
+}
+
 .black {
     background: #1c1c20;
 }
 
-.black > .modalTop > p {
-  color: #fff;
+.black > .modalTop > .modalTitle {
+    color: #fff;
 }
 
 .black > .modalTokensList > .tokenItem {
-  border: 1px solid #3D3D3D;
+    border: 1px solid #3d3d3d;
 }
 
-.black > .modalTokensList > .tokenItem > div > p {
-  color: #fff;
+.black > .modalTokensList > .tokenItem > .tokenDetail > .tokenItemAmount {
+    color: #fff;
 }
 
-.black > .modalTokensList > .tokenItemActive > div > p {
-  color: #000;
+.black > .modalTokensList > .tokenItemActive > .tokenDetail > .tokenItemAmount {
+    color: #000;
 }
 
 .black .modalPayAmount .modalPayAmountInput {
-  background: #3D3D3D;
-  color: #fff;
+    background: #3d3d3d;
+    color: #000;
 }
 
 .black > .modalPayAmount > .modalPayAmountToken {
-  color: #fff;
+    color: #fff;
+}
+
+.black > .modalPayAmount > .modalPayAmountToken {
+  color: #000;
 }
 
 .modalTop {
@@ -44,10 +69,11 @@
 }
 
 .modalTopButton {
-    height: auto;
     color: #1c77ff;
     font-size: 13px;
     font-weight: 510;
+    border: none;
+    cursor: pointer;
     padding: 0;
     background: transparent;
 }
@@ -84,8 +110,8 @@
 }
 
 .tokenItemActive {
-  border: 1px solid #F0F0F0;
-  background: #DCEAFF;
+    border: 1px solid #f0f0f0;
+    background: #dceaff;
 }
 
 .tokenItemAmount {
@@ -99,26 +125,26 @@
 }
 
 .modalPayAmount {
-  position: relative;
-  margin-bottom: 25px;
+    position: relative;
+    margin-bottom: 25px;
 }
 
 .modalPayAmountInput {
-  border: none;
-  background: #fff;
-  border-radius: 10px;
-  padding-right: 90px;
-  font-size: 18px;
-  font-weight: 560;
+    border: none !important;
+    background: #fff !important;
+    border-radius: 10px;
+    padding-right: 90px;
+    font-size: 18px;
+    font-weight: 560;
 }
 
 .modalPayAmountToken {
-  font-size: 18px;
-  font-weight: 560;
-  position: absolute;
-  top: 50%;
-  right: 15px;
-  transform: translateY(-50%);
+    font-size: 18px;
+    font-weight: 560;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
 }
 
 .payButton {
@@ -127,17 +153,16 @@
     padding: 14px;
     border-radius: 10px;
     background: #1c77ff;
+    border: none;
+    cursor: pointer;
     font-size: 15px;
     font-weight: 560;
     color: #fff;
-}
-
-.payButton {
-  background: #0c6af8;
+    transition: all 0.3s ease 0s;
 }
 
 .payButton:hover {
-  background: #0459da;
+    background: #0459da;
 }
 
 @media (max-width: 440px) {

@@ -74,15 +74,15 @@ export const ModalInfoCard: FC<ModalInfoCardProps> = ({
             tgStyles={{ modalContent: modalTg }}
         >
             <div className={s.modalTop}>
-                <Button className={s.modalTopButton} onClick={onClose} tgStyles={modalTopButtonTg}>
+                <button className={s.modalTopButton} onClick={onClose} style={modalTopButtonTg}>
                     Отмена
-                </Button>
+                </button>
                 <Text className={s.modalTitle}>{modalTitle}</Text>
             </div>
 
             <Div className={`${s.modalInfo} ${s.modalInfoTop}`}>
                 {modalTopIcon && <img src={modalTopIcon} width={25} height={25} alt="img" />}
-                <div>
+                <div className={s.modalInfoText}>
                     <Text className={s.modalInfoTopTitle} tgStyles={modalInfoTopTitle}>{modalTopTitle}</Text>
                     <Text className={s.modalInfoTopSubtitle} tgStyles={modalInfoTopSubtitle}>{modalTopSubtitle}</Text>
                 </div>
@@ -106,15 +106,15 @@ export const ModalInfoCard: FC<ModalInfoCardProps> = ({
                 </div>
             </Div>
 
-            <Div>
-                <Button className={s.modalBtnDownload} tgStyles={modalBtnDownloadTg}>
+            <Div className={s.modalInfoActions}>
+                <button className={s.modalBtnDownload} style={modalBtnDownloadTg}>
                     <IconSelector id="download" size="23px" color="#3E88F7" />
                     Download
-                </Button>
-                <Button className={s.modalBtnConnect} tgStyles={modalBtnConnectTg}>
+                </button>
+                <button className={s.modalBtnConnect} style={modalBtnConnectTg}>
                     <IconSelector id="link" size="23px" color="#FFFFFF" />
                     Connect
-                </Button>
+                </button>
             </Div>
         </Modal>
     )

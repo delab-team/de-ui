@@ -73,9 +73,9 @@ export const ModalPay: FC<ModalPayProps> = ({
     return (
         <Modal isOpen={isOpen} onClose={onClose} isCloseButton={false} className={` ${s.modal} ${className} ${variant === 'white' ? s.white : s.black}`} tgStyles={{ modalContent: modal }}>
             <div className={s.modalTop}>
-                <Button className={s.modalTopButton} tgStyles={modalTopButton} onClick={onClose}>
+                <button className={s.modalTopButton} style={modalTopButton} onClick={onClose}>
                   Отмена
-                </Button>
+                </button>
                 <Text className={s.modalTitle} tgStyles={modalTitleTg}>{modalTitle}</Text>
             </div>
 
@@ -83,16 +83,16 @@ export const ModalPay: FC<ModalPayProps> = ({
                 {modalData.map(el => (
                     <Li className={`${s.tokenItem} ${el.token === activePayToken.token ? s.tokenItemActive : ''}`} tgStyles={el.token === activePayToken.token ? tokenItemActive : tokenItem} key={el.tokenAddress} onClick={() => setActivePayToken(el)}>
                         <img className={s.tokenInfoImg} src={el.tokenLogo} alt="token logo" />
-                        <div>
+                        <div className={s.tokenDetail}>
                             <Text className={s.tokenItemAmount} tgStyles={tokenItemAmount}>
                                 {el.amount} {' '} {el.token}
                             </Text>
                         </div>
                     </Li>
                 ))}
-                <Li className={s.tokenItem} onClick={onOtherClick}>
+                <Li className={s.tokenItem} onClick={onOtherClick} tgStyles={tokenItem}>
                     <IconSelector id="external-link" size="25" color="#3E88F7" />
-                    <div>
+                    <div className={s.tokenDetail}>
                         <Text className={s.tokenItemAmount}>
                           Other
                         </Text>
@@ -105,9 +105,9 @@ export const ModalPay: FC<ModalPayProps> = ({
                 <Text className={s.modalPayAmountToken} tgStyles={modalPayAmountToken}>{activePayToken.token}</Text>
             </Div>
 
-            <Button className={s.payButton} tgStyles={payButton}>
+            <button className={s.payButton} style={payButton}>
               Pay {activePayToken.amount} {activePayToken.token}
-            </Button>
+            </button>
         </Modal>
     )
 }

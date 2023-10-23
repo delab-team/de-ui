@@ -36,7 +36,7 @@ const ModalExample = () => {
                 infoSubtitle="Text"
                 serverTitle="Text"
                 serverSubtitle="Text"
-                variant='black'
+                variant='white'
             />
             <Button onClick={() => setShow(true)}>Show Modal Search List</Button>
         </>

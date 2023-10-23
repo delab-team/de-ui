@@ -44,6 +44,9 @@
   color: #fff;
   background: #1C77FF;
   border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease 0s;
 }
 
 .modalButton:hover {
