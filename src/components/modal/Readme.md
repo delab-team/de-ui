@@ -8,6 +8,7 @@ The `Modal` component is a reusable React component that provides a modal dialog
 -   `onClose (function)`: A callback function that is called when the user closes the modal. You can define your custom logic for handling modal closure.
 -   `children (ReactNode)`: The content you want to display within the modal. This can include any React elements or components.
 -   `className (string)`: The className of the modal body.
+-   `buttonClass (string)`: The className of the modal close button.
 -   `tgStyles`: `{ modalContent?: React.CSSProperties; closeButton?: React.CSSProperties }`
 
 ## Example

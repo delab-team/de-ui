@@ -4,14 +4,16 @@ The `AlertStatus` component is a React component designed to display status mess
 
 ## Props
 
--   `iconSize (optional)`: The size of the status icon (default: '30px').
--   `status`: The status of the alert, which can be either 'successful' or 'failed'.
--   `variant`: The variant of the alert, which can be either 'white' or 'black'.
--   `isOpen`: A boolean indicating whether the modal is open or closed.
--   `onClose`: A callback function to close the modal when the button is clicked.
--   `classNameModal (optional)`: Additional custom CSS class for the modal.
--   `classNameTitle (optional)`: Additional custom CSS class for the title.
--   `classNameButton (optional)`: Additional custom CSS class for the button.
+- `statusTitle (string, required)`: The title or main message of the alert.
+- `iconStatus (React Node, required)`: The icon or visual representation of the alert's status.
+- `children (React Node, optional)`: Additional content to be displayed within the alert.
+- `isOpen (boolean, required)`: A boolean value that determines whether the alert is open or closed.
+- `onClose (function, required)`: A callback function to be executed when the alert is closed.
+- `classNameModal (string, optional)`: Additional CSS class name for the modal container.
+- `classNameTitle (string, optional)`: Additional CSS class name for the title.
+- `classNameButton (string, optional)`: Additional CSS class name for the close button.
+- `classNameStatus (string, optional)`: Additional CSS class name for the status icon container.
+- `classNameContent (string, optional)`: Additional CSS cla
 -   `tgStyles (optional)`: An object containing custom CSS styles for different parts of the modal. You can customize the modal, modalTitle, and modalButton.
 - - `modal` - React.CSSProperties | undefined
 - - `modalTitle` - React.CSSProperties | undefined
@@ -20,18 +22,29 @@ The `AlertStatus` component is a React component designed to display status mess
 ## Example
 
 ```jsx
-const [showAlert, setShowAlert] = useState<boolean>(false)
+    const success = (
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+            <circle cx="12.5" cy="12.5" r="12" stroke="#1AB233"/>
+            <path d="M16.8333 9.79169L10.875 15.75L8.16663 13.0417" stroke="#1AB233" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    )
 
-const handleShowAlert = () => {
-    setShowAlert(true)
-}
+    const [ showAlert, setShowAlert ] = useState<boolean>(false)
 
-const handleCloseAlert = () => {
-    setShowAlert(false)
-}
+    const handleShowAlert = () => {
+        setShowAlert(true)
+    }
 
-<Button onClick={handleShowAlert}>Show status alert</Button>
-{
-  showAlert && <AlertStatus status="successful" variant="black" isOpen={showAlert} onClose={handleCloseAlert} />
-}
+    const handleCloseAlert = () => {
+        setShowAlert(false)
+    }
+
+    return (
+        <div>
+            <Button onClick={handleShowAlert}>Show status alert</Button>
+            {showAlert && (
+                <AlertStatus iconStatus={success} buttonContent="Ok" statusTitle='Successful' isOpen={showAlert} onClose={handleCloseAlert} />
+            )}
+        </div>
+    )
 ```

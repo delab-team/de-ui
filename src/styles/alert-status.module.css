@@ -4,22 +4,7 @@
   justify-content: center;
   flex-direction: column;
   border-radius: 20px;
-}
-
-.white {
   background: #F9F9F9;
-}
-
-.white > .modalTitle {
-  color: #000000;
-}
-
-.black {
-  background: #28282D;
-}
-
-.black > .modalTitle {
-  color: #fff;
 }
 
 .modalStatus {
@@ -36,6 +21,7 @@
   font-size: 18px;
   font-weight: 510;
   margin: 5px 0 15px 0;
+  color: #000;
 }
 
 .modalButton {

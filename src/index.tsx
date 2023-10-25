@@ -341,24 +341,3 @@ export type { AlertStatusProps } from './components/alert-status/alert-status'
 
 export { Li } from './components/li/li'
 export type { LiProps } from './components/li/li'
-
-/**
- * ModalSearch List
-*/
-
-export { ModalSearchList } from './components/modal-search-list/modal-search-list'
-export type { ModalSearchListProps } from './components/modal-search-list/modal-search-list'
-
-/**
- * ModalInfoCard
-*/
-
-export { ModalInfoCard } from './components/modal-info-card/modal-info-card'
-export type { ModalInfoCardProps } from './components/modal-info-card/modal-info-card'
-
-/**
- * Modal Pay
-*/
-
-export { ModalPay } from './components/modal-pay/modal-pay'
-export type { ModalPayProps, PayTokenType } from './components/modal-pay/modal-pay'

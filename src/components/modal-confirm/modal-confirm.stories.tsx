@@ -37,6 +37,8 @@ const ModalConfirmExample = () => {
         <div>
             <Button onClick={handleOpenModal}>Open modal window</Button>
             <ModalConfirm
+                confirmButtonContent={'Confirm'}
+                cancelButtonContent={'Cancel'}
                 isOpen={isModalOpen}
                 title="Confirmation"
                 message="Are you sure you want to perform this action?"

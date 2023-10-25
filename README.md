@@ -103,12 +103,6 @@ export const App: React.FC = () => {
 
 -   **AlertStatus** [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/alert-status/Readme.md)
 
--   **ModalSearchList** [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/modal-search-list/Readme.md)
-
--   **ModalInfoCard** [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/modal-info-card/Readme.md)
-
--   **ModalPay** [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/modal-pay/Readme.md)
-
 ## Common:
 
 -   **Avatar**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/avatar/Readme.md)

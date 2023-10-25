@@ -10,7 +10,8 @@ The `ModalConfirm` component is a reusable React modal component designed to dis
 -   `onConfirm`: A function to execute when the user confirms the action.
 -   `onCancel`: A function to execute when the user cancels or closes the modal.
 -   `className`: The class name of the modal body.
--   `tgStyles`: `{ modalContent?: React.CSSProperties; title?: React.CSSProperties; message?: React.CSSProperties }`
+-   `confirmButtonContent, cancelButtonContent` - The contents of the buttons
+-   `tgStyles`: `{ modalContent?: React.CSSProperties; title?: React.CSSProperties; message?: React.CSSProperties, confirmButtonContent, cancelButtonContent }`
 
 ## Example
 
@@ -37,6 +38,8 @@ const ModalConfirmExample = () => {
         <div>
             <Button onClick={handleOpenModal}>Open modal window</Button>
             <ModalConfirm
+                confirmButtonContent={'Confirm'}
+                cancelButtonContent={'Cancel'}
                 isOpen={isModalOpen}
                 title="Confirmation"
                 message="Are you sure you want to perform this action?"

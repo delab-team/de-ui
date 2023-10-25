@@ -10,6 +10,7 @@ export interface ModalProps {
     onClose: () => void;
     children: React.ReactNode;
     className?: string;
+    buttonClass?: string;
     tgStyles?: {
         modalContent?: React.CSSProperties | undefined;
         closeButton?: React.CSSProperties | undefined;
@@ -17,7 +18,7 @@ export interface ModalProps {
     isCloseButton?: boolean;
 }
 
-export const Modal: FC<ModalProps> = ({ children, onClose, isOpen, className, tgStyles, isCloseButton = true }) => {
+export const Modal: FC<ModalProps> = ({ children, onClose, isOpen, className, tgStyles, buttonClass, isCloseButton = true }) => {
     const modalRef = useRef<HTMLDivElement | null>(null)
 
     useEffect(() => {
@@ -49,7 +50,7 @@ export const Modal: FC<ModalProps> = ({ children, onClose, isOpen, className, tg
                 <div className={s.modalBackdrop} ref={modalRef}>
                     <div className={`${s.modalContent} ${className || ''}`} style={contentStyles}>
                         {isCloseButton && (
-                            <button className={s.closeButton} onClick={onClose} style={closeStyles}>
+                            <button className={`${s.closeButton} ${buttonClass || ''}`} onClick={onClose} style={closeStyles}>
                                 &times;
                             </button>
                         )}

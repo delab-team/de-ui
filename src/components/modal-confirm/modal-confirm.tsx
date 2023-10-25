@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { FC, useState } from 'react'
 
 import { useIsTg } from '../../hooks/useIsTg'
@@ -15,7 +16,11 @@ export interface ModalConfirmProps {
         modalContent?: React.CSSProperties | undefined;
         title?: React.CSSProperties | undefined
         message?: React.CSSProperties | undefined
+        buttonConfirm?: React.CSSProperties | undefined
+        buttonCancel?: React.CSSProperties | undefined
     }
+    confirmButtonContent: React.ReactNode
+    cancelButtonContent: React.ReactNode
 }
 
 export const ModalConfirm: FC<ModalConfirmProps> = ({
@@ -25,7 +30,9 @@ export const ModalConfirm: FC<ModalConfirmProps> = ({
     onConfirm,
     onCancel,
     className,
-    tgStyles
+    tgStyles,
+    confirmButtonContent,
+    cancelButtonContent
 }) => {
     const [ isClosing, setIsClosing ] = useState<boolean>(false)
 
@@ -34,6 +41,8 @@ export const ModalConfirm: FC<ModalConfirmProps> = ({
     const contentStyles = isTg ? tgStyles?.modalContent : undefined
     const titleStyles = isTg ? tgStyles?.title : undefined
     const messageStyles = isTg ? tgStyles?.message : undefined
+    const buttonConfirmStyles = isTg ? tgStyles?.buttonConfirm : undefined
+    const buttonCancelStyles = isTg ? tgStyles?.buttonCancel : undefined
 
     const handleClose = () => {
         setIsClosing(true)
@@ -56,11 +65,11 @@ export const ModalConfirm: FC<ModalConfirmProps> = ({
                 <h2 className={s.title} style={titleStyles}>{title}</h2>
                 <p className={s.message} style={messageStyles}>{message}</p>
                 <div className={s.buttonContainer}>
-                    <button className={s.confirmButton} onClick={handleConfirm}>
-                      Confirm
+                    <button className={s.confirmButton} onClick={handleConfirm} style={buttonConfirmStyles}>
+                        {confirmButtonContent}
                     </button>
-                    <button className={s.cancelButton} onClick={handleClose}>
-                      Cancel
+                    <button className={s.cancelButton} onClick={handleClose} style={buttonCancelStyles}>
+                        {cancelButtonContent}
                     </button>
                 </div>
             </div>
