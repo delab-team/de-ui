@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import { useIsTg } from '../../hooks/useIsTg'
 
 import s from '../../styles/mobile-menu.module.css'
 
@@ -10,6 +11,11 @@ export interface MobileMenuItemProps {
     onClick?: () => void;
     textStyle?: React.CSSProperties | undefined;
     itemStyle?: React.CSSProperties | undefined;
+    tgStyles?: {
+        item?: React.CSSProperties | undefined;
+        text?: React.CSSProperties | undefined;
+    };
+    itemClassName?: string;
 }
 
 export const MobileMenuItem: FC<MobileMenuItemProps> = ({
@@ -19,14 +25,23 @@ export const MobileMenuItem: FC<MobileMenuItemProps> = ({
     textColor = 'black',
     onClick,
     textStyle,
-    itemStyle
-}) => (
-    <div
-        className={s.mobileMenuItem}
-        style={{ backgroundColor, color: textColor, ...itemStyle }}
-        onClick={onClick}
-    >
-        {icon}
-        <span style={textStyle}>{text}</span>
-    </div>
-)
+    itemStyle,
+    tgStyles,
+    itemClassName
+}) => {
+    const isTg = useIsTg()
+
+    const itemStyles = isTg ? tgStyles?.item : itemStyle
+    const textStyles = isTg ? tgStyles?.text : textStyle
+
+    return (
+        <div
+            className={`${s.mobileMenuItem} ${itemClassName || ''}`}
+            style={{ backgroundColor, color: textColor, ...itemStyle, ...itemStyles }}
+            onClick={onClick}
+        >
+            {icon}
+            <span style={{ ...textStyle, ...textStyles }}>{text}</span>
+        </div>
+    )
+}
