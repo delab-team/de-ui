@@ -5,7 +5,6 @@ import { useIsTg } from '../../hooks/useIsTg'
 import s from '../../styles/cell.module.css'
 
 export interface CellProps {
-    variant: 'white' | 'black';
     className?: string;
     style?: React.CSSProperties;
     tgStyles?: {
