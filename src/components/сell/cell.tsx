@@ -21,6 +21,7 @@ export interface CellProps {
     bottomLeftContent?: React.ReactNode | React.ReactNode[]
     rowLeftClassName?: string;
     rowContentClassName?: string;
+    onClick?: (...args: any | any[]) => void;
 }
 
 export const Cell: FC<CellProps> = ({
@@ -37,14 +38,15 @@ export const Cell: FC<CellProps> = ({
     rightContent,
     bottomLeftContent,
     rowLeftClassName,
-    rowContentClassName
+    rowContentClassName,
+    onClick
 }) => {
     const isTg = useIsTg()
 
     const innerStyle = isTg ? { ...style, ...tgStyles?.inner } : style
 
     return (
-        <div className={`${className || ''} ${s.cell} ${isTg || disabled ? s.noHover : ''}`} style={{ ...innerStyle }}>
+        <div className={`${className || ''} ${s.cell} ${isTg || disabled ? s.noHover : ''}`} style={{ ...innerStyle }} onClick={onClick}>
             <div className={`${s.row} ${rowLeftClassName || ''}`}>
                 {leftContent && <div className={`${leftClassName || ''} ${s.left}`}>{leftContent}</div>}
                 <div className={`${rowContentClassName || ''} ${s.rowLeftContent}`}>

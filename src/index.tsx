@@ -3,8 +3,8 @@ import './styles/common.css'
 /**
  * Cell
 */
-export { Cell } from './components/Cell/cell'
-export type { CellProps } from './components/Cell/cell'
+export { Cell } from './components/сell/cell'
+export type { CellProps } from './components/сell/cell'
 
 // Modals
 
