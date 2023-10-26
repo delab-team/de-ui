@@ -47,8 +47,8 @@ export const Modal: FC<ModalProps> = ({ children, onClose, isOpen, className, tg
     return (
         <>
             {isOpen && (
-                <div className={s.modalBackdrop} ref={modalRef}>
-                    <div className={`${s.modalContent} ${className || ''}`} style={contentStyles}>
+                <div className={s.modalBackdrop}>
+                    <div className={`${s.modalContent} ${className || ''}`} style={contentStyles} ref={modalRef}>
                         {isCloseButton && (
                             <button className={`${s.closeButton} ${buttonClass || ''}`} onClick={onClose} style={closeStyles}>
                                 &times;

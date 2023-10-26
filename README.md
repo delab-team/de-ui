@@ -81,15 +81,7 @@ export const App: React.FC = () => {
 
 ### **Here's a list of components included in our library:**
 
-## Cells:
-
--   **ActionCell**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/action-cell/Readme.md)
-
--   **ButtonsCell**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/buttons-cell/Readme.md)
-
 -   **InfoCell**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/info-cell/Readme.md)
-
--   **PaymentCell** [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/payment-cell/Readme.md)
 
 -   **SettingsCell**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/settings-cell/Readme.md)
 
@@ -174,12 +166,6 @@ export const App: React.FC = () => {
 -   **PageWrapper**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/page-wrapper/Readme.md)
 
 -   **PageWrapperSidebar**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/page-wrapper-sidebar/Readme.md)
-
-## RichCells:
-
--   **RichCellItem**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/rich-cell/Readme.md)
-
--   **RichCell**: [Readme](https://github.com/delab-team/de-ui/blob/main/src/components/rich-cell/Readme.md)
 
 ## Tables:
 
