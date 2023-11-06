@@ -1,81 +1,78 @@
 .topLeftAlert {
-  position: absolute;
-  top: 0;
-  left: 0;
+    top: 0;
+    left: 0;
 }
 
 .topRightAlert {
-  position: absolute;
-  top: 0;
-  right: 0;
+    top: 0;
+    right: 0;
 }
 
 .bottomLeftAlert {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+    bottom: 0;
+    left: 0;
 }
 
 .bottomRightAlert {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
+    bottom: 10px;
+    right: 10px;
 }
 
 .centeredAlert {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .alert {
-  padding: 10px;
-  border: 1px solid #ccc;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    position: fixed;
+    z-index: 100;
+    padding: 10px;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .iconAlert {
-  background-color: #f0f0f0;
+    background-color: #f0f0f0;
 }
 
 .importantAlert {
-  background-color: #f8d7da;
-  color: #721c24;
+    background-color: #f8d7da;
+    color: #721c24;
 }
 
 .roundedAlert {
-  background-color: #d4edda;
-  border-radius: 5px;
+    background-color: #d4edda;
+    border-radius: 5px;
 }
 
 .borderAlert {
-  border: 2px solid #007bff;
+    border: 2px solid #007bff;
 }
 
 .extensiveContentAlert {
-  background-color: #f0f0f0;
+    background-color: #f0f0f0;
 }
 
 .alertIcon {
-  margin-right: 5px;
+    margin-right: 5px;
 }
 
 .closeButton {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  font-size: 18px;
-  line-height: 1;
-  padding: 0;
-  margin: 0;
-  color: #333;
-  padding-left: 5px;
-  transition: all 0.3s ease 0s;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+    color: #333;
+    padding-left: 5px;
+    transition: all 0.3s ease 0s;
 }
 
 .closeButton:hover {
-  color: #1976D2;
+    color: #1976d2;
 }

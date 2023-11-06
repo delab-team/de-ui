@@ -11,6 +11,7 @@ export interface AlertProps {
     onClose?: () => void;
     icon?: ReactNode;
     children: ReactNode;
+    buttonClassName?: string;
     autoCloseTimeout?: number;
     position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center';
     centered?: boolean;
@@ -18,7 +19,7 @@ export interface AlertProps {
     tgStyles?: CSSProperties
 }
 
-export const Alert: React.FC<AlertProps> = ({ type, onClose, icon, children, autoCloseTimeout, position, centered, className, tgStyles }) => {
+export const Alert: React.FC<AlertProps> = ({ type, onClose, buttonClassName, icon, children, autoCloseTimeout, position, centered, className, tgStyles }) => {
     const [ isVisible, setIsVisible ] = useState<boolean>(true)
 
     const getAlertClass = () => {
@@ -86,7 +87,7 @@ export const Alert: React.FC<AlertProps> = ({ type, onClose, icon, children, aut
             {icon && <div className={s.alertIcon}>{icon}</div>}
             <div className={s.alertContent}>{children}</div>
             {onClose && (
-                <button className={s.closeButton} onClick={handleAlertClose}>
+                <button className={`${s.closeButton} ${buttonClassName || ''}`} onClick={handleAlertClose}>
                     &times;
                 </button>
             )}
