@@ -38,3 +38,9 @@
 .modalButton:hover {
   background: #1065e4;
 }
+
+@media (max-width: 440px) {
+  .modal {
+    border-radius: 20px 20px 0px 0px;
+  }
+}

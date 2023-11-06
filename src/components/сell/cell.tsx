@@ -46,7 +46,7 @@ export const Cell: FC<CellProps> = ({
     const innerStyle = isTg ? { ...style, ...tgStyles?.inner } : style
 
     return (
-        <div className={`${className || ''} ${s.cell} ${isTg || disabled ? s.noHover : ''}`} style={{ ...innerStyle }} onClick={onClick}>
+        <div onClick={onClick} className={`${className || ''} ${s.cell} ${disabled ? s.noHover : ''}`} style={{ ...innerStyle }}>
             <div className={`${s.row} ${rowLeftClassName || ''}`}>
                 {leftContent && <div className={`${leftClassName || ''} ${s.left}`}>{leftContent}</div>}
                 <div className={`${rowContentClassName || ''} ${s.rowLeftContent}`}>
