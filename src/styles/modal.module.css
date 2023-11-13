@@ -26,6 +26,7 @@
     position: absolute;
     bottom: 0;
     border-radius: 20px 20px 0px 0px;
+    animation: slideIn 0.2s ease-out;
   }
 }
 
@@ -43,4 +44,13 @@
 
 .closeButton:hover {
   color: #1976D2;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
