@@ -11,7 +11,7 @@ export interface TextProps {
     fontFamily?: string;
     color?: string;
     className?: string;
-    children: React.ReactNode;
+    children?: React.ReactNode;
     tgStyles?: React.CSSProperties;
 }
 

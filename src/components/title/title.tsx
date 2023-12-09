@@ -11,7 +11,7 @@ export interface TitleProps {
     fontFamily?: string;
     color?: string;
     className?: string;
-    children: React.ReactNode;
+    children?: React.ReactNode;
     tgStyles?: CSSProperties | undefined;
 }
 

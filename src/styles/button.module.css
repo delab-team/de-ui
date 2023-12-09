@@ -16,29 +16,25 @@
 /*--------------------Button Size--------------------*/
 
 .button--size-s {
-    font-size: 13px;
-    font-weight: 500;
-    height: 26px;
-    padding: 5px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 5px 16px;
 }
 
 .button--size-m {
-    font-size: 13px;
-    font-weight: 400;
-    height: 32px;
-    padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 8px 16px;
 }
 
 .button--size-l {
-    font-size: 13px;
-    height: 40px;
-    padding: 12px 23.5px;
+  font-size: 13px;
+  padding: 12px 23.5px;
 }
 
 .button--size-str {
-    height: 32px;
-    padding: 8px;
-    width: 100%;
+  padding: 8px;
+  width: 100%;
 }
   
 /*--------------------/Button Size--------------------*/
@@ -120,7 +116,7 @@
   background: #E64646;
 }
 
-.button--type-primary:hover {
+/* .button--type-primary:hover {
   background: #0e0d0d;
 }
 
@@ -142,5 +138,5 @@
 
 .button--type-danger:hover {
   background: #ee3939;
-}
+} */
 /*--------------------/Variants--------------------*/
