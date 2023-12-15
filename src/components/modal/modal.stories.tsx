@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable import/no-default-export */
 import { Meta, StoryObj } from '@storybook/react'
@@ -34,7 +35,7 @@ const ModalExample = () => {
             <Button onClick={handleOpenModal}>Show Modal</Button>
             <Modal isOpen={isModalOpen} onClose={handleCloseModal} tgStyles={{ modalContent: { background: '#2E7DDB', color: '#fff' } }}>
                 <h2>Modal window title</h2>
-                <p>Contents of the modal window</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
             </Modal>
         </div>
     )
@@ -42,7 +43,7 @@ const ModalExample = () => {
 
 export const Playground: Story = {
     render: () => (
-        <AppInner isTg={false}>
+        <AppInner isTg={true}>
             <ModalExample />
         </AppInner>
     )
