@@ -50,7 +50,7 @@ export const Input: React.FC<InputProps> = ({
     const labelStyles = isTg ? tgStyles?.label : undefined
     const errorStyles = isTg ? tgStyles?.error : undefined
 
-    const inputStyles = isTg ? { ...style, ...tgStyles?.input } : undefined
+    const inputStyles = isTg ? { ...style, ...tgStyles?.input } : style
 
     return (
         <div className={`${s.inputWrapper} ${sizeClass}`} style={wrapperStyles}>
